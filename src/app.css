@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+a {
+	@apply transition-all duration-300 hover:text-neutral-500;
+}

@@ -1,6 +1,4 @@
-<script>
-  const data = "cool";
-</script>
+
 
 # Hello guys this is a mdx
 
