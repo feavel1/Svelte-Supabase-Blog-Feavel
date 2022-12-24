@@ -1,7 +1,10 @@
 ---
-
+layout: home
+title: Welcome to the Feavel's Music/Phylosophy Blog
 ---
 
 # Welcome to the Feavel's Music/Phylosophy Blog
 
 Here you can find all the things you need
+
+<div class="text-3xl font-bold">cool</div>

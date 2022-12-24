@@ -84,15 +84,6 @@
 	</ul>
 </nav>
 
-<div class="svx">
+<div>
 	<slot />
 </div>
-
-<style>
-	.svx {
-		@apply top-16 ml-72 mt-16 flex min-h-screen max-w-4xl flex-col gap-5 pt-12;
-	}
-	.svx h1 {
-		@apply text-4xl font-bold underline underline-offset-8;
-	}
-</style>
