@@ -1,8 +1,0 @@
-
-
-# Hello guys this is a mdx
-
-** this is some thing **
-
-{data}
-
