@@ -33,6 +33,7 @@
 	"type": "module",
 	"dependencies": {
 		"daisyui": "^2.46.0",
-		"highlight.js": "^11.7.0"
+		"highlight.js": "^11.7.0",
+		"theme-change": "^2.2.0"
 	}
 }

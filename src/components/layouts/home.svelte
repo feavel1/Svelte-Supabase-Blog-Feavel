@@ -5,7 +5,7 @@
 	export let date;
 </script>
 
-<div class="prose-xl prose relative mx-auto max-w-4xl overflow-hidden py-16 px-4 sm:px-6 lg:px-8">
+<div class="prose-xl prose">
 	<!-- <span
 		class="block cursor-pointer"
 		on:keypress={() => {
@@ -25,8 +25,8 @@
 		Back
 	</span> -->
 	<h1 class="">{title}</h1>
-	<p class="my-4 text-gray-500">by {author}, {date}</p>
-	<div class=" first-letter:text-3xl first-letter:text-blue-600">
+	<p class="my-4 ">by {author}, {date}</p>
+	<div class="first-letter:text-5xl first-letter:text-blue-600">
 		<slot />
 	</div>
 </div>

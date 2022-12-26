@@ -3,66 +3,44 @@
 >
 	<ul class="flex w-fit flex-col gap-10">
 		<li>
-			<h5 class="mb-8 font-semibold lg:mb-3">Learn Music</h5>
+			<h5 class="mb-8 font-semibold lg:mb-3">Production</h5>
 			<ul>
 				<li>
 					<a
 						class="border-neutral-700 text-neutral-700 hover:border-neutral-400 hover:text-neutral-900 dark:text-neutral-400 dark:hover:border-neutral-500 dark:hover:text-neutral-300 -ml-px block border-l border-transparent pl-4"
-						href="/">Production</a
+						href="/">Choosing a daw</a
 					>
 				</li>
 				<li>
 					<a
 						class="border-neutral-700 text-neutral-700 hover:border-neutral-400 hover:text-neutral-900 dark:text-neutral-400 dark:hover:border-neutral-500 dark:hover:text-neutral-300 -ml-px block border-l border-transparent pl-4"
-						href="/">Recording</a
+						href="/">First 30 min in DAW</a
 					>
 				</li>
 				<li>
 					<a
 						class="border-neutral-700 text-neutral-700 hover:border-neutral-400 hover:text-neutral-900 dark:text-neutral-400 dark:hover:border-neutral-500 dark:hover:text-neutral-300 -ml-px block border-l border-transparent pl-4"
-						href="/">Mixing</a
+						href="/">Audio and Midi</a
 					>
 				</li>
 				<li>
 					<a
 						class="border-neutral-700 text-neutral-700 hover:border-neutral-400 hover:text-neutral-900 dark:text-neutral-400 dark:hover:border-neutral-500 dark:hover:text-neutral-300 -ml-px block border-l border-transparent pl-4"
-						href="/">Mastering</a
+						href="/">Adding instruments</a
 					>
 				</li>
 			</ul>
 		</li>
 
 		<li>
-			<h5 class="mb-8 font-semibold lg:mb-3">Psychoanalysis</h5>
+			<h5 class="text-neutral-900 dark:text-neutral-200 mb-8 font-semibold lg:mb-3">
+				Psychoanalysis
+			</h5>
 			<ul>
 				<li>
 					<a
 						class="border-neutral-700 text-neutral-700 hover:border-neutral-400 hover:text-neutral-900 dark:text-neutral-400 dark:hover:border-neutral-500 dark:hover:text-neutral-300 -ml-px block border-l border-transparent pl-4"
 						href="/">Lacanian Concepts</a
-					>
-				</li>
-				<li>
-					<a
-						class="border-neutral-700 text-neutral-700 hover:border-neutral-400 hover:text-neutral-900 dark:text-neutral-400 dark:hover:border-neutral-500 dark:hover:text-neutral-300 -ml-px block border-l border-transparent pl-4"
-						href="/">Create Posts</a
-					>
-				</li>
-				<li>
-					<a
-						class="border-neutral-700 text-neutral-700 hover:border-neutral-400 hover:text-neutral-900 dark:text-neutral-400 dark:hover:border-neutral-500 dark:hover:text-neutral-300 -ml-px block border-l border-transparent pl-4"
-						href="/">Guide Lines</a
-					>
-				</li>
-			</ul>
-		</li>
-
-		<li>
-			<h5 class="mb-8 font-semibold lg:mb-3">Community</h5>
-			<ul>
-				<li>
-					<a
-						class="border-neutral-700 text-neutral-700 hover:border-neutral-400 hover:text-neutral-900 dark:text-neutral-400 dark:hover:border-neutral-500 dark:hover:text-neutral-300 -ml-px block border-l border-transparent pl-4"
-						href="/">Read Posts</a
 					>
 				</li>
 				<li>
