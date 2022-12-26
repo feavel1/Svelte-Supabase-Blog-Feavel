@@ -1,31 +1,14 @@
 ---
-title: Welcome User
+title: Welcome To The Home page
 author: Feavel
 date: 25th Dec 2022
 layout: home
 ---
 
 
-Here you can find all the things you need
-
-So lets learn!
-
-- js
-- hs
-
-```js
-module.exports = {
-  //...
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
-}
-```
-
-<div class="mockup-code">
-  <pre><code>can be any color!</code></pre>
-</div>
-
-
 <div class="max-w-3xl my-20">
+
+Hello and welcome
 
 # Heading 1
 
