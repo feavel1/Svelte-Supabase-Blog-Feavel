@@ -1,10 +1,9 @@
 ---
-title: Welcome To The Home page
+title: Welcome To Feavel's Music Camp
 author: Feavel
 date: 25th Dec 2022
 layout: home
 ---
-
 
 <div class="max-w-3xl my-20">
 
@@ -32,10 +31,17 @@ It adds a new `prose` class that you can slap on any block of vanilla HTML conte
 
 ```html
 <article class="prose">
-  <h1>Garlic bread with cheese: What the science tells us</h1>
-  <p>For years parents have espoused the health benefits of eating garlic bread with cheese to their children, with the food earning such an iconic status in our culture that kids will often dress up as warm, cheesy loaf for Halloween.</p>
-  <p>But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases springing up around the country.</p>
-  <!-- ... -->
+	<h1>Garlic bread with cheese: What the science tells us</h1>
+	<p>
+		For years parents have espoused the health benefits of eating garlic bread with cheese to their
+		children, with the food earning such an iconic status in our culture that kids will often dress
+		up as warm, cheesy loaf for Halloween.
+	</p>
+	<p>
+		But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases
+		springing up around the country.
+	</p>
+	<!-- ... -->
 </article>
 ```
 
@@ -109,13 +115,13 @@ Here's what a default `tailwind.config.js` file looks like at the time of writin
 
 ```js
 module.exports = {
-  purge: [],
-  theme: {
-    extend: {},
-  },
-  variants: {},
-  plugins: [],
-}
+	purge: [],
+	theme: {
+		extend: {}
+	},
+	variants: {},
+	plugins: []
+};
 ```
 
 Hopefully that looks good enough to you.

@@ -34,8 +34,9 @@
 					>
 				</label>
 			</div>
-			<div class="mx-2 flex-1 px-2"><a href="/home">Feavel's Music Camp</a></div>
-
+			<div class=" flex-1 ">
+				<div class="mx-2px-2 btn-ghost btn"><a href="/home">Feavel's Music Camp</a></div>
+			</div>
 			<div class="hidden flex-none lg:block">
 				<ul class="menu menu-horizontal">
 					<!-- Navbar menu content here -->

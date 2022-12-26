@@ -1,4 +1,9 @@
+<script>
+	import BackTo from '../../../src/components/ui/BackTo.svelte';
+</script>
+
 <div class="mt-28 max-w-3xl">
+	<BackTo />
 	<div class="hero-content flex-col lg:flex-row-reverse">
 		<div class="text-center lg:text-left">
 			<h1 class="text-5xl font-bold">Login now!</h1>

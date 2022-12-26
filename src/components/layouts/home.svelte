@@ -5,31 +5,11 @@
 	export let date;
 </script>
 
-<div>
-	<div class="align-center flex flex-row justify-between">
-		<button
-			class="btn-ghost btn cursor-pointer"
-			on:click={() => {
-				history.back();
-			}}
-		>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				class="inline h-6 w-6"
-				fill="none"
-				viewBox="0 0 24 24"
-				stroke="currentColor"
-				stroke-width="2"
-			>
-				<path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
-			</svg>
-			Back
-		</button>
-	</div>
-	<h1 class="mb-1 text-6xl font-extrabold">{title}</h1>
+<div class="prose-xl prose ">
+	<h1 class="mb-0 text-6xl font-extrabold">{title}</h1>
+	<p class="mb-0">by {author}, {date}</p>
 	<div class="divider" />
-	<p class="mb-10">by {author}, {date}</p>
-	<div class="prose-xl prose first-letter:text-5xl first-letter:text-blue-600">
+	<div class="first-letter:text-5xl first-letter:text-blue-600">
 		<slot />
 	</div>
 </div>
