@@ -7,7 +7,7 @@
 				quasi. In deleniti eaque aut repudiandae et a id nisi.
 			</p>
 		</div>
-		<div class="card w-full max-w-sm flex-shrink-0 bg-base-100 shadow-2xl">
+		<div class="content-card w-full max-w-sm flex-shrink-0 bg-base-300 shadow-2xl ">
 			<div class="card-body">
 				<div class="form-control">
 					<!-- svelte-ignore a11y-label-has-associated-control -->

@@ -3,7 +3,6 @@
 	export let title;
 	export let author;
 	export let date;
-	let prose = false;
 </script>
 
 <div>
@@ -26,7 +25,6 @@
 			</svg>
 			Back
 		</button>
-		<!-- <button class="btn" on:click={() => (prose = !prose)}>See Code</button> -->
 	</div>
 	<h1 class="mb-1 text-6xl font-extrabold">{title}</h1>
 	<div class="divider" />
