@@ -5,7 +5,7 @@
 	export let date;
 </script>
 
-<div class="prose-xl prose ">
+<div class="prose-xl prose">
 	<h1 class="mb-0 text-6xl font-extrabold">{title}</h1>
 	<p class="mb-0">by {author}, {date}</p>
 	<div class="divider" />
