@@ -33,7 +33,8 @@
 	"type": "module",
 	"dependencies": {
 		"daisyui": "^2.46.0",
-		"highlight.js": "^11.7.0",
+		"node-html-parser": "^6.1.4",
+		"shiki": "^0.12.1",
 		"theme-change": "^2.2.0"
 	}
 }
