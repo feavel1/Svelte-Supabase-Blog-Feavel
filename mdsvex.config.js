@@ -16,7 +16,7 @@ const config = defineConfig({
 	},
 
 	layout: {
-		home: path.join(dirname, './src/components/layouts/home.svelte')
+		home: path.join(dirname, './src/components/layouts/post.svelte')
 	},
 
 	remarkPlugins: [],
