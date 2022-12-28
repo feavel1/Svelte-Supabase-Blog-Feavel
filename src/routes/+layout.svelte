@@ -42,59 +42,44 @@
 					<!-- Navbar menu content here -->
 					<div class="dropdown-hover dropdown-end dropdown">
 						<label tabindex="0" class="btn-ghost btn m-1">Learn</label>
-						<ul tabindex="0" class="dropdown-content menu rounded-box w-52 bg-base-100 p-2 shadow">
-							<li><a>Music Production</a></li>
-							<li><a>Recording</a></li>
-							<li><a>Mixing</a></li>
-							<li><a>Mastering</a></li>
+						<ul tabindex="0" class="dropdown-content grid w-max grid-cols-2 bg-base-100 shadow">
+							<div class="menu w-56">
+								<li><a>Music Production</a></li>
+								<li><a>Recording</a></li>
+								<li><a>Mixing</a></li>
+								<li><a>Mastering</a></li>
+							</div>
+							<div class="menu">
+								<li><a>Ontology</a></li>
+								<li><a>Web Design</a></li>
+								<li><a>Psychoanalysis</a></li>
+								<li><a>Mastering</a></li>
+							</div>
 						</ul>
 					</div>
 					<div class="dropdown-hover dropdown-end dropdown">
 						<label tabindex="0" class="btn-ghost btn m-1">Community</label>
 
-						<table
-							tabindex="0"
-							class="dropdown-content rounded-box  table w-full bg-base-100 p-2 shadow"
-						>
-							<!-- head -->
-							<thead>
-								<tr>
-									<th />
-									<th>Name</th>
-									<th>Job</th>
-									<th>Favorite Color</th>
-								</tr>
-							</thead>
-							<tbody>
-								<!-- row 1 -->
-								<tr>
-									<th>1</th>
-									<td>Cy Ganderton</td>
-									<td>Quality Control Specialist</td>
-									<td>Blue</td>
-								</tr>
-								<!-- row 2 -->
-								<tr>
-									<th>2</th>
-									<td>Hart Hagerty</td>
-									<td>Desktop Support Technician</td>
-									<td>Purple</td>
-								</tr>
-								<!-- row 3 -->
-								<tr>
-									<th>3</th>
-									<td>Brice Swyre</td>
-									<td>Tax Accountant</td>
-									<td>Red</td>
-								</tr>
-							</tbody>
-						</table>
+						<ul tabindex="0" class="dropdown-content grid w-max grid-cols-2 bg-base-100 shadow">
+							<div class="menu w-56">
+								<li><a>Music Production</a></li>
+								<li><a>Recording</a></li>
+								<li><a>Mixing</a></li>
+								<li><a>Mastering</a></li>
+							</div>
+							<div class="menu">
+								<li><a>Ontology</a></li>
+								<li><a>Web Design</a></li>
+								<li><a>Psychoanalysis</a></li>
+								<li><a>Mastering</a></li>
+							</div>
+						</ul>
 					</div>
 					<li><a href="/my-account">My Account</a></li>
 				</ul>
 			</div>
 
-			<label class="swap btn-ghost swap-rotate btn mx-1">
+			<label class="swap-rotate swap btn-ghost btn mx-1">
 				<input type="checkbox" data-toggle-theme="mytheme,cmyk" data-act-class="ACTIVECLASS" />
 
 				<svg
