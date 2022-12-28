@@ -5,7 +5,7 @@ date: 25th Dec 2022
 layout: home
 ---
 
-<div class="max-w-3xl my-20">
+<div class="max-w-3xl">
 
 Hello~ Let's learn how to build a blog!
 
@@ -20,6 +20,7 @@ Hello~ Let's learn how to build a blog!
 		// 👆 false parameter is required for svelte
 	});
 </script>
+
 <!-- TRUNCATED... -->
 ```
 
@@ -43,7 +44,6 @@ The `@tailwindcss/typography` plugin is our attempt to give you what you _actual
 
 It adds a new `prose` class that you can slap on any block of vanilla HTML content and turn it into a beautiful, well-formatted document:
 
-
 ```html
 <article class="prose">
 	<h1>Garlic bread with cheese: What the science tells us</h1>
@@ -59,7 +59,6 @@ It adds a new `prose` class that you can slap on any block of vanilla HTML conte
 	<!-- ... -->
 </article>
 ```
-
 
 For more information about how to use the plugin and the features it includes, [read the documentation](https://github.com/tailwindcss/typography/blob/master/README.md).
 

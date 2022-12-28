@@ -40,7 +40,7 @@
 			<div class="hidden flex-none lg:block">
 				<ul class="menu menu-horizontal">
 					<!-- Navbar menu content here -->
-					<div class="dropdown-hover dropdown dropdown-end">
+					<div class="dropdown-hover dropdown-end dropdown">
 						<label tabindex="0" class="btn-ghost btn m-1">Learn</label>
 						<ul tabindex="0" class="dropdown-content menu rounded-box w-52 bg-base-100 p-2 shadow">
 							<li><a>Music Production</a></li>
@@ -49,7 +49,7 @@
 							<li><a>Mastering</a></li>
 						</ul>
 					</div>
-					<div class="dropdown-hover dropdown dropdown-end">
+					<div class="dropdown-hover dropdown-end dropdown">
 						<label tabindex="0" class="btn-ghost btn m-1">Community</label>
 
 						<table
@@ -94,7 +94,7 @@
 				</ul>
 			</div>
 
-			<label class="swap-rotate swap btn-ghost btn mx-1">
+			<label class="swap btn-ghost swap-rotate btn mx-1">
 				<input type="checkbox" data-toggle-theme="mytheme,cmyk" data-act-class="ACTIVECLASS" />
 
 				<svg
