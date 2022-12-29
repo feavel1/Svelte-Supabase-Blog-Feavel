@@ -15,14 +15,22 @@ module.exports = {
 			{
 				mytheme: {
 					primary: '#f5f5f4',
-					secondary: '#e0f2fe',
-					accent: '#7dd3fc',
-					neutral: '#292524',
-					'base-100': '#1c1917',
-					info: '#3ABFF8',
-					success: '#5eead4',
-					warning: '#fef08a',
-					error: '#F87272'
+
+					secondary: '#57534e',
+
+					accent: '#d8b4fe',
+
+					neutral: '#1c1917',
+
+					'base-100': '#44403c',
+
+					info: '#a5f3fc',
+
+					success: '#a7f3d0',
+
+					warning: '#fde68a',
+
+					error: '#fecaca'
 				}
 			}
 		],

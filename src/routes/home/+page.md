@@ -1,5 +1,5 @@
 ---
-title: Welcome To Feavel's Music Camp
+title: Welcome To Feavel's Camp
 author: Feavel
 date: 25th Dec 2022
 layout: home
@@ -7,22 +7,7 @@ layout: home
 
 <div class="max-w-3xl">
 
-Hello~ Let's learn how to build a blog!
-
-```svelte {5-7,10-11}
-<script>
-	import '../app.css';
-	import { onMount } from 'svelte';
-	import { themeChange } from 'theme-change';
-
-	onMount(() => {
-		themeChange(false);
-		// 👆 false parameter is required for svelte
-	});
-</script>
-
-<!-- TRUNCATED... -->
-```
+Let's start learning
 
 # Heading 1
 
