@@ -5,6 +5,7 @@
 	export let date;
 </script>
 
+<title>Home - {title} </title>
 <div class="prose-xl prose">
 	<h1 class="mb-0 text-6xl font-extrabold">{title}</h1>
 	<p class="mb-0">by {author}, {date}</p>

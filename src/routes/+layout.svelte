@@ -80,7 +80,7 @@
 								<li class="menu-title">
 									<span>BLOG</span>
 								</li>
-								<li><a>Read Guide Lines</a></li>
+								<li><a href="/community/guide">Read Guide Lines</a></li>
 								<li><a>My Posts</a></li>
 							</div>
 							<div class="menu">
