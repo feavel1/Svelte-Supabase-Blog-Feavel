@@ -36,7 +36,7 @@
 			</div>
 
 			<div class="hidden flex-1 lg:block">
-				<div class="mx-2px-2 btn-ghost btn"><a href="/home">Feavel's Camp</a></div>
+				<div class="btn-ghost btn mx-2 px-2"><a href="/home">Feavel's Camp</a></div>
 				<ul class="menu menu-horizontal">
 					<!-- Navbar menu content here -->
 					<div class="dropdown-hover dropdown-end dropdown">
@@ -96,9 +96,14 @@
 					</div>
 				</ul>
 			</div>
+			<div class="btn-ghost btn flex gap-2 px-4">
+				<a href="/home"> My Account</a>
+			</div>
 			<div class="flex-2">
+				<!-- THEME CHANGER -->
+
 				<label class="swap-rotate swap btn-ghost btn mx-1">
-					<input type="checkbox" data-toggle-theme="mytheme,cmyk" data-act-class="ACTIVECLASS" />
+					<input type="checkbox" data-toggle-theme="mytheme,cupcake" data-act-class="ACTIVECLASS" />
 
 					<svg
 						class="swap-on h-5 w-5 fill-current"
@@ -130,6 +135,9 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Drawer -->
+
 	<div class="drawer-side">
 		<label for="my-drawer-3" class="drawer-overlay" />
 		<ul class="menu w-80 bg-base-100 p-4">
