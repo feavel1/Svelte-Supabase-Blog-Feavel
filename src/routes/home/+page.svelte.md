@@ -37,10 +37,10 @@ layout: home
 		</Card>
 		<Card>
 			<div class="card-body">
-				<h2 class="card-title text-accent">哲学</h2>
+				<h2 class="card-title text-accent">精神分析</h2>
 				<p>是否想阅读关于哲学或者精神分析的内容？</p>
 				<div class="card-actions justify-end">
-					<button class="btn-primary btn">购买课程</button>
+					<button class="btn-primary btn">查看内容</button>
 				</div>
 			</div>
 		</Card>

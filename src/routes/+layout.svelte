@@ -53,18 +53,18 @@
 								<li><a>Mixing</a></li>
 								<li><a>Mastering</a></li>
 								<li><a>Recording</a></li>
-								<li><a>Music Philosophy</a></li>
+								<li><a>Branding</a></li>
 							</div>
 
 							<div class="menu">
 								<li class="menu-title">
 									<span>Psychoanalysis</span>
 								</li>
-								<li><a>Record Branding</a></li>
+								<li><a>Music Philosophy</a></li>
 								<li><a>Music Psychoanalysis</a></li>
 								<li><a>Music In Film</a></li>
 								<li><a>Giving Speeches</a></li>
-								<li><a>Resource Management</a></li>
+								<li><a>Many more...</a></li>
 							</div>
 						</ul>
 					</div>
