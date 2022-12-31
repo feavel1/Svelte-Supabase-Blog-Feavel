@@ -36,41 +36,91 @@
 			</div>
 
 			<div class="hidden flex-1 lg:block">
-				<div class="btn-ghost btn mx-2 px-2"><a href="/home">Feavel's Camp</a></div>
+				<div class="btn-ghost btn mx-2 px-2"><a href="/home">feavel的部落</a></div>
 				<ul class="menu menu-horizontal">
 					<!-- Navbar menu content here -->
 					<div class="dropdown-hover dropdown-end dropdown">
-						<label tabindex="0" class="btn-ghost btn m-1">Learn</label>
+						<label tabindex="0" class="btn-ghost btn m-1">学习</label>
 						<ul
 							tabindex="0"
 							class="dropdown-content grid w-max grid-cols-2 rounded-sm bg-base-200 p-4 shadow"
 						>
 							<div class="menu w-56">
 								<li class="menu-title">
-									<span>Music</span>
+									<span>音乐</span>
 								</li>
-								<li><a>Production</a></li>
-								<li><a>Mixing</a></li>
-								<li><a>Mastering</a></li>
-								<li><a>Recording</a></li>
-								<li><a>Branding</a></li>
+								<li>
+									<a
+										>音乐制作
+										<div class="badge-primary badge">NEW!</div></a
+									>
+								</li>
+								<li>
+									<a>
+										混音
+										<div class="badge">WIP</div>
+									</a>
+								</li>
+								<li>
+									<a>
+										母带
+										<div class="badge">WIP</div>
+									</a>
+								</li>
+								<li>
+									<a>
+										录音/录制
+										<div class="badge">WIP</div>
+									</a>
+								</li>
+								<li>
+									<a>
+										推广
+										<div class="badge">WIP</div>
+									</a>
+								</li>
 							</div>
 
 							<div class="menu">
 								<li class="menu-title">
-									<span>Psychoanalysis</span>
+									<span>精神分析</span>
 								</li>
-								<li><a>Music Philosophy</a></li>
-								<li><a>Music Psychoanalysis</a></li>
-								<li><a>Music In Film</a></li>
-								<li><a>Giving Speeches</a></li>
-								<li><a>Many more...</a></li>
+								<li>
+									<a>
+										音乐哲学
+										<div class="badge">WIP</div>
+									</a>
+								</li>
+								<li>
+									<a>
+										音乐精神分析
+										<div class="badge">WIP</div>
+									</a>
+								</li>
+								<li>
+									<a>
+										电影配乐
+										<div class="badge">WIP</div>
+									</a>
+								</li>
+								<li>
+									<a>
+										演讲与发言技巧
+										<div class="badge">WIP</div>
+									</a>
+								</li>
+								<li>
+									<a>
+										还有很多...
+										<div class="badge">WIP</div>
+									</a>
+								</li>
 							</div>
 						</ul>
 					</div>
 
 					<div class="dropdown-hover dropdown-end dropdown">
-						<label tabindex="0" class="btn-ghost btn m-1">Community</label>
+						<label tabindex="0" class="btn-ghost btn m-1">社区</label>
 
 						<ul
 							tabindex="0"
@@ -80,24 +130,33 @@
 								<li class="menu-title">
 									<span>BLOG</span>
 								</li>
-								<li><a href="/community/guide">Read Guide Lines</a></li>
-								<li><a>My Posts</a></li>
+								<li>
+									<a href="/community/guide">
+										阅读博客规则 <div class="badge-primary badge">New!</div>
+									</a>
+								</li>
+								<li>
+									<a>
+										我的博客
+										<div class="badge">WIP</div></a
+									>
+								</li>
 							</div>
 							<div class="menu">
 								<li class="menu-title">
-									<span>Specials</span>
+									<span>特殊服务</span>
 								</li>
-								<li><a>Contribute</a></li>
-								<li><a>Support</a></li>
-								<li><a>Sponsor</a></li>
-								<li><a>About</a></li>
+								<li><a>贡献</a></li>
+								<li><a>技术支持</a></li>
+								<li><a>赞助</a></li>
+								<li><a>关于网站</a></li>
 							</div>
 						</ul>
 					</div>
 				</ul>
 			</div>
 			<div class="btn-ghost btn flex gap-2 px-4">
-				<a href="/home"> My Account</a>
+				<a href="/my-account">我的账号</a>
 			</div>
 			<div class="flex-2">
 				<!-- THEME CHANGER -->

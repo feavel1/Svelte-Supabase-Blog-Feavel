@@ -6,7 +6,9 @@ layout: home
 	import Card from '../../../src/components/ui/Card.svelte';
 </script>
 
-<h1 class="mb-0 text-6xl font-extrabold">Learn Music for the</h1>
+<title>Home - Feavel's Camp</title>
+
+<h1 class="mb-0 text-5xl font-extrabold">Learn Music / Phylosophy for the</h1>
 <h1 class="my-0 text-6xl font-extrabold text-accent">{'{Modern Era}'}</h1>
 <p class="mb-0">by Feavel, Dec 29th 2022</p>
 
@@ -31,7 +33,7 @@ layout: home
 				<h2 class="card-title text-accent">音乐</h2>
 				<p>是否对音乐制作、混音、录制、母带等感兴趣？</p>
 				<div class="card-actions justify-end">
-					<button class="btn-primary btn">立即查看</button>
+					<button class="btn-primary btn">阅读</button>
 				</div>
 			</div>
 		</Card>

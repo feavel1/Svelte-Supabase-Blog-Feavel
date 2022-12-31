@@ -1,6 +1,6 @@
 <div class="align-center flex flex-row justify-between">
 	<button
-		class="btn-ghost btn cursor-pointer"
+		class="btn-info btn-sm btn mb-4"
 		on:click={() => {
 			history.back();
 		}}
@@ -15,6 +15,6 @@
 		>
 			<path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
 		</svg>
-		Back
+		返回
 	</button>
 </div>
