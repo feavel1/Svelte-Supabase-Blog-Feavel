@@ -8,8 +8,8 @@ layout: home
 
 <title>Home - Feavel's Camp</title>
 
-<h1 class="mb-0 text-5xl font-extrabold">Learn Music / Phylosophy for the</h1>
-<h1 class="my-0 text-6xl font-extrabold text-accent">{'{Modern Era}'}</h1>
+<h1 class="mb-0 text-5xl font-extrabold">欢迎来到主页 </h1>
+<h1 class="my-0 text-6xl font-extrabold text-info">{"{ 搜索 }"}</h1>
 <p class="mb-0">by Feavel, Dec 29th 2022</p>
 
 <div class="divider" />
@@ -66,3 +66,10 @@ layout: home
 		</Card>
 	</div>
 </div>
+
+## 需要完成的内容：
+
+- [x] ~~页面 animation~~
+- [ ] 登录功能
+- [ ] 用户主页
+- [ ] 写帖子的功能

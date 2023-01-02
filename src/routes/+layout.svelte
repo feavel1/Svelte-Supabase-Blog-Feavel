@@ -1,7 +1,11 @@
 <script>
+	// @ts-nocheck
+
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import { themeChange } from 'theme-change';
+	import PageTransition from '../components/ui/PageTransition.svelte';
+	export let data;
 
 	onMount(() => {
 		themeChange(false);
@@ -36,7 +40,7 @@
 			</div>
 
 			<div class="hidden flex-1 lg:block">
-				<div class="btn-ghost btn mx-2 px-2"><a href="/home">feavel的部落</a></div>
+				<a href="/home"><div class="btn-ghost btn mx-2 px-2">feavel的部落</div></a>
 				<ul class="menu menu-horizontal">
 					<!-- Navbar menu content here -->
 					<div class="dropdown-hover dropdown-end dropdown">
@@ -155,9 +159,9 @@
 					</div>
 				</ul>
 			</div>
-			<div class="btn-ghost btn flex gap-2 px-4">
-				<a href="/my-account">我的账号</a>
-			</div>
+			<a href="/my-account">
+				<div class="btn-ghost btn flex gap-2 px-4">我的账号</div>
+			</a>
 			<div class="flex-2">
 				<!-- THEME CHANGER -->
 
@@ -188,11 +192,13 @@
 		</div>
 
 		<!-- Page content here -->
-		<div class="mt-28 px-6 pb-16 xl:pr-2">
-			<div class="flex flex-col-reverse justify-center gap-6 xl:flex-row ">
-				<slot />
+		<PageTransition key={data.url}>
+			<div class="mt-28 px-6 pb-16 xl:pr-2">
+				<div class="flex flex-col-reverse justify-center gap-6 xl:flex-row ">
+					<slot />
+				</div>
 			</div>
-		</div>
+		</PageTransition>
 	</div>
 
 	<!-- Drawer -->
