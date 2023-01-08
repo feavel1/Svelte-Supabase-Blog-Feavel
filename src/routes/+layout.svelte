@@ -4,12 +4,24 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import { themeChange } from 'theme-change';
+	import { supabase } from '$lib/supabaseClient';
+	import { invalidate } from '$app/navigation';
 	import PageTransition from '../components/ui/PageTransition.svelte';
 	export let data;
 
 	onMount(() => {
 		themeChange(false);
 		// 👆 false parameter is required for svelte
+
+		const {
+			data: { subscription }
+		} = supabase.auth.onAuthStateChange(() => {
+			invalidate('supabase:auth');
+		});
+
+		return () => {
+			subscription.unsubscribe();
+		};
 	});
 </script>
 
