@@ -33,7 +33,7 @@
 	<input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
 	<div class="drawer-content flex flex-col">
 		<!-- Navbar -->
-		<div class="navbar fixed w-full bg-base-300">
+		<div class="navbar fixed w-full border-b border-base-100 backdrop-blur-md">
 			<div class="flex-1 lg:hidden">
 				<label for="my-drawer-3" class="btn-ghost btn-square btn">
 					<svg
@@ -199,7 +199,7 @@
 				<!-- THEME CHANGER -->
 
 				<label class="swap-rotate swap btn-ghost btn mx-1">
-					<input type="checkbox" data-toggle-theme="mytheme,cupcake" data-act-class="ACTIVECLASS" />
+					<input type="checkbox" data-toggle-theme="mytheme,emerald" data-act-class="ACTIVECLASS" />
 
 					<svg
 						class="swap-on h-5 w-5 fill-current"

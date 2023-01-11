@@ -74,61 +74,7 @@
 				</div>
 			</div>
 		</CardPost>
-		<CardPost>
-			<div class="card-body">
-				<h2 class="card-title">第二个帖子</h2>
-				<p>帖子内容...</p>
-				<div class="card-actions justify-between">
-					<button class="btn-primary btn">x个赞</button>
-					<button class="btn-primary btn">评论</button>
-				</div>
-				<div class="mt-10">
-					用户「邮箱名」说：
-					<div class="rounded-lg bg-neutral p-2 text-neutral-content">评论</div>
-				</div>
-			</div>
-		</CardPost>
-		<CardPost>
-			<div class="card-body">
-				<h2 class="card-title">第二个帖子</h2>
-				<p>帖子内容...</p>
-				<div class="card-actions justify-between">
-					<button class="btn-primary btn">x个赞</button>
-					<button class="btn-primary btn">评论</button>
-				</div>
-				<div class="mt-10">
-					用户「邮箱名」说：
-					<div class="rounded-lg bg-neutral p-2 text-neutral-content">评论</div>
-				</div>
-			</div>
-		</CardPost>
-		<CardPost>
-			<div class="card-body">
-				<h2 class="card-title">第二个帖子</h2>
-				<p>帖子内容...</p>
-				<div class="card-actions justify-between">
-					<button class="btn-primary btn">x个赞</button>
-					<button class="btn-primary btn">评论</button>
-				</div>
-				<div class="mt-10">
-					用户「邮箱名」说：
-					<div class="rounded-lg bg-neutral p-2 text-neutral-content">评论</div>
-				</div>
-			</div>
-		</CardPost>
-		<CardPost>
-			<div class="card-body">
-				<h2 class="card-title">第二个帖子</h2>
-				<p>帖子内容...</p>
-				<div class="card-actions justify-between">
-					<button class="btn-primary btn">x个赞</button>
-					<button class="btn-primary btn">评论</button>
-				</div>
-				<div class="mt-10">
-					用户「邮箱名」说：
-					<div class="rounded-lg bg-neutral p-2 text-neutral-content">评论</div>
-				</div>
-			</div>
-		</CardPost>
 	</div>
+
+	<button class="btn-primary btn mx-auto w-fit">加载更多</button>
 </div>

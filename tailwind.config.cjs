@@ -12,6 +12,7 @@ module.exports = {
 			'cupcake',
 			'dark',
 			'cmyk',
+			'emerald',
 			{
 				mytheme: {
 					primary: '#f5f5f4',
