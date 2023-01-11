@@ -5,8 +5,8 @@
 </script>
 
 <svelte:head>
-	<title>Supabase + SvelteKit</title>
-	<meta name="description" content="SvelteKit using supabase-js v2" />
+	<title>My Account</title>
+	<meta name="description" content="My account" />
 </svelte:head>
 
 {#if !$page.data.session}

@@ -66,10 +66,10 @@
 									<span>音乐</span>
 								</li>
 								<li>
-									<a
-										>音乐制作
-										<div class="badge-primary badge">NEW!</div></a
-									>
+									<a>
+										音乐制作
+										<div class="badge">WIP</div>
+									</a>
 								</li>
 								<li>
 									<a>
@@ -147,6 +147,11 @@
 									<span>BLOG</span>
 								</li>
 								<li>
+									<a href="/community">
+										博客主页 <div class="badge-primary badge">New!</div>
+									</a>
+								</li>
+								<li>
 									<a href="/community/guide">
 										阅读博客规则 <div class="badge-primary badge">New!</div>
 									</a>
@@ -154,18 +159,34 @@
 								<li>
 									<a>
 										我的博客
-										<div class="badge">WIP</div></a
-									>
+										<div class="badge">WIP</div>
+									</a>
 								</li>
 							</div>
 							<div class="menu">
 								<li class="menu-title">
 									<span>特殊服务</span>
 								</li>
-								<li><a>贡献</a></li>
-								<li><a>技术支持</a></li>
-								<li><a>赞助</a></li>
-								<li><a>关于网站</a></li>
+								<li>
+									<a
+										>贡献 <div class="badge">WIP</div></a
+									>
+								</li>
+								<li>
+									<a
+										>技术支持 <div class="badge">WIP</div></a
+									>
+								</li>
+								<li>
+									<a
+										>赞助 <div class="badge">WIP</div></a
+									>
+								</li>
+								<li>
+									<a
+										>关于网站 <div class="badge">WIP</div></a
+									>
+								</li>
 							</div>
 						</ul>
 					</div>

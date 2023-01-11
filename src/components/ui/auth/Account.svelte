@@ -81,30 +81,43 @@
 	}
 </script>
 
-<form class="form-widget" on:submit|preventDefault={updateProfile}>
+<form class="form-control w-full max-w-xs" on:submit|preventDefault={updateProfile}>
 	<div>
-		<label for="email">Email</label>
-		<input id="email" type="text" value={session.user.email} disabled />
-	</div>
-	<div>
-		<label for="username">Name</label>
-		<input id="username" type="text" bind:value={username} />
-	</div>
-	<div>
-		<label for="website">Website</label>
-		<input id="website" type="website" bind:value={website} />
-	</div>
-
-	<div>
+		<label class="label" for="email">Email</label>
 		<input
-			type="submit"
-			class="button primary block"
-			value={loading ? 'Loading...' : 'Update'}
-			disabled={loading}
+			class="input-bordered input w-full max-w-xs"
+			id="email"
+			type="text"
+			value={session.user.email}
+			disabled
+		/>
+	</div>
+	<div>
+		<label class="label" for="username">名字</label>
+		<input
+			class="input-bordered input w-full max-w-xs"
+			id="username"
+			type="text"
+			bind:value={username}
+		/>
+	</div>
+	<div>
+		<label class="label" for="website">用户网址</label>
+		<input
+			class="input-bordered input w-full max-w-xs"
+			id="website"
+			type="website"
+			bind:value={website}
 		/>
 	</div>
 
-	<div>
-		<button class="button block" on:click={signOut} disabled={loading}>Sign Out</button>
+	<div class="mt-4 flex justify-between">
+		<input
+			type="submit"
+			class="btn-primary btn"
+			value={loading ? '加载中...' : '更新信息'}
+			disabled={loading}
+		/>
+		<button class="btn-secondary btn" on:click={signOut} disabled={loading}>退出登录</button>
 	</div>
 </form>
