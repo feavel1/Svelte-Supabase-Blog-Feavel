@@ -5,8 +5,8 @@
 </script>
 
 <svelte:head>
-	<title>My Account</title>
-	<meta name="description" content="My account" />
+	<title>我的账号 - Feavel's Camp</title>
+	<meta name="description" content="我的账号" />
 </svelte:head>
 
 {#if !$page.data.session}

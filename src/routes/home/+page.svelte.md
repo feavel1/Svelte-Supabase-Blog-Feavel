@@ -32,7 +32,7 @@ layout: home
 				<h2 class="card-title text-accent">音乐</h2>
 				<p>是否对音乐制作、混音、录制、母带等感兴趣？</p>
 				<div class="card-actions justify-end">
-					<button class="btn-primary btn">阅读</button>
+					<a href="learn/music"><button class="btn-primary btn">阅读</button></a>
 				</div>
 			</div>
 		</Card>
@@ -50,7 +50,7 @@ layout: home
 				<h2 class="card-title text-accent">论坛</h2>
 				<p>可以在论谈里查看/发布自己喜欢的内容。</p>
 				<div class="card-actions justify-end">
-					<button class="btn-primary btn">查看帖子</button>
+				<a href="/community">	<button class="btn-primary btn">查看帖子</button></a>
 				</div>
 			</div>
 		</Card>
@@ -59,7 +59,7 @@ layout: home
 				<h2 class="card-title text-accent">我的账号</h2>
 				<p>查看自己的账号状态</p>
 				<div class="card-actions justify-end">
-					<button class="btn-primary btn">查看</button>
+				<a href="/my-account"><button class="btn-primary btn">查看</button></a>	
 				</div>
 			</div>
 		</Card>
