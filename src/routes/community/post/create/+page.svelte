@@ -1,18 +1,17 @@
 <script>
 	import BackTo from '../../../../components/ui/BackTo.svelte';
-	import { supabase } from '$lib/supabaseClient';
+	import { createPost } from '$lib/services';
 
-	// @ts-ignore
-	async function createPost({ content, email }) {
-		const { data, error } = await supabase.from('posts').insert({ content, email });
-		return { data, error };
+	function handleCreatePost() {
+		let postTitle = '';
+		let postContent = '';
 	}
 </script>
 
 <div class="w-full max-w-3xl">
 	<BackTo />
 	<h1 class="mb-4 text-6xl">创建帖子</h1>
-	<form class="form-control">
+	<form class="form-control" on:submit|preventDefault={handleCreatePost}>
 		<div>
 			<label class="label" for="email">帖子标题</label>
 			<input class="input-bordered input-accent input w-full max-w-xs" />

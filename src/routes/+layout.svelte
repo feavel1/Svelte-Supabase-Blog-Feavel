@@ -1,6 +1,5 @@
 <script>
 	// @ts-nocheck
-
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import { themeChange } from 'theme-change';
@@ -199,7 +198,7 @@
 			<div class="flex-2">
 				<!-- THEME CHANGER -->
 
-				<label class="swap-rotate swap btn-ghost btn mx-1">
+				<label class="swap btn-ghost swap-rotate btn mx-1">
 					<input type="checkbox" data-toggle-theme="mytheme,emerald" data-act-class="ACTIVECLASS" />
 
 					<svg
