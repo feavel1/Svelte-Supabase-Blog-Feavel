@@ -7,6 +7,7 @@
 	import { supabase } from '$lib/supabaseClient';
 	import { invalidate } from '$app/navigation';
 	import PageTransition from '../components/ui/PageTransition.svelte';
+
 	export let data;
 
 	onMount(() => {

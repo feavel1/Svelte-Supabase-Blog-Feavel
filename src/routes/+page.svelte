@@ -1,8 +1,17 @@
 <script>
 	import PageBlock from '../components/ui/PageBlock.svelte';
-	import { onDestroy, onMount } from 'svelte';
+	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import InView from '../components/ui/InView.svelte';
+
+	import { browser } from '$app/environment';
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
+
+	if (browser && $page.data.session) {
+		goto('/home');
+	}
+
 	let ready = false;
 	onMount(() => (ready = true));
 </script>
