@@ -1,6 +1,5 @@
 <script>
 	// @ts-nocheck
-
 	import { page } from '$app/stores';
 	import { supabase } from '$lib/supabaseClient';
 	import Time from 'svelte-time';
@@ -59,6 +58,22 @@
 		<div class="divider mb-0">评论区</div>
 		<div class="flex w-full flex-col">
 			<!-- Comment Form -->
+
+			{#each comments as comment}
+				<div class="chat  flex flex-col">
+					<!-- <div class="chat-image avatar">
+						<div class="w-10 rounded-full">
+							<img src="https://placeimg.com/192/192/people" />
+						</div>
+					</div> -->
+					<div class="chat-header text-xs">
+						{comment.email}
+					</div>
+					<div class="chat-bubble-primary w-fit rounded-md px-2">{comment.content}</div>
+					<Time relative class="text-xs opacity-50" timestamp={comment.created_at} />
+				</div>
+			{/each}
+
 			<form class="form-control mb-5" on:submit|preventDefault={() => (submitComment = true)}>
 				<label for="comment" class="label">
 					<span class="label-text" />
@@ -84,21 +99,6 @@
 					{/await}
 				{/if}
 			</form>
-
-			{#each comments as comment}
-				<div class="chat  flex flex-col">
-					<!-- <div class="chat-image avatar">
-						<div class="w-10 rounded-full">
-							<img src="https://placeimg.com/192/192/people" />
-						</div>
-					</div> -->
-					<div class="chat-header text-xs">
-						{comment.email}
-					</div>
-					<div class="chat-bubble-primary w-fit rounded-md px-2">{comment.content}</div>
-					<Time relative class="text-xs opacity-50" timestamp={comment.created_at} />
-				</div>
-			{/each}
 		</div>
 	</div>
 </div>
