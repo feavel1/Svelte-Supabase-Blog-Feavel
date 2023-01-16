@@ -1,5 +1,16 @@
 <script>
 	import CardPost from '../../components/ui/CardPost.svelte';
+	import { supabase } from '$lib/supabaseClient';
+
+	async function fetchPosts() {
+		const { data, error } = await supabase
+			.from('posts')
+			.select('*')
+			.order('created_at', { ascending: false })
+			.limit(5);
+		if (error) throw new Error(error.message);
+		return data;
+	}
 </script>
 
 <svelte:head>
@@ -14,66 +25,33 @@
 
 	<h2 class="text-3xl">用户创建的帖子：</h2>
 
-	<div class="flex flex-col content-center justify-center gap-3 md:grid md:grid-cols-2">
-		<CardPost>
-			<div class="card-body">
-				<h2 class="card-title">音乐是没有意义的</h2>
-				<p>音乐是全世界最...</p>
-
-				<div class="card-actions mt-10 justify-between">
-					<button class="btn-primary btn">0个赞❤️</button>
-					<button class="btn-primary btn">添加评论💬</button>
-				</div>
-				<div class="mt-10">
-					<div>
-						用户「邮箱名」说：
-						<div class="rounded-lg bg-neutral p-2 text-neutral-content">评论</div>
+	<div class="grid-cols-1 gap-5 lg:grid lg:grid-cols-2">
+		{#await fetchPosts()}
+			<div>Loading...</div>
+		{:then data}
+			{#each data as post}
+				<CardPost>
+					<div class="card-body">
+						<div class="w-56">
+							<h2 class="card-title">{post.title}</h2>
+							<p class="truncate">{post.content}</p>
+						</div>
+						<div class="card-actions mt-10 justify-between">
+							<button class="btn-primary btn">0赞❤️</button>
+						</div>
+						<div class="mt-5 w-full flex flex-col">
+							添加评论：
+							<div>
+								<textarea class="rounded-lg w-full bg-neutral p-2 text-neutral-content" />
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-		</CardPost>
-		<CardPost>
-			<div class="card-body">
-				<h2 class="card-title">第二个帖子</h2>
-				<p>帖子内容...</p>
-				<div class="card-actions justify-between">
-					<button class="btn-primary btn">x个赞</button>
-					<button class="btn-primary btn">评论</button>
-				</div>
-				<div class="mt-10">
-					用户「邮箱名」说：
-					<div class="rounded-lg bg-neutral p-2 text-neutral-content">评论</div>
-				</div>
-			</div>
-		</CardPost>
-		<CardPost>
-			<div class="card-body">
-				<h2 class="card-title">第二个帖子</h2>
-				<p>帖子内容...</p>
-				<div class="card-actions justify-between">
-					<button class="btn-primary btn">x个赞</button>
-					<button class="btn-primary btn">评论</button>
-				</div>
-				<div class="mt-10">
-					用户「邮箱名」说：
-					<div class="rounded-lg bg-neutral p-2 text-neutral-content">评论</div>
-				</div>
-			</div>
-		</CardPost>
-		<CardPost>
-			<div class="card-body">
-				<h2 class="card-title">第二个帖子</h2>
-				<p>帖子内容...</p>
-				<div class="card-actions justify-between">
-					<button class="btn-primary btn">x个赞</button>
-					<button class="btn-primary btn">评论</button>
-				</div>
-				<div class="mt-10">
-					用户「邮箱名」说：
-					<div class="rounded-lg bg-neutral p-2 text-neutral-content">评论</div>
-				</div>
-			</div>
-		</CardPost>
+				</CardPost>
+			{/each}
+		{:catch error}
+			<p>Something went wrong while fetching the data:</p>
+			<pre>{error}</pre>
+		{/await}
 	</div>
 
 	<button class="btn-primary btn mx-auto w-fit">加载更多</button>

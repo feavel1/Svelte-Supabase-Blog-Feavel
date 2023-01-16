@@ -17,17 +17,17 @@ layout: home
 
 现在网站还在制作中，但是很多内容已经可以查看了 💕
 
-要是您愿意帮忙更新，请在上方‘contribute’查看方式。
+要是您愿意帮忙更新，请在上方‘贡献’查看方式。
 
 我们支持所有类型的帮助。
 
-进度：◼︎◼︎◻︎◻︎◻︎◻︎◻︎◻︎◻︎◻︎
+进度：◼︎◼︎◼︎◼︎◼︎◻︎◻︎◻︎◻︎◻︎
 
-## 现在官网上可学习的东西：
+## 现在官网上可以使用的功能：
 
 <div class="first-letter:text-5xl first-letter:text-blue-600">
 	<div class="flex justify-center content-center md:grid-cols-2 flex-col gap-3 md:grid">
-		<Card>
+		<!-- <Card>
 			<div class="card-body">
 				<h2 class="card-title text-accent">音乐</h2>
 				<p>是否对音乐制作、混音、录制、母带等感兴趣？</p>
@@ -44,7 +44,7 @@ layout: home
 					<button class="btn-primary btn">查看内容</button>
 				</div>
 			</div>
-		</Card>
+		</Card> -->
 		<Card>
 			<div class="card-body">
 				<h2 class="card-title text-accent">论坛</h2>
@@ -71,4 +71,10 @@ layout: home
 - [x] 页面 animation
 - [x] 登录功能
 - [x] 用户主页
-- [ ] 写帖子的功能
+- [x] 写帖子的功能
+- [ ] 点赞功能
+- [ ] 评论功能
+- [ ] 加载更多帖子
+- [ ] 上传图片（待定）
+- [ ] 完善界面
+- [ ] 动态页面
