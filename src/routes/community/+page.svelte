@@ -1,14 +1,35 @@
 <script>
+	// @ts-nocheck
+
 	import CardPost from '../../components/ui/CardPost.svelte';
 	import { supabase } from '$lib/supabaseClient';
 
 	async function fetchPosts() {
-		const { data, error } = await supabase
+		let { data, error } = await supabase
 			.from('posts')
 			.select('*')
 			.order('created_at', { ascending: false })
 			.limit(5);
 		if (error) throw new Error(error.message);
+
+		data = await Promise.all(
+			data.map(async (post) => {
+				const [{ count: likes }, { data: comments }] = await Promise.all([
+					await supabase
+						.from('likes')
+						.select('id', { count: 'estimated', head: true })
+						.eq('post', post.id),
+					await supabase.from('comments').select('*').eq('post', post.id)
+				]);
+				if (error) throw new Error(error.message);
+
+				return {
+					...post,
+					likes,
+					comments
+				};
+			})
+		);
 		return data;
 	}
 </script>
@@ -29,7 +50,7 @@
 		{#await fetchPosts()}
 			<div>Loading...</div>
 		{:then data}
-			{#each data as post}
+			{#each data || [] as post}
 				<CardPost>
 					<div class="card-body">
 						<div class="w-56">
