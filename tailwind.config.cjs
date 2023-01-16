@@ -32,6 +32,25 @@ module.exports = {
 					warning: '#fde68a',
 
 					error: '#fecaca'
+				},
+				mylighttheme: {
+					primary: '#c7d2fe',
+
+					secondary: '#d8b4fe',
+
+					accent: '#d9f99d',
+
+					neutral: '#191D24',
+
+					'base-100': '#f3f4f6',
+
+					info: '#3ABFF8',
+
+					success: '#36D399',
+
+					warning: '#FBBD23',
+
+					error: '#F87272'
 				}
 			}
 		],

@@ -1,6 +1,4 @@
 <script>
-	// @ts-nocheck
-
 	import CardPost from '../../components/ui/CardPost.svelte';
 	import { supabase } from '$lib/supabaseClient';
 
@@ -13,13 +11,19 @@
 		if (error) throw new Error(error.message);
 
 		data = await Promise.all(
+			// @ts-ignore
 			data.map(async (post) => {
 				const [{ count: likes }, { data: comments }] = await Promise.all([
 					await supabase
 						.from('likes')
 						.select('id', { count: 'estimated', head: true })
 						.eq('post', post.id),
-					await supabase.from('comments').select('*').eq('post', post.id)
+					await supabase
+						.from('comments')
+						.select('*')
+						.order('created_at', { ascending: false })
+						.eq('post', post.id)
+						.limit(3)
 				]);
 				if (error) throw new Error(error.message);
 
@@ -32,6 +36,8 @@
 		);
 		return data;
 	}
+
+	// console.log(fetchPosts());
 </script>
 
 <svelte:head>
@@ -51,23 +57,7 @@
 			<div>Loading...</div>
 		{:then data}
 			{#each data || [] as post}
-				<CardPost>
-					<div class="card-body">
-						<div class="w-56">
-							<h2 class="card-title">{post.title}</h2>
-							<p class="truncate">{post.content}</p>
-						</div>
-						<div class="card-actions mt-10 justify-between">
-							<button class="btn-primary btn">0赞❤️</button>
-						</div>
-						<div class="mt-5 w-full flex flex-col">
-							添加评论：
-							<div>
-								<textarea class="rounded-lg w-full bg-neutral p-2 text-neutral-content" />
-							</div>
-						</div>
-					</div>
-				</CardPost>
+				<CardPost {...post} />
 			{/each}
 		{:catch error}
 			<p>Something went wrong while fetching the data:</p>

@@ -16,7 +16,7 @@
 	</div>
 
 	<div class="divider" />
-	<div class="first-letter:text-5xl first-letter:text-blue-600">
+	<div class="first-letter:text-blue-600">
 		<slot />
 	</div>
 </div>

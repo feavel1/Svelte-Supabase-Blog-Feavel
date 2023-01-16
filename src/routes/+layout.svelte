@@ -199,7 +199,11 @@
 				<!-- THEME CHANGER -->
 
 				<label class="swap btn-ghost swap-rotate btn mx-1">
-					<input type="checkbox" data-toggle-theme="mytheme,emerald" data-act-class="ACTIVECLASS" />
+					<input
+						type="checkbox"
+						data-toggle-theme="mytheme,mylighttheme"
+						data-act-class="ACTIVECLASS"
+					/>
 
 					<svg
 						class="swap-on h-5 w-5 fill-current"
