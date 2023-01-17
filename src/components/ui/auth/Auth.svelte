@@ -3,21 +3,15 @@
 	import { supabase } from '$lib/supabaseClient';
 
 	let loading = false;
-	let email: string;
+	let emailToVerify: string;
 
 	const handleLogin = async () => {
-		try {
-			loading = true;
-			const { error } = await supabase.auth.signInWithOtp({ email });
-			if (error) throw error;
-			alert('Check your email for the login link!');
-		} catch (error) {
-			if (error instanceof Error) {
-				alert(error.message);
-			}
-		} finally {
-			loading = false;
-		}
+		const { data, error } = await supabase.auth.signInWithOtp({
+			email: emailToVerify
+		});
+		if (error) throw new Error(error.message);
+		console.log(data);
+		return data;
 	};
 </script>
 
@@ -37,7 +31,12 @@
 					<label class="label">
 						<span class="label-text">邮箱📮</span>
 					</label>
-					<input type="text" placeholder="email" class="input-bordered input" bind:value={email} />
+					<input
+						type="text"
+						placeholder="email"
+						class="input-bordered input"
+						bind:value={emailToVerify}
+					/>
 				</div>
 
 				<div class="form-control mt-6">
