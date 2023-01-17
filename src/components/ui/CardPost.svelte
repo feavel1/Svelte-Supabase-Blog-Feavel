@@ -62,7 +62,7 @@
 				{postLike}赞❤️
 			</button>
 			<a class="btn-primary btn" href="community/post/{id}">
-				{#if (email = $page.data?.session?.user.email)}阅读自己的文章{:else}阅读文章{/if}
+				{#if email === $page.data?.session?.user.email}阅读自己的文章{:else}阅读文章{/if}
 			</a>
 		</div>
 		<!-- comment section -->
