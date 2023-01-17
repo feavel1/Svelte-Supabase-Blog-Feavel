@@ -1,8 +1,8 @@
 import { supabase } from '$lib/supabaseClient';
+import type { PageLoad } from './$types';
 
-// @ts-ignore
-export const load = async ({ params }) => {
-	async function fetchPost(postId: Number) {
+export const load = (async ({ params }) => {
+	async function fetchPost(postId: String) {
 		let { data, error } = await supabase
 			.from('posts')
 			.select('*')
@@ -12,16 +12,7 @@ export const load = async ({ params }) => {
 		return data;
 	}
 
-	async function fetchLikes(postId: Number) {
-		let { count, error } = await supabase
-			.from('likes')
-			.select('id', { count: 'estimated', head: true })
-			.eq('post', postId);
-		if (error) throw new Error(error.message);
-		return count;
-	}
-
-	async function fetchComments(postId: Number) {
+	async function fetchComments(postId: String) {
 		let { data, error } = await supabase.from('comments').select('*').eq('post', postId);
 		if (error) throw new Error(error.message);
 		return data;
@@ -29,7 +20,6 @@ export const load = async ({ params }) => {
 
 	return {
 		post: fetchPost(params.postId),
-		likes: fetchLikes(params.postId),
 		comments: fetchComments(params.postId)
 	};
-};
+}) satisfies PageLoad;

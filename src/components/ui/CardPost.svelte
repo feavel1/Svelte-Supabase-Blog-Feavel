@@ -1,41 +1,40 @@
-<script>
-	// @ts-nocheck
+<script lang="ts">
 	import { page } from '$app/stores';
 	import { supabase } from '$lib/supabaseClient';
-	import Time from 'svelte-time';
 
-	export let id,
-		email,
-		title,
-		content,
-		likes = 0,
-		comments = [],
-		created_at;
+	export let id: string, email: string, title: string, content: string, likes;
+
+	let postLike = likes.likes;
+
+	let disabled: boolean;
+	if (!$page.data?.session?.user.email) {
+		disabled = true;
+	} else {
+		disabled = false;
+	}
 
 	function addLike() {
-		likes += 1;
-		async function createLike() {
-			const { data, error } = await supabase
-				.from('likes')
-				.insert({ user: $page.data?.session.user.email, post: id });
+		async function addLike() {
+			const { error } = await supabase.from('likes').update({ likes: postLike }).eq('id', id);
 			if (error) throw new Error(error.message);
-			return { data };
+			console.log(error);
 		}
-		createLike();
+		postLike += 1;
+		addLike();
 	}
 
-	let commentContent,
-		commentPost = id,
-		commentEmail = $page.data?.session.user.email;
-	let submitComment = false;
+	// let commentContent,
+	// 	commentPost = id,
+	// 	commentEmail = $page.data?.session.user.email;
+	// let submitComment = false;
 
-	async function handleCreateComment() {
-		const { data, error } = await supabase
-			.from('comments')
-			.insert([{ content: commentContent, email: commentEmail, post: commentPost }]);
-		if (error) throw new Error(error.message);
-		return data;
-	}
+	// async function handleCreateComment() {
+	// 	const { data, error } = await supabase
+	// 		.from('comments')
+	// 		.insert([{ content: commentContent, email: commentEmail, post: commentPost }]);
+	// 	if (error) throw new Error(error.message);
+	// 	return data;
+	// }
 </script>
 
 <div
@@ -45,36 +44,34 @@
 		<div class="w-80">
 			<h2 class="card-title">{title}</h2>
 			<p class="truncate">{content}</p>
-
-			<div class="badge">作者: {email}</div>
+			<p class="badge">作者: {email}</p>
 		</div>
 		<div class="card-actions mt-10 justify-between">
-			<button class="btn-primary btn" on:click={addLike}>{likes}赞❤️</button>
-			<a class="btn-primary btn" href="community/post/{id}"
-				>{#if (email = $page.data?.session?.user.email)}编辑文章{:else}阅读文章{/if}</a
-			>
+			<button {disabled} class="btn-primary btn" on:click={addLike}>{postLike}赞❤️</button>
+			<a class="btn-primary btn" href="community/post/{id}">
+				{#if (email = $page.data?.session?.user.email)}编辑文章{:else}阅读文章{/if}
+			</a>
 		</div>
 		<!-- comment section -->
-		<div class="divider mb-0">评论区</div>
+		<!-- <div class="divider mb-0">评论区</div> -->
 		<div class="flex w-full flex-col">
-			<!-- Comment Form -->
-
+			<!-- 
 			{#each comments as comment}
 				<div class="chat  flex flex-col">
-					<!-- <div class="chat-image avatar">
+					<div class="chat-image avatar">
 						<div class="w-10 rounded-full">
 							<img src="https://placeimg.com/192/192/people" />
 						</div>
-					</div> -->
+					</div>
 					<div class="chat-header text-xs">
 						{comment.email}
 					</div>
 					<div class="chat-bubble-primary w-fit rounded-md px-2">{comment.content}</div>
 					<Time relative class="text-xs opacity-50" timestamp={comment.created_at} />
 				</div>
-			{/each}
+			{/each} -->
 
-			<form class="form-control mb-5" on:submit|preventDefault={() => (submitComment = true)}>
+			<!-- <form class="form-control mb-5" on:submit|preventDefault={() => (submitComment = true)}>
 				<label for="comment" class="label">
 					<span class="label-text" />
 					<button class="btn-xs btn" on:click={() => (submitComment = false)}>添加评论</button>
@@ -98,7 +95,7 @@
 						</label>
 					{/await}
 				{/if}
-			</form>
+			</form> -->
 		</div>
 	</div>
 </div>
