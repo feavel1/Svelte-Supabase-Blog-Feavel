@@ -4,13 +4,24 @@
 
 	export let id: string, email: string, title: string, content: string, likes;
 
-	let postLike = likes.likes;
+	let likeButtonDisabled: boolean, postLike: number;
 
-	let disabled: boolean;
-	if (!$page.data?.session?.user.email) {
-		disabled = true;
+	if (likes === null) {
+		postLike = 0;
+		async function createLike() {
+			const { error } = await supabase.from('likes').insert({ likes: postLike, id: id });
+			if (error) throw new Error(error.message);
+			console.log(error);
+		}
+		createLike();
 	} else {
-		disabled = false;
+		postLike = likes.likes;
+	}
+
+	if (!$page.data?.session?.user.email) {
+		likeButtonDisabled = true;
+	} else {
+		likeButtonDisabled = false;
 	}
 
 	function addLike() {
@@ -47,9 +58,11 @@
 			<p class="badge">作者: {email}</p>
 		</div>
 		<div class="card-actions mt-10 justify-between">
-			<button {disabled} class="btn-primary btn" on:click={addLike}>{postLike}赞❤️</button>
+			<button disabled={likeButtonDisabled} class="btn-primary btn" on:click={addLike}>
+				{postLike}赞❤️
+			</button>
 			<a class="btn-primary btn" href="community/post/{id}">
-				{#if (email = $page.data?.session?.user.email)}编辑文章{:else}阅读文章{/if}
+				{#if (email = $page.data?.session?.user.email)}阅读自己的文章{:else}阅读文章{/if}
 			</a>
 		</div>
 		<!-- comment section -->

@@ -1,18 +1,20 @@
-<script>
-	// @ts-nocheck
-
+<script lang="ts">
 	import BackTo from '../../../../components/ui/BackTo.svelte';
 	import { page } from '$app/stores';
 	import { supabase } from '$lib/supabaseClient';
 
-	let submit = false;
-	let postTitle, postContent;
-	let postEmail = $page.data.session.user.email;
+	let submit = false,
+		postTitle: string,
+		postContent: string,
+		postEmail = $page.data.session.user.email,
+		postCreator = $page.data.session.user.id;
 
 	async function handleCreatePost() {
 		const { data, error } = await supabase
 			.from('posts')
-			.insert([{ title: postTitle, content: postContent, email: postEmail }]);
+			.insert([
+				{ title: postTitle, content: postContent, email: postEmail, post_creator_id: postCreator }
+			]);
 		if (error) throw new Error(error.message);
 		return data;
 	}
