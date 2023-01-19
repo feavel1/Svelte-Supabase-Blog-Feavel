@@ -2,12 +2,19 @@
 	import CardPost from '../../components/ui/CardPost.svelte';
 	import { supabase } from '$lib/supabaseClient';
 
+	let numberOfPosts = 6;
+
+	function addPosts() {
+		numberOfPosts += 6;
+		fetchPosts();
+	}
+
 	async function fetchPosts() {
 		const { data, error } = await supabase
 			.from('posts')
 			.select(`*,likes (likes)`)
 			.order('created_at', { ascending: false })
-			.limit(5);
+			.limit(numberOfPosts);
 		if (error) throw new Error(error.message);
 		console.log(data);
 		return data;
@@ -39,5 +46,5 @@
 		{/await}
 	</div>
 
-	<button class="btn-primary btn mx-auto w-fit">加载更多</button>
+	<button class="btn-primary btn mx-auto w-fit" on:click|preventDefault={addPosts}>加载更多</button>
 </div>

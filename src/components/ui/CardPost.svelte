@@ -53,7 +53,7 @@
 >
 	<div class="card-body">
 		<div class="w-80">
-			<h2 class="card-title">{title}</h2>
+			<h2 class="card-title truncate">{title}</h2>
 			<p class="truncate">{content}</p>
 			<p class="badge">作者: {email}</p>
 		</div>

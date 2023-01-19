@@ -1,7 +1,6 @@
-<script>
-	// @ts-nocheck
+<script lang="ts">
 	import { fly } from 'svelte/transition';
-	export let key;
+	export let key: URL;
 </script>
 
 {#key key}

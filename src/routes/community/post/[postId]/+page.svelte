@@ -21,7 +21,7 @@
 		inputHint = '请先登录。';
 	} else {
 		commentDisabled === false;
-		inputHint = '如何评价？';
+		inputHint = '评论';
 	}
 
 	async function handleCreateComment() {
