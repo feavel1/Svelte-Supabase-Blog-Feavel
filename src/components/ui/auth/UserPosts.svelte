@@ -1,28 +1,62 @@
 <script lang="ts">
+	import { supabase } from '$lib/supabaseClient';
 	import CardPostUser from '../CardPostUser.svelte';
-	export let session;
-	console.log(session.user.id);
+	export let id: number, title: string, content: string, likes;
+
+	let likeButtonDisabled: boolean, postLike: number;
+
+	if (likes === null) {
+		postLike = 0;
+		async function createLike() {
+			const { error } = await supabase.from('likes').insert({ likes: postLike, id: id });
+			if (error) throw new Error(error.message);
+			console.log(error);
+		}
+		createLike();
+	} else {
+		postLike = likes.likes;
+	}
+
+	function addLike() {
+		async function addLike() {
+			const { error } = await supabase.from('likes').update({ likes: postLike }).eq('id', id);
+			if (error) throw new Error(error.message);
+			console.log(error);
+		}
+		postLike += 1;
+		addLike();
+	}
+
+	async function fetchComments() {
+		let { data, error } = await supabase.from('comments').select('*').eq('post_id', id);
+		if (error) throw new Error(error.message);
+		return data!;
+	}
 </script>
 
 <CardPostUser>
 	<div class="card-body">
-		<h2 class="card-title">音乐是没有意义的</h2>
-		<p>音乐是全世界最...</p>
+		<div class="w-80">
+			<h2 class="card-title ">{title}</h2>
+			<p class="truncate">{content}</p>
+		</div>
 		<div class="card-actions justify-between">
-			<button class="btn-primary btn">0个赞❤️</button>
+			<button on:click={addLike} class="btn-primary btn">{postLike}个赞❤️</button>
 			<a href="/community/post/edit"><button class="btn-primary btn">编辑📑</button></a>
 		</div>
-		<div class="">
-			<div>
-				用户「邮箱名」说：
-				<div class="rounded-lg bg-neutral p-2 text-neutral-content">评论</div>
-			</div>
-		</div>
-		<div class="">
-			<div>
-				用户「邮箱名」说：
-				<div class="rounded-lg bg-neutral p-2 text-neutral-content">评论</div>
-			</div>
-		</div>
+		<div class="divider my-0">评论</div>
+		{#await fetchComments()}
+			<div>加载中...</div>
+		{:then data}
+			{#each data as comment}
+				<div>
+					用户「{comment.email}」说：
+					<div class="rounded-lg bg-neutral p-2 text-neutral-content">{comment.content}</div>
+				</div>
+			{/each}
+		{:catch error}
+			<p>在捕捉数据时出了点问题:</p>
+			<pre>{error}</pre>
+		{/await}
 	</div>
 </CardPostUser>

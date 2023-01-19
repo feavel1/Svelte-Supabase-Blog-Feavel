@@ -81,6 +81,17 @@
 			loading = false;
 		}
 	}
+
+	async function fetchPosts() {
+		const { data, error } = await supabase
+			.from('posts')
+			.select(`*,likes (likes)`)
+			.eq('post_creator_id', session.user.id)
+			.order('created_at', { ascending: false })
+			.limit(3);
+		if (error) throw new Error(error.message);
+		return data;
+	}
 </script>
 
 <div class="grid w-full max-w-4xl grid-cols-1 gap-4 md:grid-cols-2">
@@ -129,6 +140,15 @@
 	<div class="mx-auto mt-12 w-full max-w-sm">
 		<h1 class="text-3xl">您创建的帖子：</h1>
 		<div class="divider" />
-		<UserPosts {session} />
+		{#await fetchPosts()}
+			<div>Loading...</div>
+		{:then data}
+			{#each data as post}
+				<UserPosts {...post} />
+			{/each}
+		{:catch error}
+			<p>Something went wrong while fetching the data:</p>
+			<pre>{error}</pre>
+		{/await}
 	</div>
 </div>
