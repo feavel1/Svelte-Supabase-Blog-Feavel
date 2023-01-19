@@ -3,7 +3,7 @@
 	import CardPostUser from '../CardPostUser.svelte';
 	export let id: number, title: string, content: string, likes;
 
-	let likeButtonDisabled: boolean, postLike: number;
+	let postLike: number;
 
 	if (likes === null) {
 		postLike = 0;
@@ -42,14 +42,14 @@
 		</div>
 		<div class="card-actions justify-between">
 			<button on:click={addLike} class="btn-primary btn">{postLike}个赞❤️</button>
-			<a href="/community/post/edit"><button class="btn-primary btn">编辑📑</button></a>
+			<a href="/community/post/edit/{id}"><button class="btn-primary btn">编辑📑</button></a>
 		</div>
 		<div class="divider my-0">评论</div>
 		{#await fetchComments()}
 			<div>加载中...</div>
 		{:then data}
 			{#each data as comment}
-				<div>
+				<div class="text-sm">
 					用户「{comment.email}」说：
 					<div class="rounded-lg bg-neutral p-2 text-neutral-content">{comment.content}</div>
 				</div>

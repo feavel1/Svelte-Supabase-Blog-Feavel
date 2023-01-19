@@ -2,7 +2,7 @@
 	import CardPost from '../../components/ui/CardPost.svelte';
 	import { supabase } from '$lib/supabaseClient';
 
-	let numberOfPosts = 1;
+	let numberOfPosts = 6;
 
 	async function addPosts() {
 		numberOfPosts += 1;
@@ -12,7 +12,7 @@
 	async function fetchPosts() {
 		const { data, error } = await supabase
 			.from('posts')
-			.select(`*,likes (likes)`)
+			.select(`*, likes (likes)`)
 			.order('created_at', { ascending: false })
 			.limit(numberOfPosts);
 		if (error) throw new Error(error.message);

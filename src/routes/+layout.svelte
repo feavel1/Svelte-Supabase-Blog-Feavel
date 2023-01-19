@@ -174,11 +174,6 @@
 									</a>
 								</li>
 								<li>
-									<a
-										>技术支持 <div class="badge">WIP</div>
-									</a>
-								</li>
-								<li>
 									<a>
 										赞助 <div class="badge">WIP</div>
 									</a>
