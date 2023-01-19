@@ -1,9 +1,9 @@
 ---
-layout: home
+layout: Home
 ---
 
 <script>
-	import Card from '../../../src/components/ui/Card.svelte';
+	import Card from '../../components/ui/Card.svelte';
 </script>
 
 <title>Home - Feavel's Camp</title>

@@ -1,12 +1,11 @@
 <script>
-	import PageBlock from '../components/ui/PageBlock.svelte';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-	import InView from '../components/ui/InView.svelte';
-
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+	import PageBlock from '../components/ui/PageBlock.svelte';
+	import InView from '../components/ui/InView.svelte';
 
 	if (browser && $page.data.session) {
 		goto('/home');
@@ -24,7 +23,7 @@
 					<h1 in:fly={{ x: -400, duration: 900 }} class="em text-6xl font-bold">标题</h1>
 					<p in:fly={{ x: -800, duration: 1200 }} class="text-3xl font-black">这里是。。。</p>
 					<p in:fly={{ x: 800, duration: 1500 }} class="">一段文字简单描述这里</p>
-					<div in:fly={{ y: 800, duration: 2000 }} class="mt-64">⬇️下滑</div>
+					<div in:fly={{ y: 800, duration: 2000 }} class="mt-64">⬇️ 下滑</div>
 				{/if}
 			</InView>
 		</PageBlock>

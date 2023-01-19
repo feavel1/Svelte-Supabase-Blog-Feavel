@@ -1,13 +1,19 @@
-<script>
+<script lang="ts">
 	// @ts-nocheck
-	export let title;
-	export let author;
-	export let date;
+
+	export let data;
+	export let form;
+	export let layout;
+
+	export let title = '标题';
+	export let author = '作者';
+	export let date = '日期';
 
 	import BackTo from '../ui/BackTo.svelte';
 </script>
 
-<title>Home - {title} </title>
+<title>Feavel's Camp - {title} </title>
+
 <div class="prose-xl prose w-full max-w-3xl">
 	<BackTo />
 	<div>

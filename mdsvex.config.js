@@ -11,13 +11,14 @@ const config = defineConfig({
 	smartypants: {
 		dashes: 'oldschool'
 	},
+
 	highlight: {
 		highlighter
 	},
 
 	layout: {
 		post: path.join(dirname, './src/components/layouts/post.svelte'),
-		home: path.join(dirname, './src/components/layouts/home.svelte'),
+		Home: path.join(dirname, './src/components/layouts/home.svelte'),
 		_: path.join(dirname, './src/components/layouts/home.svelte')
 	},
 
