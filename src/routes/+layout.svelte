@@ -1,13 +1,14 @@
-<script>
-	// @ts-nocheck
+<script lang="ts">
 	import '../app.css';
+	import type { PageData } from './$types';
+
 	import { onMount } from 'svelte';
 	import { themeChange } from 'theme-change';
 	import { supabase } from '$lib/supabaseClient';
 	import { invalidate } from '$app/navigation';
 	import PageTransition from '../components/ui/PageTransition.svelte';
 
-	export let data;
+	export let data: PageData;
 
 	onMount(() => {
 		themeChange(false);
@@ -168,24 +169,24 @@
 									<span>特殊服务</span>
 								</li>
 								<li>
-									<a
-										>贡献 <div class="badge">WIP</div></a
-									>
+									<a href="/community/guide/contribute">
+										贡献 <div class="badge-primary badge">New!</div>
+									</a>
 								</li>
 								<li>
 									<a
-										>技术支持 <div class="badge">WIP</div></a
-									>
+										>技术支持 <div class="badge">WIP</div>
+									</a>
 								</li>
 								<li>
-									<a
-										>赞助 <div class="badge">WIP</div></a
-									>
+									<a>
+										赞助 <div class="badge">WIP</div>
+									</a>
 								</li>
 								<li>
-									<a
-										>关于网站 <div class="badge">WIP</div></a
-									>
+									<a>
+										关于网站 <div class="badge">WIP</div>
+									</a>
 								</li>
 							</div>
 						</ul>
@@ -198,7 +199,7 @@
 			<div class="flex-2">
 				<!-- THEME CHANGER -->
 
-				<label class="swap btn-ghost swap-rotate btn mx-1">
+				<label class="swap-rotate swap btn-ghost btn mx-1">
 					<input
 						type="checkbox"
 						data-toggle-theme="mytheme,mylighttheme"

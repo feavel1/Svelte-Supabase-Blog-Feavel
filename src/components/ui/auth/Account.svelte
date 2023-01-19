@@ -2,8 +2,8 @@
 	import { onMount } from 'svelte';
 	import type { AuthSession } from '@supabase/supabase-js';
 	import { supabase } from '$lib/supabaseClient';
-	import CardPostUser from '../CardPostUser.svelte';
 	import BackTo from '../BackTo.svelte';
+	import UserPosts from './UserPosts.svelte';
 
 	export let session: AuthSession;
 
@@ -53,7 +53,7 @@
 				username,
 				website,
 				avatar_url: avatarUrl,
-				updated_at: new Date()
+				updated_at: new Date().toString()
 			};
 
 			let { error } = await supabase.from('profiles').upsert(updates);
@@ -129,27 +129,6 @@
 	<div class="mx-auto mt-12 w-full max-w-sm">
 		<h1 class="text-3xl">您创建的帖子：</h1>
 		<div class="divider" />
-		<CardPostUser>
-			<div class="card-body">
-				<h2 class="card-title">音乐是没有意义的</h2>
-				<p>音乐是全世界最...</p>
-				<div class="card-actions justify-between">
-					<button class="btn-primary btn">0个赞❤️</button>
-					<a href="/community/post/edit"><button class="btn-primary btn">编辑📑</button></a>
-				</div>
-				<div class="">
-					<div>
-						用户「邮箱名」说：
-						<div class="rounded-lg bg-neutral p-2 text-neutral-content">评论</div>
-					</div>
-				</div>
-				<div class="">
-					<div>
-						用户「邮箱名」说：
-						<div class="rounded-lg bg-neutral p-2 text-neutral-content">评论</div>
-					</div>
-				</div>
-			</div>
-		</CardPostUser>
+		<UserPosts {session} />
 	</div>
 </div>

@@ -1,13 +1,13 @@
 <script lang="ts">
-	// @ts-nocheck
 	import type { PageData } from './$types';
 	import Time from 'svelte-time';
 	import { page } from '$app/stores';
 	import { supabase } from '$lib/supabaseClient';
+	import BackTo from '../../../../components/ui/BackTo.svelte';
 	export let data: PageData;
 
-	let inputHint,
-		comments = data.comments,
+	let inputHint = '',
+		comments = data.comments!,
 		commentContent: string,
 		commentPost = data.post?.id,
 		commentEmail = $page.data.session?.user.email,
@@ -17,7 +17,7 @@
 	let commentDisabled = false;
 
 	if ($page.data.session === null) {
-		commentDisabled === true;
+		commentDisabled = true;
 		inputHint = '请先登录。';
 	} else {
 		commentDisabled === false;
@@ -28,9 +28,9 @@
 		const { data, error } = await supabase.from('comments').insert([
 			{
 				content: commentContent,
-				email: commentEmail,
-				post_id: commentPost,
-				user_id: commentUserId
+				email: commentEmail!,
+				post_id: commentPost!,
+				user_id: commentUserId!
 			}
 		]);
 		if (error) throw new Error(error.message);
@@ -39,6 +39,7 @@
 </script>
 
 <div class=" w-full max-w-3xl">
+	<BackTo />
 	<div class="prose-xl prose">
 		<h1 class="mb-2">{data.post?.title}</h1>
 		<div class="divider my-0" />

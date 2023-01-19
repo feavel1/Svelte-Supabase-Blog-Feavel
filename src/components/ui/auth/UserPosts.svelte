@@ -1,5 +1,7 @@
-<script>
+<script lang="ts">
 	import CardPostUser from '../CardPostUser.svelte';
+	export let session;
+	console.log(session.user.id);
 </script>
 
 <CardPostUser>
