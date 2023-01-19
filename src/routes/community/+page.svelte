@@ -19,14 +19,14 @@
 	<meta name="description" content="Community" />
 </svelte:head>
 
-<div class="flex flex-col gap-3">
+<div class="flex w-full max-w-3xl flex-col gap-3">
 	<h1 class="text-6xl">欢迎来到社区📌🗂️</h1>
 
 	<div class="divider" />
 
 	<h2 class="text-3xl">用户创建的帖子：</h2>
 
-	<div class="grid-cols-1 gap-5 lg:grid lg:grid-cols-2">
+	<div class="grid-cols-1 gap-5 md:grid md:grid-cols-2">
 		{#await fetchPosts()}
 			<div>Loading...</div>
 		{:then data}

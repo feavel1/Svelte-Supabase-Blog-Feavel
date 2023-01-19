@@ -21,3 +21,9 @@ But currently everything is free software
 - Tailwindcss
 
 - Daisyui
+
+# Gen Types snippet
+
+```bash
+npx supabase gen types typescript --project-id "fjalaldupduxpjneeqht" --schema public > src/lib/supabase.ts
+```

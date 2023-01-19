@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 	import { supabase } from '$lib/supabaseClient';
 
-	export let id: string, email: string, title: string, content: string, likes;
+	export let id: number, email: string, title: string, content: string, likes;
 
 	let likeButtonDisabled: boolean, postLike: number;
 
