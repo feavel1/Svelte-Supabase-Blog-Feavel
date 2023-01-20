@@ -1,5 +1,5 @@
 <script lang="ts">
-	import BackTo from '../../../../../components/ui/BackTo.svelte';
+	import BackTo from '../../../../../lib/components/ui/BackTo.svelte';
 </script>
 
 <div class="w-full max-w-3xl">

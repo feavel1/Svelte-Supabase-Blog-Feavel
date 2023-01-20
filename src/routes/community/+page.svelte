@@ -1,5 +1,5 @@
 <script lang="ts">
-	import CardPost from '../../components/ui/CardPost.svelte';
+	import CardPost from '../../lib/components/ui/CardPost.svelte';
 	import { supabase } from '$lib/supabaseClient';
 
 	let numberOfPosts = 6;

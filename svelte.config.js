@@ -3,7 +3,7 @@ import { mdsvex } from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
-import highlighter from './src/components/scripts/codeHighliter.mjs';
+import highlighter from './src/lib/components/scripts/codeHighliter.mjs';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

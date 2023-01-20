@@ -6,7 +6,7 @@
 	import { themeChange } from 'theme-change';
 	import { supabase } from '$lib/supabaseClient';
 	import { invalidate } from '$app/navigation';
-	import PageTransition from '../components/ui/PageTransition.svelte';
+	import PageTransition from '../lib/components/ui/PageTransition.svelte';
 
 	export let data: PageData;
 
@@ -194,7 +194,7 @@
 			<div class="flex-2">
 				<!-- THEME CHANGER -->
 
-				<label class="swap-rotate swap btn-ghost btn mx-1">
+				<label class="swap btn-ghost swap-rotate btn mx-1">
 					<input
 						type="checkbox"
 						data-toggle-theme="mytheme,mylighttheme"
