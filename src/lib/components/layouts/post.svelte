@@ -1,10 +1,6 @@
 <script lang="ts">
 	// @ts-nocheck
 
-	export let data;
-	export let form;
-	export let layout;
-
 	export let title = '标题';
 	export let author = '作者';
 	export let date = '日期';

@@ -1,7 +1,7 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import highlighter from './src/components/scripts/codeHighliter.mjs';
+import highlighter from './src/lib/components/scripts/codeHighliter.mjs';
 
 const dirname = path.resolve(fileURLToPath(import.meta.url), '../');
 
