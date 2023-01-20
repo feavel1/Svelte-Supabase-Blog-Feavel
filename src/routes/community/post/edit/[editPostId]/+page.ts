@@ -1,6 +1,5 @@
 import { supabase } from '$lib/supabaseClient';
 import type { Actions } from './$types';
-
 import type { PageLoad } from './$types';
 
 export const load = (async ({ params }) => {
