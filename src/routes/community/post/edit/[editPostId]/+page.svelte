@@ -1,5 +1,5 @@
 <script lang="ts">
-	import BackTo from '../../../../../lib/components/ui/BackTo.svelte';
+	import BackTo from '$lib/components/ui/BackTo.svelte';
 </script>
 
 <div class="w-full max-w-3xl">
@@ -11,11 +11,7 @@
 	</div>
 	<div>
 		<label class="label" for="email">帖子内容</label>
-		<textarea
-			class="textarea-warning textarea h-56 w-full"
-			placeholder="# 这里可以输入你想发布的内容
-请编写"
-		/>
+		<textarea class="textarea-warning textarea h-56 w-full" placeholder="内容" />
 	</div>
 	<div class="btn-primary btn mt-4">保存编辑</div>
 </div>

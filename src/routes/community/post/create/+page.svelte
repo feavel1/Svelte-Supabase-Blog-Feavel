@@ -4,10 +4,17 @@
 	import { supabase } from '$lib/supabaseClient';
 
 	let submit = false,
+		disabledButton = true,
 		postTitle: string,
 		postContent: string,
-		postEmail = $page.data.session.user.email,
-		postCreator = $page.data.session.user.id;
+		postEmail = $page.data.session?.user.email!,
+		postCreator = $page.data.session?.user.id!;
+
+	if ($page.data.session?.user == null) {
+		disabledButton = false;
+	} else {
+		disabledButton = true;
+	}
 
 	async function handleCreatePost() {
 		const { data, error } = await supabase
@@ -36,9 +43,14 @@
 				placeholder="# 这里可以输入你想发布的内容,请编写"
 			/>
 		</div>
-		<button disabled={submit} type="submit" class="btn" on:click={() => (submit = false)}
-			>发布帖子</button
+		<button
+			disabled={submit && disabledButton}
+			type="submit"
+			class="btn"
+			on:click={() => (submit = false)}
 		>
+			发布帖子
+		</button>
 	</form>
 	{#if submit}
 		{#await handleCreatePost()}
