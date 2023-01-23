@@ -2,19 +2,17 @@
 	import CardPost from '../../lib/components/ui/CardPost.svelte';
 	import { supabase } from '$lib/supabaseClient';
 
-	let numberOfPosts = 6;
-
+	let numberOfPosts = 1;
 	async function addPosts() {
-		numberOfPosts += 1;
-		await fetchPosts();
+		numberOfPosts += 3;
 	}
 
-	async function fetchPosts() {
+	async function fetchPosts(postsNumber: number) {
 		const { data, error } = await supabase
 			.from('posts')
 			.select(`*, likes (likes)`)
 			.order('created_at', { ascending: false })
-			.limit(numberOfPosts);
+			.limit(postsNumber);
 		if (error) throw new Error(error.message);
 		return data;
 	}
@@ -33,7 +31,7 @@
 	<h2 class="text-3xl">用户创建的帖子：</h2>
 
 	<div class="grid-cols-1 gap-5 md:grid md:grid-cols-2">
-		{#await fetchPosts()}
+		{#await fetchPosts(numberOfPosts)}
 			<div>Loading...</div>
 		{:then data}
 			{#each data as post}
