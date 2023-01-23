@@ -13,7 +13,11 @@ export const load = (async ({ params }) => {
 	}
 
 	async function fetchComments(postId: String) {
-		let { data, error } = await supabase.from('comments').select('*').eq('post_id', postId);
+		let { data, error } = await supabase
+			.from('comments')
+			.select('*')
+			.order('created_at', { ascending: false })
+			.eq('post_id', postId);
 		if (error) throw new Error(error.message);
 		return data;
 	}

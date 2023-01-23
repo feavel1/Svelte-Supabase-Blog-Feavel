@@ -34,6 +34,7 @@
 			}
 		]);
 		if (error) throw new Error(error.message);
+		location.reload();
 		return data;
 	}
 </script>
@@ -65,7 +66,7 @@
 			disabled={commentDisabled}
 			type="text"
 			placeholder={inputHint}
-			class="px s-2 input-bordered input w-full rounded-lg bg-info text-info-content"
+			class="px s-2 input-bordered input w-full rounded-lg bg-info text-info-content placeholder:text-slate-600"
 		/>
 
 		{#if submitComment}
