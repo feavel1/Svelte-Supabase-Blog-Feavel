@@ -18,7 +18,7 @@
 	</div>
 
 	<div class="divider" />
-	<div class="first-letter:text-blue-600">
+	<div class="first-letter:text-cyan-300">
 		<slot />
 	</div>
 </div>

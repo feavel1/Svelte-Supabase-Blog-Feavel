@@ -35,6 +35,8 @@ src/routes/learn/psychoanalysis/...
 src/routes/learn/psychoanalysis/lacan/graph1/volcabulary/+page.md
 ```
 
+参考 - [Markdown 内容样式](/community/guide/markdownDemo)
+
 参考 - 本页文件格式为：
 
 ````md

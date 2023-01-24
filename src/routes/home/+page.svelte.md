@@ -23,7 +23,7 @@ layout: Home
 
 进度：◼︎◼︎◼︎◼︎◼︎◼︎◼︎◻︎◻︎◻︎
 
-## 现在官网上可以使用的功能：
+## 现在官网上可以使用的功能 📨
 
 <div class="first-letter:text-5xl first-letter:text-blue-600">
 	<div class="flex justify-center content-center md:grid-cols-2 flex-col gap-3 md:grid">
@@ -66,26 +66,8 @@ layout: Home
 	</div>
 </div>
 
-## 需要完成的内容：
+## 学习或者帮助建设网站 ⚙️
 
-✅ 页面 animation
+网站介绍
 
-✅ 登录功能
-
-✅ 用户主页
-
-✅ 写帖子的功能
-
-✅ 点赞功能
-
-✅ 评论功能
-
-✅ 编辑帖子
-
-✅ 加载更多帖子
-
-✖️ 上传图片（待定）
-
-✖️ 完善界面
-
-✖️ 优化设计页面
+[贡献指南](/community/guide/contribute)
