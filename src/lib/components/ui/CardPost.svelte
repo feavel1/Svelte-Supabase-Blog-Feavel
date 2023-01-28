@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { supabase } from '$lib/supabaseClient';
+	import Time from 'svelte-time/src/Time.svelte';
 
-	export let id: number, email: string, title: string, content: string, likes;
+	export let id: number, email: string, title: string, content: string, likes, created_at;
 
 	let likeButtonDisabled: boolean, postLike: number;
 
@@ -52,10 +53,13 @@
 	class="mb-5 flex w-96 rounded-sm bg-info text-info-content shadow-xl transition-all duration-300 hover:rounded-3xl hover:bg-accent hover:text-accent-content"
 >
 	<div class="card-body">
-		<div class="w-80">
+		<div class="flex w-80 flex-col gap-1">
 			<h2 class="card-title truncate">{title}</h2>
 			<p class="truncate">{content}</p>
-			<p class="badge">作者: {email}</p>
+			<div class=" badge">作者: {email}</div>
+			<div class="badge-primary badge">
+				创建： <Time relative class="text-xs " timestamp={created_at} />
+			</div>
 		</div>
 		<div class="card-actions mt-10 justify-between">
 			<button disabled={likeButtonDisabled} class="btn-primary btn" on:click={addLike}>
