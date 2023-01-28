@@ -87,8 +87,7 @@
 			.from('posts')
 			.select(`*,likes (likes)`)
 			.eq('post_creator_id', session.user.id)
-			.order('created_at', { ascending: false })
-			.limit(3);
+			.order('created_at', { ascending: false });
 		if (error) throw new Error(error.message);
 		return data;
 	}

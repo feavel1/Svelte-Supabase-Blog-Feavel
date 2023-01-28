@@ -17,6 +17,7 @@ function ensureIntersectionObserver() {
 /**
  * @param {Element} element
  */
+
 export default function viewport(element) {
 	ensureIntersectionObserver();
 
