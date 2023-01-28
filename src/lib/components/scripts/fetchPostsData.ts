@@ -17,7 +17,6 @@ let data: ({
 	created_at: string;
 	email: string;
 	id: number;
-	post_creator_id: string;
 	title: string;
 } & { likes: { likes: number } | { likes: number }[] | null })[] = [];
 
@@ -39,7 +38,7 @@ export default {
 		let { from, to } = rangeOfPosts(page++, 6);
 		const { data: newData, error } = await supabase
 			.from('posts')
-			.select(`*, likes (likes)`)
+			.select(`content, created_at,email, id, title, likes (likes)`)
 			.order('created_at', { ascending: false })
 			.range(from, to);
 

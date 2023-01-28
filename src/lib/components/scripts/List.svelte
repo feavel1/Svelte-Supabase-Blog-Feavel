@@ -7,7 +7,6 @@
 		created_at: string;
 		email: string;
 		id: number;
-		post_creator_id: string;
 		title: string;
 	} & { likes: { likes: number } | { likes: number }[] | null })[];
 	export let noMoreData: boolean;

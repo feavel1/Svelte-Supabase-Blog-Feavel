@@ -3,7 +3,7 @@
 	import { supabase } from '$lib/supabaseClient';
 	import Time from 'svelte-time/src/Time.svelte';
 
-	export let id: number, email: string, title: string, content: string, likes, created_at: Date;
+	export let id: number, email: string, title: string, content: string, likes, created_at;
 
 	let likeButtonDisabled: boolean, postLike: number;
 
