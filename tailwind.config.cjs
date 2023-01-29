@@ -27,8 +27,8 @@ module.exports = {
 				},
 				mylighttheme: {
 					primary: '#c7d2fe',
-					secondary: '#d8b4fe',
-					accent: '#d9f99d',
+					secondary: '#57534e',
+					accent: '#d8b4fe',
 					neutral: '#191D24',
 					'base-100': '#f3f4f6',
 					info: '#3ABFF8',

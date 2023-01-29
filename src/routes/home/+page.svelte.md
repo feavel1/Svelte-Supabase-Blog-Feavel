@@ -47,7 +47,7 @@ layout: Home
 		</Card> -->
 		<Card>
 			<div class="card-body">
-				<h2 class="card-title text-accent">论坛</h2>
+				<h2 class="card-title">论坛</h2>
 				<p>可以在论谈里查看/发布自己喜欢的内容。</p>
 				<div class="card-actions justify-end">
 				<a href="/community">	<button class="btn-primary btn">查看帖子</button></a>
@@ -56,7 +56,7 @@ layout: Home
 		</Card>
 		<Card>
 			<div class="card-body">
-				<h2 class="card-title text-accent">我的账号</h2>
+				<h2 class="card-title">我的账号</h2>
 				<p>查看自己的账号状态</p>
 				<div class="card-actions justify-end">
 				<a href="/my-account"><button class="btn-primary btn">查看</button></a>	
