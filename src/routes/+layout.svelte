@@ -154,13 +154,13 @@
 								</li>
 								<li>
 									<a href="/community/guide">
-										阅读博客规则 <div class="badge-primary badge">New!</div>
+										社区指南🧭 <div class="badge-primary badge">New!</div>
 									</a>
 								</li>
 								<li>
-									<a>
+									<a href="/my-account">
 										我的博客
-										<div class="badge">WIP</div>
+										<div class="badge-primary badge">New!</div>
 									</a>
 								</li>
 							</div>
@@ -194,7 +194,7 @@
 			<div class="flex-2">
 				<!-- THEME CHANGER -->
 
-				<label class="swap btn-ghost swap-rotate btn mx-1">
+				<label class="swap-rotate swap btn-ghost btn mx-1">
 					<input
 						type="checkbox"
 						data-toggle-theme="mytheme,mylighttheme"

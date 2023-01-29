@@ -14,16 +14,16 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
-		"@tailwindcss/typography": "^0.5.8",
+		"@tailwindcss/typography": "^0.5.9",
 		"autoprefixer": "^10.4.13",
-		"eslint": "^8.28.0",
-		"eslint-config-prettier": "^8.5.0",
+		"eslint": "^8.33.0",
+		"eslint-config-prettier": "^8.6.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"mdsvex": "^0.10.6",
 		"postcss": "^8.4.20",
-		"prettier": "^2.8.1",
-		"prettier-plugin-svelte": "^2.8.1",
-		"prettier-plugin-tailwindcss": "^0.2.1",
+		"prettier": "^2.8.3",
+		"prettier-plugin-svelte": "^2.9",
+		"prettier-plugin-tailwindcss": "^0.2.2",
 		"svelte": "^3.54.0",
 		"svelte-check": "^2.9.2",
 		"svelte-time": "^0.7.1",
@@ -33,11 +33,11 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@supabase/auth-helpers-sveltekit": "^0.8.6",
-		"@supabase/supabase-js": "^2.2.3",
-		"daisyui": "^2.46.0",
+		"@supabase/auth-helpers-sveltekit": "^0.8.7",
+		"@supabase/supabase-js": "^2.5.0",
+		"daisyui": "^2.49.0",
 		"node-html-parser": "^6.1.4",
-		"shiki": "^0.12.1",
-		"theme-change": "^2.2.0"
+		"shiki": "^0.13.0",
+		"theme-change": "^2.3.0"
 	}
 }

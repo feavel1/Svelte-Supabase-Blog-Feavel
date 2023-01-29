@@ -1,5 +1,5 @@
 ---
-title: 社区规则
+title: 社区指南🧭
 author: Feavel
 date: 2022年12月30日
 layout: post
