@@ -59,10 +59,11 @@
 				</ul>
 			</div>
 		</div>
-		<div class="divider my-0">评论</div>
+
 		{#await fetchComments()}
-			<div>加载中...</div>
+			<div class="divider my-0">加载中...</div>
 		{:then data}
+			<div class="divider my-0">评论</div>
 			{#each data as comment}
 				<div class="text-sm">
 					用户「{comment.email}」说：

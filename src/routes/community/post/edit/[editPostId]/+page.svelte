@@ -5,15 +5,13 @@
 	export let data: PageData;
 
 	let title: string,
-		content: string,
+		content: string = data.post!.content,
 		submit = false,
-		userId = data.session?.user.id;
+		userId = data.session?.user.id,
+		postId = data.post?.id;
 
 	async function editPost() {
-		const { error } = await supabase
-			.from('posts')
-			.update({ title, content })
-			.eq('post_creator_id', userId);
+		const { error } = await supabase.from('posts').update({ title, content }).eq('id', postId);
 		if (error) throw new Error(error.message);
 	}
 </script>
