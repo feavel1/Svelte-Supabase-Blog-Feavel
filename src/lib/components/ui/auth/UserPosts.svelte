@@ -10,7 +10,6 @@
 		async function createLike() {
 			const { error } = await supabase.from('likes').insert({ likes: postLike, id: id });
 			if (error) throw new Error(error.message);
-			console.log(error);
 		}
 		createLike();
 	} else {
@@ -21,7 +20,6 @@
 		async function addLike() {
 			const { error } = await supabase.from('likes').update({ likes: postLike }).eq('id', id);
 			if (error) throw new Error(error.message);
-			console.log(error);
 		}
 		postLike += 1;
 		addLike();
@@ -38,6 +36,11 @@
 		return data;
 	}
 </script>
+
+<!-- svelte-ignore a11y-label-has-associated-control -->
+<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+<!-- svelte-ignore a11y-missing-attribute -->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 
 <CardPostUser>
 	<div class="card-body">
