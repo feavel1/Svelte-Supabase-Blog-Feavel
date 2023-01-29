@@ -1,7 +1,4 @@
-/**
- * @type {IntersectionObserver}
- */
-let intersectionObserver;
+let intersectionObserver: IntersectionObserver;
 
 function ensureIntersectionObserver() {
 	if (intersectionObserver) return;
@@ -14,11 +11,7 @@ function ensureIntersectionObserver() {
 	});
 }
 
-/**
- * @param {Element} element
- */
-
-export default function viewport(element) {
+export default function viewport(element: Element) {
 	ensureIntersectionObserver();
 
 	intersectionObserver.observe(element);
