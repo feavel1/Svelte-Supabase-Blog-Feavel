@@ -26,11 +26,11 @@ module.exports = {
 					error: '#fecaca'
 				},
 				mylighttheme: {
-					primary: '#c7d2fe',
-					secondary: '#57534e',
-					accent: '#d8b4fe',
-					neutral: '#191D24',
-					'base-100': '#f3f4f6',
+					primary: '#CEC2B6',
+					secondary: '#E3D5CA',
+					accent: '#D5BDAF',
+					neutral: '#D6CCC2',
+					'base-100': '#F6F6F4',
 					info: '#3ABFF8',
 					success: '#36D399',
 					warning: '#FBBD23',
@@ -40,7 +40,7 @@ module.exports = {
 		],
 		base: true,
 		utils: true,
-		logs: true,
+		logs: false,
 		rtl: true,
 		prefix: ''
 	}

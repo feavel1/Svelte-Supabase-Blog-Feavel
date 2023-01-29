@@ -37,7 +37,7 @@
 
 <div
 	transition:fade
-	class="mb-5 flex w-96 rounded-sm bg-info text-info-content shadow-xl transition-all duration-300 hover:rounded-3xl hover:bg-accent hover:text-accent-content"
+	class="mb-5 flex w-96 rounded-sm bg-secondary text-secondary-content shadow-xl transition-all duration-300 hover:rounded-3xl hover:bg-accent hover:text-accent-content"
 >
 	<div class="card-body">
 		<div class="flex w-80 flex-col gap-1">
