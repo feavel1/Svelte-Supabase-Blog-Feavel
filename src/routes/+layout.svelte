@@ -187,7 +187,7 @@
 
 		<!-- Page content here -->
 		<PageTransition key={data.url}>
-			<div class="mt-28 px-6 pb-16 xl:pr-2">
+			<div class="mt-28 px-6 pb-16 xl:px-2">
 				<div class="flex flex-col-reverse justify-center gap-6 md:flex-row ">
 					<slot />
 				</div>
