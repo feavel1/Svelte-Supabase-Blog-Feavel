@@ -50,7 +50,7 @@ layout: Home
 				<h2 class="card-title">论坛</h2>
 				<p>可以在论谈里查看/发布自己喜欢的内容。</p>
 				<div class="card-actions justify-end">
-				<a href="/community">	<button class="btn-primary btn">查看帖子</button></a>
+				<a href="/community" >	<button class="btn-primary btn">查看帖子</button></a>
 				</div>
 			</div>
 		</Card>
