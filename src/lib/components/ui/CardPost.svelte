@@ -2,9 +2,9 @@
 	import { page } from '$app/stores';
 	import { supabase } from '$lib/supabaseClient';
 	import Time from 'svelte-time/src/Time.svelte';
-	import { fade } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 
-	export let id: number, email: string, title: string, content: string, likes, created_at;
+	export let id: number, email: string, title: string, content: string, likes, created_at: string;
 
 	let likeButtonDisabled: boolean, postLike: number;
 
@@ -36,7 +36,7 @@
 </script>
 
 <div
-	transition:fade
+	in:fly={{ y: -50, duration: 1000 }}
 	class="mb-5 flex  rounded-sm bg-secondary text-secondary-content shadow-xl transition-all duration-300 hover:rounded-3xl hover:bg-accent hover:text-accent-content"
 >
 	<div class="card-body">
