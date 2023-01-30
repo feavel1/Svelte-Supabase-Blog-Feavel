@@ -37,13 +37,13 @@
 
 <div
 	transition:fade
-	class="mb-5 flex w-96 rounded-sm bg-secondary text-secondary-content shadow-xl transition-all duration-300 hover:rounded-3xl hover:bg-accent hover:text-accent-content"
+	class="mb-5 flex  rounded-sm bg-secondary text-secondary-content shadow-xl transition-all duration-300 hover:rounded-3xl hover:bg-accent hover:text-accent-content"
 >
 	<div class="card-body">
-		<div class="flex w-80 flex-col gap-1">
+		<div class="flex flex-col gap-1">
 			<h2 class="card-title truncate">{title}</h2>
-			<p class="truncate">{content}</p>
-			<div class=" badge">作者: {email}</div>
+			<!-- <p class="text-clip">{content}</p> -->
+			<div class="badge">作者: {email}</div>
 			<div class="badge-primary badge">
 				创建： <Time relative class="text-xs " timestamp={created_at} />
 			</div>

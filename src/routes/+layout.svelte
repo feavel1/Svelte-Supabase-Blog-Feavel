@@ -201,6 +201,36 @@
 		<label for="my-drawer-3" class="drawer-overlay" />
 		<ul class="menu w-80 bg-base-100 p-4">
 			<!-- Sidebar content here -->
+			<a href="/home"><div class="btn-ghost btn mx-2 px-2">feavel的部落 - 主页</div></a>
+
+			<div class="menu">
+				<li class="menu-title">
+					<span>BLOG</span>
+				</li>
+				<li>
+					<a href="/community">
+						博客主页 <div class="badge-primary badge">New!</div>
+					</a>
+				</li>
+				<li>
+					<a href="/community/guide">
+						社区指南🧭 <div class="badge-primary badge">New!</div>
+					</a>
+				</li>
+				<li>
+					<a href="/my-account">
+						我的博客
+						<div class="badge-primary badge">New!</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="/community/guide/contribute">
+						贡献 <div class="badge-primary badge">New!</div>
+					</a>
+				</li>
+			</div>
+
 			<div class="menu w-56">
 				<li class="menu-title">
 					<span>音乐</span>
@@ -236,66 +266,6 @@
 					</a>
 				</li>
 			</div>
-			<div class="menu">
-				<li class="menu-title">
-					<span>精神分析</span>
-				</li>
-				<li>
-					<a>
-						音乐哲学
-						<div class="badge">WIP</div>
-					</a>
-				</li>
-				<li>
-					<a>
-						音乐精神分析
-						<div class="badge">WIP</div>
-					</a>
-				</li>
-				<li>
-					<a>
-						电影配乐
-						<div class="badge">WIP</div>
-					</a>
-				</li>
-				<li>
-					<a>
-						演讲与发言技巧
-						<div class="badge">WIP</div>
-					</a>
-				</li>
-				<li>
-					<a>
-						还有很多...
-						<div class="badge">WIP</div>
-					</a>
-				</li>
-			</div>
-			<li class="menu-title">
-				<span>BLOG</span>
-			</li>
-			<li>
-				<a href="/community">
-					博客主页 <div class="badge-primary badge">New!</div>
-				</a>
-			</li>
-			<li>
-				<a href="/community/guide">
-					社区指南🧭 <div class="badge-primary badge">New!</div>
-				</a>
-			</li>
-			<li>
-				<a href="/my-account">
-					我的博客
-					<div class="badge-primary badge">New!</div>
-				</a>
-			</li>
-
-			<li>
-				<a href="/community/guide/contribute">
-					贡献 <div class="badge-primary badge">New!</div>
-				</a>
-			</li>
 		</ul>
 	</div>
 </div>

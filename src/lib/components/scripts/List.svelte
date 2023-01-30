@@ -17,11 +17,9 @@
 	const dispatch = createEventDispatcher();
 </script>
 
-<ul class="mx-auto grid-cols-1 gap-5 md:grid md:grid-cols-2">
+<ul class="mx-auto w-full grid-cols-1 items-center gap-5 md:grid md:grid-cols-2">
 	{#each data as item}
-		<li>
-			<CardPost {...item} />
-		</li>
+		<CardPost {...item} />
 	{/each}
 </ul>
 <div transition:fade>
