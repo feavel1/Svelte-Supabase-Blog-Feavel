@@ -1,5 +1,5 @@
 import { supabase } from '$lib/supabaseClient';
-import type { PageLoad } from './$types';
+import type { PageServerLoad } from './$types';
 
 export const load = (async ({ params }) => {
 	async function fetchPost(postId: String) {
@@ -26,4 +26,4 @@ export const load = (async ({ params }) => {
 		post: fetchPost(params.postId),
 		comments: fetchComments(params.postId)
 	};
-}) satisfies PageLoad;
+}) satisfies PageServerLoad;

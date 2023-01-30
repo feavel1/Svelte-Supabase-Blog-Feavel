@@ -3,7 +3,8 @@
 	import Time from 'svelte-time';
 	import { page } from '$app/stores';
 	import { supabase } from '$lib/supabaseClient';
-	import BackTo from '../../../../lib/components/ui/BackTo.svelte';
+	import BackTo from '$lib/components/ui/BackTo.svelte';
+
 	export let data: PageData;
 
 	let inputHint = '',
@@ -66,7 +67,7 @@
 			disabled={commentDisabled}
 			type="text"
 			placeholder={inputHint}
-			class="px s-2 input-bordered input w-full rounded-lg bg-info text-info-content placeholder:text-slate-600"
+			class="px s-2 input-bordered input w-full rounded-lg bg-primary text-info-content placeholder:text-slate-600"
 		/>
 
 		{#if submitComment}
