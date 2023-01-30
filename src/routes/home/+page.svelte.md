@@ -8,7 +8,7 @@ layout: Home
 
 <title>Home - Feavel's Camp</title>
 
-<h1 class="mb-0 text-5xl font-extrabold">🎉欢迎来到主页🎉</h1>
+<h1 class="mb-0 md:text-5xl font-extrabold">🎉欢迎来到主页🎉</h1>
 <p class="mb-0">by Feavel, 2022年12月29日</p>
 
 <div class="divider" />

@@ -40,12 +40,12 @@
 	}
 </script>
 
-<div class=" w-full max-w-3xl">
+<div class="w-full max-w-3xl">
 	<BackTo />
-	<div class="prose-xl prose">
+	<div class="prose-md prose md:prose-xl">
 		<h1 class="mb-2">{data.post?.title}</h1>
 		<div class="divider my-0" />
-		<span class=" text-sm">作者：{data.post?.email}</span>
+		<span class="text-sm">作者：{data.post?.email}</span>
 
 		<p class="mt-10 whitespace-pre">{data.post?.content}</p>
 	</div>

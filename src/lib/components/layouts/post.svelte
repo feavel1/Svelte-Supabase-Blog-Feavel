@@ -10,7 +10,7 @@
 
 <title>Feavel's Camp - {title} </title>
 
-<div class="prose-xl prose w-full max-w-3xl">
+<div class="prose-xs prose w-full max-w-3xl md:prose-xl">
 	<BackTo />
 	<div>
 		<h1 class="mb-0 text-6xl font-extrabold">{title}</h1>

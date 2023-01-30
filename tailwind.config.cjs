@@ -26,15 +26,23 @@ module.exports = {
 					error: '#fecaca'
 				},
 				mylighttheme: {
-					primary: '#CEC2B6',
-					secondary: '#E3D5CA',
-					accent: '#D5BDAF',
-					neutral: '#D6CCC2',
-					'base-100': '#F6F6F4',
-					info: '#3ABFF8',
-					success: '#36D399',
-					warning: '#FBBD23',
-					error: '#F87272'
+					primary: '#d968e8',
+
+					secondary: '#f5ebe0',
+
+					accent: '#d5bdaf',
+
+					neutral: '#2C242D',
+
+					'base-100': '#FFFFFF',
+
+					info: '#6284F3',
+
+					success: '#53E4C5',
+
+					warning: '#F3A339',
+
+					error: '#E53440'
 				}
 			}
 		],
