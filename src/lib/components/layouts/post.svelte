@@ -11,7 +11,7 @@
 
 <div class="w-full max-w-3xl">
 	<BackTo />
-	<h1 class="my-0 text-5xl text-6xl font-extrabold">{title}</h1>
+	<h1 class="my-0 text-5xl font-extrabold md:text-6xl">{title}</h1>
 	<p class="my-0">by {author}, {date}</p>
 
 	<div class="divider " />

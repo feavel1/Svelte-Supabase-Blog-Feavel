@@ -26,7 +26,7 @@
 	{#if !noMoreData}
 		<div use:viewport on:enterViewport={() => dispatch('loadMore')}>
 			{#if loading}
-				<p>Loading...</p>
+				<p>加载中，请稍后...</p>
 			{/if}
 		</div>
 	{:else}
