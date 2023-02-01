@@ -42,12 +42,12 @@
 
 <div class="w-full max-w-3xl">
 	<BackTo />
-	<div class="prose-md prose md:prose-xl">
-		<h1 class="mb-2">{data.post?.title}</h1>
-		<div class="divider my-0" />
+	<div class="">
+		<h1 class="my-0 text-5xl font-extrabold md:text-6xl">{data.post?.title}</h1>
 		<span class="text-sm">作者：{data.post?.email}</span>
+		<div class="divider" />
 
-		<p class="mt-10 whitespace-pre">{data.post?.content}</p>
+		<p class="prose-md prose  whitespace-pre md:prose-xl">{data.post?.content}</p>
 	</div>
 	<!-- comment section -->
 	<div class="divider mb-0">评论区</div>

@@ -44,13 +44,39 @@
 				<a href="/home"><div class="btn-ghost btn mx-2 px-2">feavel的部落</div></a>
 				<ul class="menu menu-horizontal">
 					<!-- Navbar menu content here -->
-					<div class="dropdown-hover dropdown-end dropdown">
+					<div class="dropdown-end dropdown dropdown-hover">
 						<label tabindex="0" class="btn-ghost btn m-1">学习</label>
 						<ul
 							tabindex="0"
-							class="dropdown-content grid w-max grid-cols-2 rounded-sm bg-base-200 p-4 shadow"
+							class="dropdown-content grid w-max grid-cols-3 rounded-sm bg-base-200 p-4 shadow"
 						>
-							<div class="menu w-56">
+							<!-- 哲学 -->
+							<div class="menu">
+								<li class="menu-title">
+									<span>哲学</span>
+								</li>
+								<li>
+									<a>
+										哲学史
+										<div class="badge">WIP</div>
+									</a>
+								</li>
+								<li>
+									<a>
+										精神分析
+										<div class="badge">WIP</div>
+									</a>
+								</li>
+								<li>
+									<a>
+										地缘政治学
+										<div class="badge">WIP</div>
+									</a>
+								</li>
+							</div>
+
+							<!-- 音乐 -->
+							<div class="menu">
 								<li class="menu-title">
 									<span>音乐</span>
 								</li>
@@ -78,45 +104,33 @@
 										<div class="badge">WIP</div>
 									</a>
 								</li>
-								<li>
-									<a>
-										推广
-										<div class="badge">WIP</div>
-									</a>
-								</li>
 							</div>
-
+							<!-- 编程 -->
 							<div class="menu">
 								<li class="menu-title">
-									<span>精神分析</span>
+									<span>网络工程</span>
 								</li>
 								<li>
 									<a>
-										音乐哲学
+										介绍
 										<div class="badge">WIP</div>
 									</a>
 								</li>
 								<li>
 									<a>
-										音乐精神分析
+										前端区
 										<div class="badge">WIP</div>
 									</a>
 								</li>
 								<li>
 									<a>
-										电影配乐
+										网站设计 🎨
 										<div class="badge">WIP</div>
 									</a>
 								</li>
 								<li>
 									<a>
-										演讲与发言技巧
-										<div class="badge">WIP</div>
-									</a>
-								</li>
-								<li>
-									<a>
-										还有很多...
+										后段区
 										<div class="badge">WIP</div>
 									</a>
 								</li>
@@ -124,7 +138,7 @@
 						</ul>
 					</div>
 
-					<div class="dropdown-hover dropdown-end dropdown">
+					<div class="dropdown-end dropdown dropdown-hover">
 						<label tabindex="0" class="btn-ghost btn m-1">社区</label>
 
 						<ul
@@ -201,37 +215,55 @@
 		<label for="my-drawer-3" class="drawer-overlay" />
 		<ul class="menu w-80 bg-base-100 p-4">
 			<!-- Sidebar content here -->
-			<a href="/home"><div class="btn-ghost btn mx-2 px-2">feavel的部落 - 主页</div></a>
-
+			<a href="/home"><div class="btn-primary  btn mx-2 px-2">feavel的部落 - 主页</div></a>
+			<div class="divider" />
+			<!-- Blog -->
 			<div class="menu">
 				<li class="menu-title">
-					<span>BLOG</span>
+					<span>社区</span>
 				</li>
 				<li>
 					<a href="/community">
-						博客主页 <div class="badge-primary badge">New!</div>
-					</a>
-				</li>
-				<li>
-					<a href="/community/guide">
-						社区指南🧭 <div class="badge-primary badge">New!</div>
+						📨 博客主页 <div class="badge-primary badge">New!</div>
 					</a>
 				</li>
 				<li>
 					<a href="/my-account">
-						我的博客
+						📫 我的帖子
 						<div class="badge-primary badge">New!</div>
 					</a>
 				</li>
 
 				<li>
 					<a href="/community/guide/contribute">
-						贡献 <div class="badge-primary badge">New!</div>
+						💕 贡献 <div class="badge-primary badge">New!</div>
 					</a>
 				</li>
 			</div>
+			<div class="divider" />
 
-			<div class="menu w-56">
+			<!-- 哲学 -->
+			<div class="menu">
+				<li class="menu-title">
+					<span>哲学</span>
+				</li>
+				<li>
+					<a>
+						哲学史
+						<div class="badge">WIP</div>
+					</a>
+				</li>
+				<li>
+					<a>
+						精神分析
+						<div class="badge">WIP</div>
+					</a>
+				</li>
+			</div>
+			<div class="divider" />
+
+			<!-- 音乐 -->
+			<div class="menu">
 				<li class="menu-title">
 					<span>音乐</span>
 				</li>
@@ -259,9 +291,35 @@
 						<div class="badge">WIP</div>
 					</a>
 				</li>
+			</div>
+			<div class="divider" />
+
+			<!-- 编程 -->
+			<div class="menu">
+				<li class="menu-title">
+					<span>网络工程</span>
+				</li>
 				<li>
 					<a>
-						推广
+						介绍
+						<div class="badge">WIP</div>
+					</a>
+				</li>
+				<li>
+					<a>
+						前端区
+						<div class="badge">WIP</div>
+					</a>
+				</li>
+				<li>
+					<a>
+						网站设计 🎨
+						<div class="badge">WIP</div>
+					</a>
+				</li>
+				<li>
+					<a>
+						后段区
 						<div class="badge">WIP</div>
 					</a>
 				</li>
