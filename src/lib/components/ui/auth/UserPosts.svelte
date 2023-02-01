@@ -44,9 +44,9 @@
 
 <CardPostUser>
 	<div class="card-body">
-		<div class="w-80">
+		<div class="">
 			<h2 class="card-title ">{title}</h2>
-			<p class="truncate">{content}</p>
+			<!-- <p class="truncate">{content}</p> -->
 		</div>
 		<div class="card-actions justify-between">
 			<button on:click={addLike} class="btn-primary btn">{postLike}个赞❤️</button>
