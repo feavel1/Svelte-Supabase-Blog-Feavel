@@ -140,7 +140,7 @@
 		<h1 class="text-3xl">您创建的帖子：</h1>
 		<div class="divider" />
 		{#await fetchPosts()}
-			<div>Loading...</div>
+			<div>加载中...</div>
 		{:then data}
 			{#each data as post}
 				<UserPosts {...post} />

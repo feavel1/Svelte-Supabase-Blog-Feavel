@@ -37,7 +37,7 @@
 
 <div
 	in:fly={{ y: -50, duration: 1000 }}
-	class="mb-5 flex  rounded-sm bg-secondary text-secondary-content shadow-xl transition-all duration-300 hover:rounded-3xl hover:bg-accent hover:text-accent-content"
+	class="mb-5 flex rounded-sm bg-secondary text-secondary-content shadow-xl transition-all duration-300 hover:rounded-3xl hover:bg-accent hover:text-accent-content"
 >
 	<div class="card-body">
 		<div class="flex flex-col gap-1">
