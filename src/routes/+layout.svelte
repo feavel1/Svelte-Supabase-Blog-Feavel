@@ -229,7 +229,7 @@
 				</li>
 				<li>
 					<a href="/my-account">
-						📫 用户帖子
+						📫 我发的帖子
 						<div class="badge-primary badge">New!</div>
 					</a>
 				</li>
