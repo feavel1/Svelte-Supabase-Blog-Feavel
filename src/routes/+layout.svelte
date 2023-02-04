@@ -7,6 +7,7 @@
 	import { invalidate } from '$app/navigation';
 	import PageTransition from '$lib/components/ui/PageTransition.svelte';
 	import ThemeChanger from '$lib/components/ui/navBar/ThemeChanger.svelte';
+	import Footer from '$lib/components/ui/Footer.svelte';
 
 	export let data: PageData;
 
@@ -219,6 +220,7 @@
 					<slot />
 				</div>
 			</div>
+			<Footer />
 		</PageTransition>
 	</div>
 

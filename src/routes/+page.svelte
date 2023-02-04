@@ -11,8 +11,8 @@
 		goto('/home');
 	}
 
-	let ready = true;
-	// onMount(() => (ready = true));
+	let ready = false;
+	onMount(() => (ready = true));
 </script>
 
 <svelte:head>
@@ -40,7 +40,7 @@
 					<p in:fly={{ x: -800, duration: 1200 }} class="text-3xl font-black">
 						哲学、电影、 音乐、摄影...
 					</p>
-					<p in:fly={{ x: 800, duration: 1500 }} class="text-secondary-content">
+					<p in:fly={{ x: 800, duration: 1500 }} class="text-secondary">
 						但你不知道从哪开始或者...<br />不知道在哪找到相关的参考与资料？
 					</p>
 				{/if}
@@ -50,7 +50,7 @@
 		<PageBlock>
 			<InView let:isVisible>
 				{#if isVisible}
-					<h1 in:fly={{ x: -400, duration: 900 }} class="em text-6xl font-bold text-error">
+					<h1 in:fly={{ x: -400, duration: 900 }} class="text-6xl font-bold text-error-content">
 						对不起，
 						<br />
 						我有坏消息
@@ -58,9 +58,7 @@
 					<p in:fly={{ x: -800, duration: 1200 }} class="text-3xl font-black">
 						音乐语言太复杂，哲学将会失去自己的分析性，电影越拍越多... <br />看不完...
 					</p>
-					<p in:fly={{ x: 800, duration: 1500 }} class="text-secondary-content">
-						我只知道我啥都不知道🤷
-					</p>
+					<p in:fly={{ x: 800, duration: 1500 }} class="text-secondary">我只知道我啥都不知道🤷</p>
 				{/if}
 			</InView>
 		</PageBlock>
@@ -68,13 +66,13 @@
 		<PageBlock>
 			<InView let:isVisible>
 				{#if isVisible}
-					<h1 in:fly={{ x: -400, duration: 900 }} class="em text-6xl font-bold text-info">
+					<h1 in:fly={{ x: -400, duration: 900 }} class="em text-6xl font-bold text-info-content">
 						那我们应该怎么办呢？
 					</h1>
 					<p in:fly={{ x: -800, duration: 1200 }} class="text-3xl font-black">
 						首先我们得学会提问... <br />“是什么不让我学习或者做一件事情？”
 					</p>
-					<p in:fly={{ x: 800, duration: 1500 }} class="text-secondary-content">
+					<p in:fly={{ x: 800, duration: 1500 }} class="text-secondary">
 						只有通过不断质疑和突破思想的桎梏，我们才能真正学到东西。
 					</p>
 				{/if}
@@ -90,7 +88,7 @@
 					<p in:fly={{ x: -800, duration: 1200 }} class="text-3xl font-black">
 						启发、鼓励、帮助你的内容
 					</p>
-					<p in:fly={{ x: 800, duration: 1500 }} class="text-secondary-content">开始学习吧</p>
+					<p in:fly={{ x: 800, duration: 1500 }} class="text-secondary">开始学习吧</p>
 					<div in:fly={{ x: -400, duration: 900 }} class="felx-col mt-5 flex gap-3 ">
 						<a href="/home"><button class="btn-accent btn text-accent-content">进入主页</button></a>
 						<a href="/my-account">
