@@ -7,13 +7,18 @@
 	import PageBlock from '../lib/components/ui/PageBlock.svelte';
 	import InView from '../lib/components/ui/InView.svelte';
 
-	// if (browser && $page.data.session) {
-	// 	goto('/home');
-	// }
+	if (browser && $page.data.session) {
+		goto('/home');
+	}
 
-	let ready = false;
-	onMount(() => (ready = true));
+	let ready = true;
+	// onMount(() => (ready = true));
 </script>
+
+<svelte:head>
+	<title>主页 - Feavel's Camp</title>
+	<meta name="description" content="Feavel's Camp Home Page" />
+</svelte:head>
 
 {#if ready}
 	<div class="flex w-full max-w-5xl flex-col content-center">
@@ -89,12 +94,7 @@
 					<div in:fly={{ x: -400, duration: 900 }} class="felx-col mt-5 flex gap-3 ">
 						<a href="/home"><button class="btn-accent btn text-accent-content">进入主页</button></a>
 						<a href="/my-account">
-							<button
-								class="btn-info btn text-info-content
-							"
-							>
-								登录账号
-							</button>
+							<button class="btn-info btn text-info-content"> 登录账号 </button>
 						</a>
 					</div>
 				{/if}
