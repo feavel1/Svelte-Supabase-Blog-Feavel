@@ -7,9 +7,9 @@
 	import PageBlock from '../lib/components/ui/PageBlock.svelte';
 	import InView from '../lib/components/ui/InView.svelte';
 
-	if (browser && $page.data.session) {
-		goto('/home');
-	}
+	// if (browser && $page.data.session) {
+	// 	goto('/home');
+	// }
 
 	let ready = false;
 	onMount(() => (ready = true));

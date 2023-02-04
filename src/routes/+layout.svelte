@@ -44,7 +44,7 @@
 				<a href="/home"><div class="btn-ghost btn mx-2 px-2">feavel的部落</div></a>
 				<ul class="menu menu-horizontal">
 					<!-- Navbar menu content here -->
-					<div class="dropdown-end dropdown-hover dropdown">
+					<div class="dropdown-hover dropdown-end dropdown">
 						<label tabindex="0" class="btn-ghost btn m-1">学习</label>
 						<ul
 							tabindex="0"
@@ -206,7 +206,7 @@
 					<slot />
 				</div>
 			</div>
-			<footer class="footer footer-center rounded bg-base-200 p-10 text-base-content">
+			<footer class="footer footer-center rounded bg-base-200 p-10">
 				<div class="grid grid-flow-col gap-4">
 					<a class="link-hover link" href="/community/guide/contribute">贡献指南</a>
 					<a class="link-hover link" href="/community/about">关于本站</a>
