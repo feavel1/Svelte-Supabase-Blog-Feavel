@@ -6,7 +6,7 @@ import highlighter from './src/lib/components/scripts/codeHighliter.mjs';
 const dirname = path.resolve(fileURLToPath(import.meta.url), '../');
 
 const config = defineConfig({
-	extensions: ['.svelte.md', '.md', '.svx'],
+	extensions: ['.svelte.md', '.md', '.svx', '.mdx'],
 
 	smartypants: {
 		dashes: 'oldschool'

@@ -41,7 +41,7 @@
 >
 	<div class="card-body">
 		<div class="flex flex-col gap-1">
-			<h2 class="card-title truncate">{title}</h2>
+			<h1 class="w-44 truncate text-2xl font-semibold">{title}</h1>
 			<!-- <p class="text-clip">{content}</p> -->
 			<div class="badge">作者: {email}</div>
 			<div class="badge-primary badge">

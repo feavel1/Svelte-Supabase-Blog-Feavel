@@ -2,4 +2,4 @@
 	// @ts-nocheck
 </script>
 
-<div class="prose-xs prose w-full max-w-3xl md:prose-xl"><slot /></div>
+<div class="w-full max-w-3xl"><slot /></div>

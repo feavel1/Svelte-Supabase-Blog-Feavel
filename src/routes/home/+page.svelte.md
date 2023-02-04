@@ -2,16 +2,16 @@
 layout: Home
 ---
 
-<script>
-	import Card from '$lib/components/ui/Card.svelte';
-</script>
+<script>import Card from '$lib/components/ui/Card.svelte';</script>
 
 <title>Home - Feavel's Camp</title>
 
-<h1 class="mb-0 md:text-5xl font-extrabold">🎉欢迎来到主页🎉</h1>
-<p class="mb-0">by Feavel, 2022年12月29日</p>
+<h1 class="my-0 text-5xl font-extrabold md:text-6xl">🎉欢迎来到主页🎉</h1>
+<p class="my-0">by Feavel, 2022年12月29日</p>
 
 <div class="divider" />
+
+<div class="prose-xs prose md:prose-xl">
 
 ## 网站介绍 🎉
 
@@ -26,48 +26,51 @@ layout: Home
 ## 现在官网上可以使用的功能 📨
 
 <div class="first-letter:text-5xl first-letter:text-blue-600">
-	<div class="flex justify-center content-center md:grid-cols-2 flex-col gap-3 md:grid">
-		<!-- <Card>
-			<div class="card-body">
-				<h2 class="card-title text-accent">音乐</h2>
-				<p>是否对音乐制作、混音、录制、母带等感兴趣？</p>
-				<div class="card-actions justify-end">
-					<a href="learn/music"><button class="btn-primary btn">阅读</button></a>
-				</div>
-			</div>
-		</Card>
-		<Card>
-			<div class="card-body">
-				<h2 class="card-title text-accent">精神分析</h2>
-				<p>是否想阅读关于哲学或者精神分析的内容？</p>
-				<div class="card-actions justify-end">
-					<button class="btn-primary btn">查看内容</button>
-				</div>
-			</div>
-		</Card> -->
-		<Card>
-			<div class="card-body">
-				<h2 class="card-title">论坛</h2>
-				<p>可以在论谈里查看/发布自己喜欢的内容。</p>
-				<div class="card-actions justify-end">
-				<a href="/community" >	<button class="btn-primary btn">查看帖子</button></a>
-				</div>
-			</div>
-		</Card>
-		<Card>
-			<div class="card-body">
-				<h2 class="card-title">我的账号</h2>
-				<p>查看自己的账号状态</p>
-				<div class="card-actions justify-end">
-				<a href="/my-account"><button class="btn-primary btn">查看</button></a>	
-				</div>
-			</div>
-		</Card>
+<div class="flex justify-center content-center md:grid-cols-2 flex-col gap-3 md:grid">
+
+<Card>
+	<div class="card-body">
+		<h2 class="card-title">论坛📡</h2>
+		<p>可以在论谈里查看/发布自己喜欢的内容。</p>
+		<div class="card-actions justify-end">
+			<a href="/community">
+				<button class="btn-primary btn">查看帖子</button>
+			</a>
+		</div>
 	</div>
+</Card>
+<Card>
+	<div class="card-body">
+		<h2 class="card-title">我的账号📠</h2>
+		<p>查看自己的账号状态</p>
+		<div class="card-actions justify-end">
+			<a href="/my-account">
+				<button class="btn-primary btn">查看</button>
+			</a>
+		</div>
+	</div>
+</Card>
+
+<Card>
+	<div class="card-body">
+		<h2 class="card-title">学习🧑🏼‍💻</h2>
+		<p>是否想学混音、编程、哲学？</p>
+		<div class="card-actions justify-end">
+			<a href="learn/music"><button class="btn-primary btn">阅读</button></a>
+		</div>
+	</div>
+</Card>
+<Card>
+	<div class="card-body">
+		<h2 class="card-title">内容创作🫶</h2>
+		<p>您愿意帮忙创作网站内容吗？</p>
+		<div class="card-actions justify-end">
+			<a href="learn/music"><button class="btn-primary btn">阅读</button></a>
+		</div>
+	</div>
+</Card>
+
+</div>
 </div>
 
-## 学习或者帮助建设网站 ⚙️
-
-网站介绍
-
-[贡献指南](/community/guide/contribute)
+</div>
