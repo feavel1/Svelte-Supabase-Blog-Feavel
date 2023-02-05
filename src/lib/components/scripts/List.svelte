@@ -17,11 +17,11 @@
 	const dispatch = createEventDispatcher();
 </script>
 
-<ul class="mx-auto w-full grid-cols-1 items-center gap-5 md:grid md:grid-cols-2">
+<div class="mx-auto w-full grid-cols-1 items-center gap-5 md:grid md:grid-cols-2">
 	{#each data as item}
 		<CardPost {...item} />
 	{/each}
-</ul>
+</div>
 <div transition:fade>
 	{#if !noMoreData}
 		<div use:viewport on:enterViewport={() => dispatch('loadMore')}>
