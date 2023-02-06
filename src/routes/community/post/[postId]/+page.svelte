@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import Time from 'svelte-time';
-	import { page } from '$app/stores';
 	import { supabase } from '$lib/supabaseClient';
 	import BackTo from '$lib/components/ui/BackTo.svelte';
 
@@ -11,13 +10,13 @@
 		comments = data.comments!,
 		commentContent: string,
 		commentPost = data.post?.id,
-		commentEmail = $page.data.session?.user.email,
-		commentUserId = $page.data.session?.user.id,
+		commentEmail = data.session?.user.email,
+		commentUserId = data.session?.user.id,
 		submitComment = false;
 
 	let commentDisabled = false;
 
-	if ($page.data.session === null) {
+	if (data.session === null) {
 		commentDisabled = true;
 		inputHint = '请先登录。';
 	} else {
