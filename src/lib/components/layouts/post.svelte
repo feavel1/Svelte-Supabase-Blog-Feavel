@@ -7,7 +7,9 @@
 	import BackTo from '../ui/BackTo.svelte';
 </script>
 
-<title>Feavel's Camp - {title}</title>
+<svelte:head>
+	<title>Feavel's Camp - {title}</title>
+</svelte:head>
 
 <div class="w-full max-w-3xl">
 	<BackTo />

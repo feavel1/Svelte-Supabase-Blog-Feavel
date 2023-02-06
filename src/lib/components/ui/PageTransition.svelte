@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { beforeUpdate, onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	export let key: string;
 </script>

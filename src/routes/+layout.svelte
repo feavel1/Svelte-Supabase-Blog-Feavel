@@ -29,7 +29,7 @@
 
 <!-- svelte-ignore a11y-missing-attribute -->
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-<div class="drawer">
+<div class="drawer-new">
 	<input type="checkbox" id="my-drawer-3" class="drawer-toggle" />
 
 	<div class="drawer-content flex flex-col">
@@ -55,9 +55,9 @@
 
 			<div class="hidden flex-1 lg:block">
 				<a href="/home"><div class="btn-ghost btn mx-2 px-2">feavel的部落</div></a>
-				<ul class="menu menu-horizontal">
+				<div class="menu menu-horizontal">
 					<!-- Navbar menu content here -->
-					<div class="dropdown-hover dropdown-end dropdown">
+					<div class="dropdown-end dropdown-hover dropdown">
 						<div tabindex="0" class="btn-ghost btn m-1 ">学习</div>
 
 						<div
@@ -202,13 +202,13 @@
 							</div>
 						</div>
 					</div>
-				</ul>
+				</div>
 			</div>
+
 			<a href="/my-account">
 				<div class="btn-ghost btn flex gap-2 px-4">我的账号</div>
 			</a>
 			<div class="flex-2">
-				<!-- THEME CHANGER -->
 				<ThemeChanger />
 			</div>
 		</div>

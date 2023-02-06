@@ -6,7 +6,7 @@ layout: Home
 
 <title>Home - Feavel's Camp</title>
 
-<h1 class="my-0 text-5xl font-extrabold md:text-6xl">🎉欢迎来到主页🎉</h1>
+<h1 class="my-0 text-5xl font-extrabold md:text-6xl">欢迎来到主页🎉</h1>
 <p class="my-0">by Feavel, 2022年12月29日</p>
 
 <div class="divider" />
@@ -56,7 +56,7 @@ layout: Home
 		<h2 class="card-title">学习🧑🏼‍💻</h2>
 		<p>是否想学混音、编程、哲学？</p>
 		<div class="card-actions justify-end">
-			<a href="learn/music"><button class="btn-primary btn">阅读</button></a>
+			<a href="/learn"><button class="btn-primary btn">阅读</button></a>
 		</div>
 	</div>
 </Card>
@@ -65,7 +65,7 @@ layout: Home
 		<h2 class="card-title">内容创作🫶</h2>
 		<p>您愿意帮忙创作网站内容吗？</p>
 		<div class="card-actions justify-end">
-			<a href="learn/music"><button class="btn-primary btn">阅读</button></a>
+			<a href="/community/guide/contribute"><button class="btn-primary btn">阅读</button></a>
 		</div>
 	</div>
 </Card>
