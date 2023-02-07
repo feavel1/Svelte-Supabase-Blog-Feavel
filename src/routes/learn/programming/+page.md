@@ -1,0 +1,45 @@
+---
+layout: post
+author: Feavel
+date: 2022年2月8日
+title: 学习编程
+---
+
+# 目录
+
+我的业余爱好是做前端页面。
+
+在这里我希望可以帮助大家快速上手一些实用的技能，这样以后我有更多的资源可以看哈哈。希望大家能找到自己喜欢的内容，找不到的话也可以去贡献页面创建一点新的内容。上面没有链接的说明都还没制作过程或者还没开始。着急的话可以在底下关于作者联系我。
+
+开始探索吧
+
+## 0 基础看这里（新手）
+
+| 0 基础   | 0 基础前端         | 待定 |
+| -------- | ------------------ | ---- |
+| 学习道路 | 我应该选哪个框架？ | 待定 |
+| 编程介绍 | 做一个漂亮的网页   | 待定 |
+| 推荐资源 | 用 Vercel 发布网站 | 待定 |
+
+## 前端开发
+
+| Next.js            | Svelte Kit         |
+| ------------------ | ------------------ |
+| 为什么用 Next？    | 为什么用 Svelte ？ |
+| 使用 Next 开发 PWA | Svelte 配置环境    |
+| 待定 Next.js 功能  | Svelte Markdown    |
+
+| Astro 教程      | Qwik             |
+| --------------- | ---------------- |
+| Astro 的优缺点  | 为什么使用 Qwik? |
+| 搭建 Astro Blog | Qwik 环境搭建    |
+| 添加 Themes     |                  |
+
+## BAAS 开发
+
+| Supabase Tutorials                      | PocketBase |
+| --------------------------------------- | ---------- |
+| Setup Supabase + Svelte Project         | Setup      |
+| CRUD app with Supabase and SvelteKit    | ...        |
+| Load more data onScroll with Supabase   | ...        |
+| Dynamic routes with Svelte and Supabase | ...        |

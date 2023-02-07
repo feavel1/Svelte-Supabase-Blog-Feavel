@@ -6,8 +6,8 @@
 	display: grid;
 	width: 100%;
 	overflow: hidden;
-	/* height: 100vh;
-	height: 100dvh; */
+	height: 100vh;
+	height: 100dvh;
 }
 .drawer-new.drawer-end {
 	direction: ltr;

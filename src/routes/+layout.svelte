@@ -57,7 +57,7 @@
 				<a href="/home"><div class="btn-ghost btn mx-2 px-2">feavel的部落</div></a>
 				<div class="menu menu-horizontal">
 					<!-- Navbar menu content here -->
-					<div class="dropdown-end dropdown-hover dropdown">
+					<div class="dropdown-hover dropdown-end dropdown">
 						<div tabindex="0" class="btn-ghost btn m-1 ">学习</div>
 
 						<div
@@ -125,9 +125,9 @@
 									<span>网络工程</span>
 								</li>
 								<li>
-									<a>
+									<a href="/learn/programming">
 										介绍
-										<div class="badge">WIP</div>
+										<div class="badge-primary badge">New!</div>
 									</a>
 								</li>
 								<li>
