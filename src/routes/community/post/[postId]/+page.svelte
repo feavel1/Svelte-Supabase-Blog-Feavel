@@ -66,7 +66,7 @@
 			disabled={commentDisabled}
 			type="text"
 			placeholder={inputHint}
-			class="px s-2 input-bordered input w-full rounded-lg bg-primary text-info-content placeholder:text-slate-600"
+			class="px s-2 input-bordered input w-full rounded-lg bg-primary text-primary-content placeholder:text-slate-600"
 		/>
 
 		{#if submitComment}

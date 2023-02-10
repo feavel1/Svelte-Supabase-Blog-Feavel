@@ -32,7 +32,7 @@
 				<div class="menu menu-horizontal">
 					<!-- Navbar menu content here -->
 					<div class="dropdown-hover dropdown-end dropdown">
-						<div tabindex="0" class="btn-ghost btn m-1 ">学习</div>
+						<a tabindex="0" class="btn-ghost btn m-1" href="/learn">学习</a>
 
 						<div
 							tabindex="0"

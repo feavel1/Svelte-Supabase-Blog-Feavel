@@ -7,7 +7,7 @@
 		<a class="link-hover link" href="https://feavel.com">关于作者</a>
 		<a class="link-hover link">隐私条约</a>
 	</div>
-	<div>
+	<!-- <div>
 		<div class="grid grid-flow-col gap-4">
 			<a>
 				<svg
@@ -23,7 +23,7 @@
 				</svg>
 			</a>
 		</div>
-	</div>
+	</div> -->
 	<div>
 		<p>Copyright © 2023 - All right reserved by FEAVEL</p>
 	</div>

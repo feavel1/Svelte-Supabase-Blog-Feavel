@@ -27,7 +27,7 @@
 
 <NavigationBar>
 	<PageTransition key={data.url}>
-		<div class="mt-20  min-h-screen px-6 pb-16 xl:px-2">
+		<div class="mt-28  min-h-screen px-6 pb-16 xl:px-2">
 			<div class="flex justify-center">
 				<slot />
 			</div>
