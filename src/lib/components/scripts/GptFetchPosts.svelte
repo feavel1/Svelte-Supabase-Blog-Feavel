@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { supabase } from '$lib/supabaseClient';
+	import { fly } from 'svelte/transition';
 	import CardPost from '$lib/components/ui/CardPost.svelte';
-	import { fade, fly } from 'svelte/transition';
 
 	let posts: any = [];
 	let error: unknown = null;
@@ -19,18 +19,15 @@
 				.select(`content, created_at,email, id, title, likes (likes)`)
 				.order('created_at', { ascending: false })
 				.range(offset, offset + limit);
-
 			posts = data;
 			offset += limit;
 		} catch (e) {
 			error = e;
 		}
-
 		observer = new IntersectionObserver(handleIntersect);
 		const loadingIndicator = document.getElementById('loading-indicator');
 		observer.observe(loadingIndicator!);
 	});
-
 	function loadMore() {
 		supabase
 			.from('posts')
@@ -46,7 +43,6 @@
 				offset += limit;
 			});
 	}
-
 	function handleIntersect(entries: { isIntersecting: any }[]) {
 		if (entries[0].isIntersecting) {
 			loadMore();
@@ -83,6 +79,6 @@
 			</div>
 		</div>
 	{:else}
-		<p transition:fade>暂时没有更多啦.</p>
+		<p in:fly={{ y: -50, duration: 1000 }}>暂时没有更多啦.</p>
 	{/if}
 {/if}
