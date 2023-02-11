@@ -1,16 +1,10 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-	import CardPost from '../ui/CardPost.svelte';
+	import CardPost from '$lib/components/ui/CardPost.svelte';
 	import viewport from './infiniteScroll';
 	import { fade } from 'svelte/transition';
 
-	export let data: ({
-		content: string;
-		created_at: string;
-		email: string;
-		id: number;
-		title: string;
-	} & { likes: { likes: number } | { likes: number }[] | null })[];
+	export let data;
 	export let noMoreData: boolean;
 	export let loading = false;
 
