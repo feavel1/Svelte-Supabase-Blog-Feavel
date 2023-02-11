@@ -38,6 +38,7 @@
 		"daisyui": "^2.50.0",
 		"node-html-parser": "^6.1.4",
 		"shiki": "^0.14.1",
+		"svelte-seo": "^1.4.1",
 		"theme-change": "^2.3.0"
 	}
 }

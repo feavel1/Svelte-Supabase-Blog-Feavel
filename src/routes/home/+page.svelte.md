@@ -4,7 +4,12 @@ layout: Home
 
 <script>import Card from '$lib/components/ui/Card.svelte';</script>
 
-<title>Home - Feavel's Camp</title>
+<svelte:head>
+
+<title>主页 - Feavel的部落</title>
+<meta name="description" content="主页" />
+
+</svelte:head>
 
 <h1 class="my-0 text-5xl font-extrabold md:text-6xl">欢迎来到主页🎉</h1>
 <p class="my-0">by Feavel, 2022年12月29日</p>
@@ -30,7 +35,7 @@ layout: Home
 
 <Card>
 	<div class="card-body">
-		<h2 class="card-title">论坛📡</h2>
+		<h3 class="card-title">论坛📡</h3>
 		<p>可以在论谈里查看/发布自己喜欢的内容。</p>
 		<div class="card-actions justify-end">
 			<a href="/community">
@@ -41,7 +46,7 @@ layout: Home
 </Card>
 <Card>
 	<div class="card-body">
-		<h2 class="card-title">我的账号📠</h2>
+		<h3 class="card-title">我的账号📠</h3>
 		<p>查看自己的账号状态</p>
 		<div class="card-actions justify-end">
 			<a href="/my-account">
@@ -53,7 +58,7 @@ layout: Home
 
 <Card>
 	<div class="card-body">
-		<h2 class="card-title">学习🧑🏼‍💻</h2>
+		<h3 class="card-title">学习🧑🏼‍💻</h3>
 		<p>是否想学混音、编程、哲学？</p>
 		<div class="card-actions justify-end">
 			<a href="/learn"><button class="btn-primary btn">阅读</button></a>
@@ -62,7 +67,7 @@ layout: Home
 </Card>
 <Card>
 	<div class="card-body">
-		<h2 class="card-title">内容创作🫶</h2>
+		<h3 class="card-title">内容创作🫶</h3>
 		<p>您愿意帮忙创作网站内容吗？</p>
 		<div class="card-actions justify-end">
 			<a href="/community/guide/contribute"><button class="btn-primary btn">阅读</button></a>

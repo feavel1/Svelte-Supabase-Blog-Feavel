@@ -1,15 +1,53 @@
 <script lang="ts">
-	// @ts-nocheck
+	import SvelteSeo from 'svelte-seo';
+	import BackTo from '../ui/BackTo.svelte';
+
 	export let title = '标题';
 	export let author = '作者';
 	export let date = '日期';
-
-	import BackTo from '../ui/BackTo.svelte';
 </script>
 
-<svelte:head>
-	<title>Feavel's Camp - {title}</title>
-</svelte:head>
+<SvelteSeo
+	title="Feavel的部落 - {title}"
+	description="."
+	openGraph={{
+		title: title + ' - Feavel的部落',
+		description: '点击Feavel的部落中查看关于此内容的帖子',
+		url: 'https://feavel-musci-camp.vercel.com',
+		type: 'website',
+		images: [
+			{
+				url: 'img-link.png',
+				width: 128,
+				height: 128,
+				alt: 'Icon Image'
+			}
+		]
+	}}
+	jsonLd={{
+		'@type': 'Article',
+		mainEntityOfPage: {
+			'@type': 'WebPage',
+			'@id': 'https://feavel-musci-camp.vercel.com'
+		},
+		headline: title,
+		image: ['img-link.png', 'img-link.png', 'img-link.png'],
+		datePublished: date,
+		dateModified: date,
+		author: {
+			'@type': 'Person',
+			name: author
+		},
+		publisher: {
+			'@type': 'Organization',
+			name: 'FEAVEL的部落',
+			logo: {
+				'@type': 'ImageObject',
+				url: 'img-link.png'
+			}
+		}
+	}}
+/>
 
 <div class="w-full max-w-3xl">
 	<BackTo />
@@ -17,7 +55,7 @@
 	<p class="my-0">by {author}, {date}</p>
 
 	<div class="divider " />
-	<div class="prose-lg prose first-letter:text-cyan-300 md:prose-xl">
+	<div class="prose-lg prose md:prose-xl first-letter:text-cyan-300">
 		<slot />
 	</div>
 </div>

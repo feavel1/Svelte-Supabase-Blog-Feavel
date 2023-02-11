@@ -56,7 +56,7 @@
 						我有坏消息
 					</h1>
 					<p in:fly={{ x: -800, duration: 1200 }} class="text-3xl font-black">
-						音乐语言太复杂，哲学将会失去自己的分析性，电影越拍越多... <br />看不完...
+						音乐语言太复杂，哲学会失去自己的分析性，电影越拍越多... <br />看不完...
 					</p>
 					<p in:fly={{ x: 800, duration: 1500 }} class="text-secondary">我只知道我啥都不知道🤷</p>
 				{/if}
@@ -70,7 +70,7 @@
 						那我们应该怎么办呢？
 					</h1>
 					<p in:fly={{ x: -800, duration: 1200 }} class="text-3xl font-black">
-						首先我们得学会提问... <br />“是什么不让我学习或者做一件事情？”
+						首先... <br />我们必须必须必须，得让无聊的东西变的有趣❤️
 					</p>
 					<p in:fly={{ x: 800, duration: 1500 }} class="text-secondary">
 						只有通过不断质疑和突破思想的桎梏，我们才能真正学到东西。

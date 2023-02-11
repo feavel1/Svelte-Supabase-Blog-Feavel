@@ -1,6 +1,5 @@
 <script lang="ts">
-	import List from '$lib/components/scripts/List.svelte';
-	import data from '$lib/components/scripts/fetchPostsData';
+	import GptFetchPosts from '$lib/components/scripts/GptFetchPosts.svelte';
 </script>
 
 <svelte:head>
@@ -28,5 +27,7 @@
 
 	<h2 class="mt-10 text-3xl">用户创建的帖子：</h2>
 
-	<List {...$data} on:loadMore={data.fetchMore} />
+	<!-- <List {...$data} on:loadMore={data.fetchMore} /> -->
+
+	<GptFetchPosts />
 </div>
