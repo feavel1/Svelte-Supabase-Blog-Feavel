@@ -28,26 +28,26 @@ title: 学习道路
 
 ### 个人喜欢的：
 
+- [Svelte](https://svelte.dev) - 一个非常新、开发流程友好、功能丰富、加载快的框架
+
 - [React](https://reactjs.org) - 一个非常非常流行的构建界面的 JavaScript 库.
 
 - [Vue.js](https://vuejs.org) - 用于构建用户界面的渐进式 JavaScript 框架
 
-- [Svelte](https://svelte.dev) - 一个非常新、开发流程友好、功能丰富、加载快的框架
-
 ## 🔄 服务器端渲染（SSR）- 用于搭建网页程序
 
+- [Svelte Kit](https://kit.svelte.dev) - Svelte 默认的开发环境，非常好学
 - [Astro.js](https://docs.astro.build/zh-cn/getting-started/) - 非常适合用来搭建个人主页/博客的框架。
 - [Next.js](https://nextjs.org) - 用于构建服务器呈现的 React 应用程序的框架
-- [Svelte Kit](https://kit.svelte.dev) - Svelte 默认的开发环境，非常好学
 - [Nuxt.js](https://nuxtjs.org) - 用于构建服务器呈现的 Vue.js 应用程序的框架
 
 ## 💼 后端即服务 (BaaS)
 
 -用于搭建数据库/登录/实时更新/文件储存的服务
 
-- [Firebase](https://firebase.google.com) - Google 提供的 BaaS 平台
 - [Supabase](https://supabase.com) - Supabase 提供的 **开源** BaaS 平台
 - [PocketBase](https://pocketbase.io) - 在 1 个文件中开源后端和移动应用程序的 BaaS
+- [Firebase](https://firebase.google.com) - Google 提供的 BaaS 平台
 
 ## 🚀 流行框架 用于搭建手机、桌面应用
 
