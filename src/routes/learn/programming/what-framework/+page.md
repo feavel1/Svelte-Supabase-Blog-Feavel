@@ -2,7 +2,7 @@
 layout: post
 author: Feavel
 date: 2022年2月13日
-title: 我应该选什么框架？
+title: 我应该选什么框架？🧐
 ---
 
 ## 什么是个前端框架？
@@ -21,6 +21,8 @@ title: 我应该选什么框架？
 
 - _网页、桌面应用（mac、win、linux）、手机缓存试应用（pwa）、手机应用（iOS、android）、小程序、还有很多前端应用。_
 
+在 选择哪个 SSR 框架中，我讲更多关于这些应用端的开发。
+
 最后，请注意，前端框架不是万能的，并不适用于所有项目，因此需要根据项目的具体需求和特点进行选择。
 
 ---
@@ -28,6 +30,12 @@ title: 我应该选什么框架？
 ## 那么，我应该选择哪一个？
 
 ### 作者推荐：
+
+- [Svelte](https://svelte.dev) - 一个非常新的框架
+
+  - 优点：语言逻辑非常非常简洁，打包出来的工程不大，传递速度很快。编程效率很高。
+
+  - 缺点：用的人暂时没有前两个多，偶尔搜索内容会比较难找到答案。
 
 - [React](https://reactjs.org) - 一个非常非常流行的构建界面的 JavaScript 库.
 
@@ -41,13 +49,7 @@ title: 我应该选什么框架？
 
   - 缺点：对比新框架编程没那么简洁/简单，需要练习以下才能搞明白信息传递逻辑
 
-- [Svelte](https://svelte.dev) - 一个非常新的框架
-
-  - 优点：语言逻辑非常非常简洁，打包出来的工程不大，传递速度很快。编程效率很高。
-
-  - 缺点：用的人暂时没有前两个多，偶尔搜索内容会比较难找到答案。
-
-### 本人没用过的，但还是很多人使用的：
+### 作者没用过的，但还是很多人使用的：
 
 - [Angular](https://angular.io) - 谷歌用于构建复杂 Web 应用程序的综合框架
 - [Solid js](https://www.solidjs.com) - 一个和 React 很相似，但是速度快很多倍的框架
@@ -75,3 +77,79 @@ title: 我应该选什么框架？
 学习社区：加入前端框架的社区，学习更多关于框架的知识和经验。
 
 希望这些建议对你有所帮助，加油学习！
+
+---
+
+## 对比不使用框架(html+js)和使用框架(svelte)的代码
+
+HTML/JS 是 HTML、CSS 和 JavaScript 的组合，可用于构建网页。 这是一个简单的 **“to-do list”** 应用程序的 HTML/JS 代码片段：
+
+```html
+<!-- index.html -->
+<html>
+	<head>
+		<title>To-Do List</title>
+	</head>
+	<body>
+		<h1>To-Do List</h1>
+		<form>
+			<input type="text" id="task" />
+			<button type="submit">添加To-do</button>
+		</form>
+		<ul id="tasks"></ul>
+
+		<script>
+			const form = document.querySelector('form');
+			const input = document.querySelector('input');
+			const tasksList = document.querySelector('ul');
+
+			form.addEventListener('submit', (event) => {
+				event.preventDefault();
+				const task = input.value;
+				input.value = '';
+				const newTask = `<li>${task}</li>`;
+				tasksList.insertAdjacentHTML('beforeend', newTask);
+			});
+		</script>
+	</body>
+</html>
+```
+
+另一方面，Svelte 是用于构建 Web 应用程序的现代 JavaScript 框架。 它不同于传统框架，因为它在构建时将其组件编译成普通 JavaScript，从而导致更小的文件大小和更快的运行时性能。 下面是 Svelte 中同一个待办事项列表应用程序的代码片段：
+
+这是使用 Svelte Kit **同样** 的代码：
+
+```svelte
+<!-- App.svelte -->
+<script>
+	let task = '';
+	let tasks = [];
+
+	function addTask() {
+		tasks = [...tasks, task];
+		task = '';
+	}
+</script>
+
+<h1>To-Do List</h1>
+<form on:submit|preventDefault={addTask}>
+	<input bind:value={task} />
+	<button type="submit">Add Task</button>
+</form>
+<ul>
+	{#each tasks as task}
+		<li>{task}</li>
+	{/each}
+</ul>
+```
+
+我们应该选择 Svelte 而不是纯 HTML/JS 的原因有几个：
+
+- 易用性：Svelte 为编写组件提供了简单直观的语法，使开发人员更容易编写可维护和可重用的代码。
+
+- 性能：与传统框架相比，Svelte 将组件编译成高度优化的 vanilla JavaScript，从而带来更快的运行时性能和更小的文件大小。
+  反应性：Svelte 提供了一个内置的反应性系统，允许您以声明方式将数据绑定到 UI，从而更容易构建动态应用程序。
+
+- 更少的抽象：与其他框架相比，Svelte 的抽象更少，因此更容易理解您的应用程序在幕后如何工作。
+
+总之，如果您正在寻找一种快速直观的方式来构建 Web 应用程序，Svelte 是一个不错的选择。
