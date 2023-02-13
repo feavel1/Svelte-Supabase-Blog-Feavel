@@ -1,5 +1,7 @@
 <script>
 	import ThemeChanger from '$lib/components/ui/navBar/ThemeChanger.svelte';
+	import New from '../ui/badges/New.svelte';
+	import Wip from '../ui/badges/Wip.svelte';
 </script>
 
 <!-- svelte-ignore a11y-missing-attribute -->
@@ -45,20 +47,17 @@
 								</li>
 								<li>
 									<a>
-										哲学史
-										<div class="badge">WIP</div>
+										哲学史 <Wip />
 									</a>
 								</li>
 								<li>
 									<a>
-										精神分析
-										<div class="badge">WIP</div>
+										精神分析 <Wip />
 									</a>
 								</li>
 								<li>
 									<a>
-										地缘政治学
-										<div class="badge">WIP</div>
+										地缘政治学 <Wip />
 									</a>
 								</li>
 							</ul>
@@ -70,26 +69,22 @@
 								</li>
 								<li>
 									<a>
-										音乐制作
-										<div class="badge">WIP</div>
+										音乐制作 <Wip />
 									</a>
 								</li>
 								<li>
 									<a>
-										混音
-										<div class="badge">WIP</div>
+										混音 <Wip />
 									</a>
 								</li>
 								<li>
 									<a>
-										母带
-										<div class="badge">WIP</div>
+										母带 <Wip />
 									</a>
 								</li>
 								<li>
 									<a>
-										录音/录制
-										<div class="badge">WIP</div>
+										录音/录制 <Wip />
 									</a>
 								</li>
 							</ul>
@@ -100,26 +95,22 @@
 								</li>
 								<li>
 									<a href="/learn/programming">
-										介绍
-										<div class="badge-primary badge">New!</div>
+										学习编程 <New />
+									</a>
+								</li>
+								<li>
+									<a href="/learn/programming/roadmap">
+										开发路线图<New />
 									</a>
 								</li>
 								<li>
 									<a>
-										前端区
-										<div class="badge">WIP</div>
+										网站设计 🎨 <Wip />
 									</a>
 								</li>
 								<li>
 									<a>
-										网站设计 🎨
-										<div class="badge">WIP</div>
-									</a>
-								</li>
-								<li>
-									<a>
-										后段区
-										<div class="badge">WIP</div>
+										后段区 <Wip />
 									</a>
 								</li>
 							</div>
@@ -139,18 +130,17 @@
 								</li>
 								<li>
 									<a href="/community">
-										博客主页 <div class="badge-primary badge">New!</div>
+										博客主页 <New />
 									</a>
 								</li>
 								<li>
 									<a href="/community/guide">
-										社区指南🧭 <div class="badge-primary badge">New!</div>
+										社区指南🧭 <New />
 									</a>
 								</li>
 								<li>
 									<a href="/my-account">
-										我的博客
-										<div class="badge-primary badge">New!</div>
+										我的博客 <New />
 									</a>
 								</li>
 							</div>
@@ -160,17 +150,17 @@
 								</li>
 								<li>
 									<a href="/community/guide/contribute">
-										贡献 <div class="badge-primary badge">New!</div>
+										贡献 <New />
 									</a>
 								</li>
 								<li>
 									<a>
-										赞助 <div class="badge">WIP</div>
+										赞助 <Wip />
 									</a>
 								</li>
 								<li>
 									<a>
-										关于网站 <div class="badge">WIP</div>
+										关于网站 <Wip />
 									</a>
 								</li>
 							</div>
@@ -203,24 +193,51 @@
 				</li>
 				<li>
 					<a href="/community">
-						📨 博客主页 <div class="badge-primary badge">New!</div>
+						📨 博客主页 <New />
 					</a>
 				</li>
 				<li>
 					<a href="/my-account">
 						📫 我发的帖子
-						<div class="badge-primary badge">New!</div>
+						<New />
 					</a>
 				</li>
 
 				<li>
 					<a href="/community/guide/contribute">
-						💕 贡献 <div class="badge-primary badge">New!</div>
+						💕 贡献 <New />
 					</a>
 				</li>
 			</ul>
 			<div class="divider" />
-
+			<!-- 编程 -->
+			<ul class="menu">
+				<li class="menu-title">
+					<span>网络工程</span>
+				</li>
+				<li>
+					<a href="/learn/programming">
+						学习编程 <New />
+					</a>
+				</li>
+				<li>
+					<a href="/learn/programming/roadmap">
+						开发路线图<New />
+					</a>
+				</li>
+				<li>
+					<a>
+						我应该选什么框架？
+						<New />
+					</a>
+				</li>
+				<li>
+					<a>
+						<Wip />
+					</a>
+				</li>
+			</ul>
+			<div class="divider" />
 			<!-- 哲学 -->
 			<ul class="menu">
 				<li class="menu-title">
@@ -229,13 +246,13 @@
 				<li>
 					<a>
 						哲学史
-						<div class="badge">WIP</div>
+						<Wip />
 					</a>
 				</li>
 				<li>
 					<a>
-						精神分析
-						<div class="badge">WIP</div>
+						神分析
+						<Wip />
 					</a>
 				</li>
 			</ul>
@@ -248,58 +265,26 @@
 				</li>
 				<li>
 					<a>
-						音乐制作
-						<div class="badge">WIP</div>
+						乐制作
+						<Wip />
 					</a>
 				</li>
 				<li>
 					<a>
 						混音
-						<div class="badge">WIP</div>
+						<Wip />
 					</a>
 				</li>
 				<li>
 					<a>
 						母带
-						<div class="badge">WIP</div>
+						<Wip />
 					</a>
 				</li>
 				<li>
 					<a>
-						录音/录制
-						<div class="badge">WIP</div>
-					</a>
-				</li>
-			</ul>
-			<div class="divider" />
-
-			<!-- 编程 -->
-			<ul class="menu">
-				<li class="menu-title">
-					<span>网络工程</span>
-				</li>
-				<li>
-					<a>
-						介绍
-						<div class="badge">WIP</div>
-					</a>
-				</li>
-				<li>
-					<a>
-						前端区
-						<div class="badge">WIP</div>
-					</a>
-				</li>
-				<li>
-					<a>
-						🎨 网站设计
-						<div class="badge">WIP</div>
-					</a>
-				</li>
-				<li>
-					<a>
-						后段区
-						<div class="badge">WIP</div>
+						录/录制
+						<Wip />
 					</a>
 				</li>
 			</ul>

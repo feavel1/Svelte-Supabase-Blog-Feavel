@@ -5,48 +5,59 @@ date: 2022年2月8日
 title: 学习道路
 ---
 
-# 💻 Front-end Development Roadmap
+# 💻 前端开发路线图
 
-As a front-end developer, it's important to stay up-to-date with the latest tools, frameworks, and technologies in the industry. Here is a comprehensive roadmap to help guide you on your journey.
+作为前端开发人员，了解行业中最新的工具、框架和技术非常重要。 这是一份适合新手的全面的路线图，可帮助指导您的旅程。
 
-## 🛠 Basic Necessities/Tools
+## 🛠 基本必需品/工具
 
-- [Visual Studio Code](https://code.visualstudio.com/) - A popular code editor for web development
-- [Node.js](https://nodejs.org) - JavaScript runtime environment for server-side development
-- [Git](https://git-scm.com/) - A version control system for tracking code changes
-- [Package Managers](https://npmjs.com) - Package manager for the Node.js ecosystem (npm), and others such as Yarn
+- [Visual Studio Code](https://code.visualstudio.com/) - 用于 Web 开发的流行代码编辑器。
+- [Node.js](https://nodejs.org) - 用于服务器端开发的 JavaScript 运行时环境以及插件、软件包、运行管理。
+- [Git](https://git-scm.com/) - 用于跟踪代码更改的版本控制系统，可以保存自己的改动，方便返回与更新软件版本
+- [包管理器 - NPM](https://npmjs.com) - Node.js 生态系统 (npm) 的包管理器，以及 Yarn 等其他包管理器
 
-## 📦 CSS Frameworks
+## 📦 CSS 框架
 
-- [Bootstrap](https://getbootstrap.com/) - A popular CSS framework for responsive, mobile-first development
-- [Materialize](https://materializecss.com/) - A modern CSS framework based on Google's Material Design guidelines
-- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid styling and development
+- [Tailwind CSS](https://tailwindcss.com/) - 用于快速样式化和开发的实用程序优先 CSS 框架,可以在官网找到例子
+- [Daisyui](https://daisyui.com) - 一种流行的 CSS 框架，用于响应式、移动优先的开发。在 Tailwind 基础上搭建
+- [Materialize](https://materializecss.com/) - 基于 Google 的 Material Design 指南的现代 CSS 框架
 
-## 💻 Progressive Web Apps (PWA)
+## 💻 渐进式 Web 应用程序语言 (PWA)
 
-- [React](https://reactjs.org) - A popular JavaScript library for building user interfaces
-- [Angular](https://angular.io) - A comprehensive framework for building complex web applications
-- [Vue.js](https://vuejs.org) - A progressive JavaScript framework for building user interfaces
+你可以在 [这里](/learn/programming/what-framework) 找到更好的对比与比较。
 
-## 🔄 Server-Side Rendering (SSR)
+### 个人喜欢的：
 
-- [Next.js](https://nextjs.org) - A framework for building server-rendered React applications
-- [Nuxt.js](https://nuxtjs.org) - A framework for building server-rendered Vue.js applications
+- [React](https://reactjs.org) - 一个非常非常流行的构建界面的 JavaScript 库.
 
-## 💼 Backend-as-a-Service (BaaS)
+- [Vue.js](https://vuejs.org) - 用于构建用户界面的渐进式 JavaScript 框架
 
-- [Firebase](https://firebase.google.com) - A BaaS platform provided by Google
-- [AWS Amplify](https://aws.amazon.com/amplify) - A BaaS platform provided by Amazon Web Services
-- [Parse Server](https://parseplatform.org) - An open-source BaaS platform
+- [Svelte](https://svelte.dev) - 一个非常新、开发流程友好、功能丰富、加载快的框架
 
-## 🚀 Popular Frameworks
+## 🔄 服务器端渲染（SSR）- 用于搭建网页程序
 
-- [React Native](https://reactnative.dev) - A framework for building native mobile apps using React
-- [Ionic](https://ionicframework.com) - A framework for building cross-platform mobile apps using Angular and web technologies
+- [Astro.js](https://docs.astro.build/zh-cn/getting-started/) - 非常适合用来搭建个人主页/博客的框架。
+- [Next.js](https://nextjs.org) - 用于构建服务器呈现的 React 应用程序的框架
+- [Svelte Kit](https://kit.svelte.dev) - Svelte 默认的开发环境，非常好学
+- [Nuxt.js](https://nuxtjs.org) - 用于构建服务器呈现的 Vue.js 应用程序的框架
 
-## 🎨 CSS Libraries
+## 💼 后端即服务 (BaaS)
 
-- [Animate.css](https://animate.style) - A library of cross-browser CSS animation classes
-- [Hover.css](https://ianlunn.github.io/Hover/) - A collection of CSS3 transitions and animations
+-用于搭建数据库/登录/实时更新/文件储存的服务
 
-With this roadmap, you'll be well on your way to becoming a skilled front-end developer! 🚀
+- [Firebase](https://firebase.google.com) - Google 提供的 BaaS 平台
+- [Supabase](https://supabase.com) - Supabase 提供的 **开源** BaaS 平台
+- [PocketBase](https://pocketbase.io) - 在 1 个文件中开源后端和移动应用程序的 BaaS
+
+## 🚀 流行框架 用于搭建手机、桌面应用
+
+- [Tauri](https://tauri.app/zh-cn/) - 使用 Next.js, Svelte Kit, Rust 来搭建自己的跨平台程序
+- [Ionic](https://ionicframework.com) - 使用 React/Vue/Angular 构建跨平台移动应用程序的框架
+- [Electron](https://www.electronjs.org) - 使用多种框架构建原生移动应用程序的框架
+
+## 🎨 CSS 库
+
+- [Animate.css](https://animate.style) - 跨浏览器 CSS 动画类库
+- [Hover.css](https://ianlunn.github.io/Hover/) - CSS3 过渡和动画的集合
+
+有了这个路线图，您将顺利成为一名熟练的前端开发人员！ 🚀

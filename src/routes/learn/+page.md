@@ -26,7 +26,7 @@ title: 学习主页
   </div>
 </Card>
 
-<div class="divider" />
+<!-- <div class="divider" />
 
 <Card>
   <div class="card-body">
@@ -50,6 +50,6 @@ title: 学习主页
       <a href="/learn/phylosophy"> <button class="btn-accent btn">学习哲学</button></a>
     </div>
   </div>
-</Card>
+</Card> -->
 
 <div class="divider" />
