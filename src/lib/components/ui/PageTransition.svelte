@@ -1,11 +1,14 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	export let key: string;
 </script>
 
 {#key key}
-	<div in:fly={{ y: -50, duration: 1000, delay: 600 }} out:fly={{ y: -50, duration: 550 }}>
+	<div
+		in:fly={{ y: -50, duration: 500, delay: 600 }}
+		out:fly={{ y: -50, duration: 350 }}
+		class="-z-50"
+	>
 		<slot />
 	</div>
 {/key}

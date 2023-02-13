@@ -17,11 +17,11 @@ title: 学习主页📚
 
 <Card>
   <div class="card-body">
-    <div class="card-title">⚙️网络工程指南🧭</div>
+    <div class="card-title">👶🏻 基础编程知识</div>
     <div class="badge-info badge">New!</div>
-    <div>新手、前端、BAAS、Svelte Kit、Astro、Supabase</div>
+    <div>新手、前端、Svelte Kit、Astro</div>
     <div class="card-actions justify-end">
-      <a href="/learn/programming"> <button class="btn-accent btn">学习编程</button></a>
+      <a href="/learn/programming"> <button class="btn-accent btn">学习基础</button></a>
     </div>
   </div>
 </Card>

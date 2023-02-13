@@ -40,6 +40,27 @@
 							tabindex="0"
 							class="dropdown-content grid w-max grid-cols-3 rounded-sm bg-base-200 p-4 shadow"
 						>
+							<!-- 编程 -->
+							<ul class="menu">
+								<li class="menu-title">
+									<span>网络工程</span>
+								</li>
+								<li>
+									<a href="/learn/programming">
+										👶🏻 基础知识 <New />
+									</a>
+								</li>
+								<li>
+									<a>
+										🎨 前端工程 <Wip />
+									</a>
+								</li>
+								<li>
+									<a>
+										后段区 <Wip />
+									</a>
+								</li>
+							</ul>
 							<!-- 哲学 -->
 							<ul class="menu">
 								<li class="menu-title">
@@ -88,32 +109,6 @@
 									</a>
 								</li>
 							</ul>
-							<!-- 编程 -->
-							<div class="menu">
-								<li class="menu-title">
-									<span>网络工程</span>
-								</li>
-								<li>
-									<a href="/learn/programming">
-										学习编程 <New />
-									</a>
-								</li>
-								<li>
-									<a href="/learn/programming/roadmap">
-										开发路线图<New />
-									</a>
-								</li>
-								<li>
-									<a>
-										网站设计 🎨 <Wip />
-									</a>
-								</li>
-								<li>
-									<a>
-										后段区 <Wip />
-									</a>
-								</li>
-							</div>
 						</div>
 					</div>
 
@@ -124,7 +119,7 @@
 							tabindex="0"
 							class="dropdown-content grid w-max grid-cols-2 rounded-sm bg-base-200 p-4 shadow"
 						>
-							<div class="menu w-56">
+							<ul class="menu w-56">
 								<li class="menu-title">
 									<span>BLOG</span>
 								</li>
@@ -143,8 +138,8 @@
 										我的博客 <New />
 									</a>
 								</li>
-							</div>
-							<div class="menu">
+							</ul>
+							<ul class="menu">
 								<li class="menu-title">
 									<span>特殊服务</span>
 								</li>
@@ -163,7 +158,7 @@
 										关于网站 <Wip />
 									</a>
 								</li>
-							</div>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -217,23 +212,17 @@
 				</li>
 				<li>
 					<a href="/learn/programming">
-						学习编程 <New />
-					</a>
-				</li>
-				<li>
-					<a href="/learn/programming/roadmap">
-						开发路线图<New />
+						👶🏻 基础知识 <New />
 					</a>
 				</li>
 				<li>
 					<a>
-						我应该选什么框架？
-						<New />
+						🎨 前端工程 <Wip />
 					</a>
 				</li>
 				<li>
 					<a>
-						<Wip />
+						后段区 <Wip />
 					</a>
 				</li>
 			</ul>
