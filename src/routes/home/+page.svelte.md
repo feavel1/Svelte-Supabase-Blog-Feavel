@@ -35,6 +35,16 @@ layout: Home
 
 <Card>
 	<div class="card-body">
+		<h3 class="card-title">学习🧑🏼‍💻</h3>
+		<p>是否想学混音、编程、哲学？</p>
+		<div class="card-actions justify-end">
+			<a href="/learn"><button class="btn-primary btn">阅读</button></a>
+		</div>
+	</div>
+</Card>
+
+<Card>
+	<div class="card-body">
 		<h3 class="card-title">论坛📡</h3>
 		<p>可以在论谈里查看/发布自己喜欢的内容。</p>
 		<div class="card-actions justify-end">
@@ -44,6 +54,7 @@ layout: Home
 		</div>
 	</div>
 </Card>
+
 <Card>
 	<div class="card-body">
 		<h3 class="card-title">我的账号📠</h3>
@@ -56,15 +67,6 @@ layout: Home
 	</div>
 </Card>
 
-<Card>
-	<div class="card-body">
-		<h3 class="card-title">学习🧑🏼‍💻</h3>
-		<p>是否想学混音、编程、哲学？</p>
-		<div class="card-actions justify-end">
-			<a href="/learn"><button class="btn-primary btn">阅读</button></a>
-		</div>
-	</div>
-</Card>
 <Card>
 	<div class="card-body">
 		<h3 class="card-title">内容创作🫶</h3>
