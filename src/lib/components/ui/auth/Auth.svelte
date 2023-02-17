@@ -10,7 +10,7 @@
 			loading = true;
 			const { error } = await supabase.auth.signInWithOtp({ email: emailToVerify });
 			if (error) throw error;
-			alert('Check your email for the login link!');
+			alert('快去邮箱📮查看你的魔术🪄链接🔗吧❤️❤️❤️!');
 		} catch (error) {
 			if (error instanceof Error) {
 				alert(error.message);

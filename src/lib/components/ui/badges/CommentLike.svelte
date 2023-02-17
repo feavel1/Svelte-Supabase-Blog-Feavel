@@ -29,6 +29,7 @@
 
 	const toggleLike = async () => {
 		if (!user) {
+			alert('登录才能点赞哦😯');
 			return;
 		}
 
