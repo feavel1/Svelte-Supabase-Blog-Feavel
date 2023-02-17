@@ -1,38 +1,40 @@
 <script lang="ts">
-	import type { PageData } from './$types';
-	import Time from 'svelte-time';
 	import { supabase } from '$lib/supabaseClient';
-	import BackTo from '$lib/components/ui/BackTo.svelte';
+	import { page } from '$app/stores';
+	import CommentLike from '$lib/components/ui/badges/CommentLike.svelte';
+	import Time from 'svelte-time/src/Time.svelte';
 
-	export let data: PageData;
+	export let data;
 
-	let inputHint = '',
-		comments = data.comments!,
-		commentContent: string,
-		commentPost = data.post?.id,
-		commentEmail = data.session?.user.email,
-		commentUserId = data.session?.user.id,
-		submitComment = false;
+	let post = data.post,
+		comments = data.comments,
+		content = '',
+		user = $page.data.session && $page.data.session.user;
 
-	let commentDisabled = false;
-
-	if (data.session === null) {
-		commentDisabled = true;
-		inputHint = '请先登录。';
-	} else {
-		commentDisabled === false;
-		inputHint = '评论';
-	}
-
-	async function handleCreateComment() {
-		const { data, error } = await supabase.from('comments').insert([
-			{
-				content: commentContent,
-				email: commentEmail!,
-				post_id: commentPost!,
-				user_id: commentUserId!
+	const submitComment = async () => {
+		try {
+			if (!user) {
+				alert('监测到您未登录.');
+				return;
 			}
-		]);
+			const { data: newComment, error } = await supabase
+				.from('comments')
+				.insert({ post_id: post.id, user_id: user.id, content, email: user.email! })
+				.select(`*, comment_likes (user_id)`)
+				.single();
+			if (error) throw error;
+
+			comments = [...comments, newComment];
+			// location.reload();
+			content = '';
+		} catch (error) {
+			console.error(error);
+			alert('添加评论时出错啦.');
+		}
+	};
+
+	async function handelDeleteComment(comment: number) {
+		const { data, error } = await supabase.from('comments').delete().eq('id', comment);
 		if (error) throw new Error(error.message);
 		location.reload();
 		return data;
@@ -40,59 +42,57 @@
 </script>
 
 <div class="w-full max-w-3xl">
-	<BackTo />
-	<div class="">
-		<h1 class="my-0 text-5xl font-extrabold md:text-6xl">{data.post?.title}</h1>
-		<span class="text-sm">作者：{data.post?.email}</span>
-		<div class="divider" />
-
-		<p class="prose-md prose  whitespace-pre md:prose-xl">{data.post?.content}</p>
-	</div>
-	<!-- comment section -->
-	<div class="divider mb-0">评论区</div>
-	<form class="form-control mb-5" on:submit|preventDefault={() => (submitComment = true)}>
-		<label for="comment" class="label">
-			<span class="label-text" />
-			<button
-				class="btn-xs btn"
-				disabled={commentDisabled}
-				on:click={() => (submitComment = false)}
-			>
-				{#if commentDisabled === true}请先登录{:else}添加评论{/if}
-			</button>
-		</label>
-		<input
-			bind:value={commentContent}
-			disabled={commentDisabled}
-			type="text"
-			placeholder={inputHint}
-			class="px s-2 input-bordered input w-full rounded-lg bg-primary text-primary-content placeholder:text-slate-600"
-		/>
-
-		{#if submitComment}
-			{#await handleCreateComment()}
-				<label for="comment" class="label"><span class="label-text">加载中...</span></label>
-			{:then data}
-				<label for="comment" class="label">
-					<span class="label-text text-success">添加成功!</span>
+	{#if post}
+		<div class="">
+			<h1 class="my-0 text-5xl font-extrabold md:text-6xl">{post.title}</h1>
+			<span class="text-sm">作者：{post.email}</span>
+			<div class="divider" />
+			<p class="prose-md prose  whitespace-pre md:prose-xl">{post.content}</p>
+		</div>
+		<!-- 评论区 -->
+		<div class="divider mb-0">评论💬</div>
+		{#if user}
+			<form class="form-control mb-5" on:submit|preventDefault={submitComment}>
+				<label for="content" class="label">
+					输入你的评论:
+					<button class="btn-xs btn" type="submit">添加评论</button>
 				</label>
-			{:catch error}
-				<label for="comment" class="label text-error">
-					<span class="label-text">发生错误了</span>
-					<span class="label-text ">{error}</span>
-				</label>
-			{/await}
+				<input
+					type="text"
+					class="px s-2 input-bordered input w-full rounded-lg bg-primary text-primary-content placeholder:text-slate-600"
+					id="content"
+					bind:value={content}
+				/>
+			</form>
+		{:else}
+			<a href="/my-account" class="badge">登录才可以添加评论.</a>
 		{/if}
-	</form>
-	<div class="flex w-full flex-col">
-		{#each comments as comment}
-			<div class="chat  flex flex-col">
-				<div class="chat-header text-xs">
-					By: {comment.email}
+
+		{#if comments.length === 0}
+			<p>暂时没有评论，快添加一个吧.</p>
+		{:else}
+			{#each comments as comment}
+				<div class="chat flex flex-col">
+					<div class="chat-header text-xs">By: {comment.email}</div>
+					<div class="flex flex-row items-center justify-between gap-3">
+						<div class="chat-bubble-secondary w-fit rounded-md px-3 py-1">{comment.content}</div>
+						<div>
+							{#if comment.email === $page.data.session?.user.email}
+								<button
+									class="px-2 py-1 text-accent  hover:text-accent-focus "
+									on:click={() => handelDeleteComment(comment.id)}
+								>
+									删除
+								</button>
+							{/if}
+							<CommentLike {comment} {user} />
+						</div>
+					</div>
+					<Time relative class="text-xs opacity-50" timestamp={comment.created_at} />
 				</div>
-				<div class="chat-bubble-secondary w-fit rounded-md px-3 py-1">{comment.content}</div>
-				<Time relative class="text-xs opacity-50" timestamp={comment.created_at} />
-			</div>
-		{/each}
-	</div>
+			{/each}
+		{/if}
+	{:else}
+		<p>没有找到此帖子.</p>
+	{/if}
 </div>

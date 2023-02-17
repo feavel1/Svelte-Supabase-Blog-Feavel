@@ -2,33 +2,26 @@ import { supabase } from '$lib/supabaseClient';
 import type { PageServerLoad } from './$types';
 
 export const load = (async ({ params }) => {
-	// Fetch the post
 	async function fetchPost(postId: String) {
-		const { data: post, error: postError } = await supabase
+		let { data, error } = await supabase
 			.from('posts')
 			.select('*')
 			.filter('id', 'eq', postId)
 			.single();
-		if (postError) {
-			console.log(postError);
-		}
-		return post;
+		if (error) throw new Error(error.message);
+		return data;
 	}
 
-	// Fetch the comments for the post
 	async function fetchComments(postId: String) {
-		const { data: comments, error: commentsError } = await supabase
+		let { data, error } = await supabase
 			.from('comments')
-			.select(`content, created_at, email, id, comment_likes (user_id)`)
+			.select('*')
 			.order('created_at', { ascending: false })
 			.eq('post_id', postId);
-		if (commentsError) {
-			console.log(commentsError);
-		}
-		return comments;
+		if (error) throw new Error(error.message);
+		return data;
 	}
 
-	// Return the data and errors
 	return {
 		post: fetchPost(params.postId),
 		comments: fetchComments(params.postId)
