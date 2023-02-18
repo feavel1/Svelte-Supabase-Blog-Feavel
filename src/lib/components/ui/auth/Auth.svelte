@@ -10,7 +10,7 @@
 			loading = true;
 			const { error } = await supabase.auth.signInWithOtp({ email: emailToVerify });
 			if (error) throw error;
-			alert('快去邮箱📮查看你的魔术🪄链接🔗吧❤️❤️❤️!');
+			alert('快去邮箱📮查看你的魔术🪄链接🔗吧❤️!');
 		} catch (error) {
 			if (error instanceof Error) {
 				alert(error.message);
@@ -34,12 +34,11 @@
 			<div class="content-card w-full max-w-sm flex-shrink-0 rounded-sm bg-base-300 shadow-2xl ">
 				<form class="card-body" on:submit|preventDefault={handleLogin}>
 					<div class="form-control">
-						<!-- svelte-ignore a11y-label-has-associated-control -->
-						<label class="label">
+						<label for="email" class="label">
 							<span class="label-text">邮箱📮</span>
 						</label>
 						<input
-							type="text"
+							type="email"
 							placeholder="email"
 							class="input-bordered input"
 							bind:value={emailToVerify}

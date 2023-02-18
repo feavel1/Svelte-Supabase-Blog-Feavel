@@ -43,12 +43,12 @@
 
 <div class="w-full max-w-3xl">
 	{#if post}
-		<div class="">
-			<h1 class="my-0 text-5xl font-extrabold md:text-6xl">{post.title}</h1>
-			<span class="text-sm">作者：{post.email}</span>
-			<div class="divider" />
-			<p class="prose-md prose whitespace-pre md:prose-xl">{@html post.content}</p>
-		</div>
+		<h1 class="my-0 text-5xl font-extrabold md:text-6xl">{post.title}</h1>
+		<span class="text-sm">作者：{post.email}</span>
+		<Time relative class="text-xs opacity-50" timestamp={post.created_at} />
+		<div class="divider" />
+		<div class="prose-lg prose md:prose-xl first-letter:text-cyan-300">{@html post.content}</div>
+
 		<!-- 评论区 -->
 		{#if user}
 			<div class="divider mb-0">评论💬</div>
@@ -65,8 +65,8 @@
 				/>
 			</form>
 		{:else}
-			<div class="divider mb-0">
-				<a href="/my-account" class="badge mb-0">登录才可以添加评论.</a>
+			<div class="divider">
+				<a href="/my-account" class="badge">登录才可以添加评论.</a>
 			</div>
 		{/if}
 
