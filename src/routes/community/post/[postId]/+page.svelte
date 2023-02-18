@@ -47,7 +47,7 @@
 			<h1 class="my-0 text-5xl font-extrabold md:text-6xl">{post.title}</h1>
 			<span class="text-sm">作者：{post.email}</span>
 			<div class="divider" />
-			<p class="prose-md prose  whitespace-pre md:prose-xl">{post.content}</p>
+			<p class="prose-md prose whitespace-pre md:prose-xl">{@html post.content}</p>
 		</div>
 		<!-- 评论区 -->
 		<div class="divider mb-0">评论💬</div>

@@ -1,5 +1,7 @@
 import { supabase } from '$lib/supabaseClient';
 import type { PageServerLoad } from './$types';
+import { compile } from 'mdsvex';
+import highlighter from '$lib/components/scripts/codeHighliter.mjs';
 
 export const load = (async ({ params }) => {
 	// Fetch the post
@@ -12,6 +14,15 @@ export const load = (async ({ params }) => {
 		if (postError) {
 			console.log(postError);
 		}
+		const mdsvexOptions = {
+			highlight: {
+				highlighter
+			}
+		};
+		(async () => {
+			const { code } = await compile(post.content, mdsvexOptions);
+			post.content = code;
+		})();
 		return post;
 	}
 
@@ -25,6 +36,7 @@ export const load = (async ({ params }) => {
 		if (commentsError) {
 			console.log(commentsError);
 		}
+
 		return comments;
 	}
 
