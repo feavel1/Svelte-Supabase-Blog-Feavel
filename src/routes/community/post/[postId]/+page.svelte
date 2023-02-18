@@ -50,8 +50,8 @@
 			<p class="prose-md prose whitespace-pre md:prose-xl">{@html post.content}</p>
 		</div>
 		<!-- 评论区 -->
-		<div class="divider mb-0">评论💬</div>
 		{#if user}
+			<div class="divider mb-0">评论💬</div>
 			<form class="form-control mb-5" on:submit|preventDefault={submitComment}>
 				<label for="content" class="label">
 					输入你的评论:
@@ -65,7 +65,9 @@
 				/>
 			</form>
 		{:else}
-			<a href="/my-account" class="badge">登录才可以添加评论.</a>
+			<div class="divider mb-0">
+				<a href="/my-account" class="badge mb-0">登录才可以添加评论.</a>
+			</div>
 		{/if}
 
 		{#if comments.length === 0}

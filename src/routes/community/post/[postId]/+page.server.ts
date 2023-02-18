@@ -20,8 +20,8 @@ export const load = (async ({ params }) => {
 			}
 		};
 		(async () => {
-			const { code } = await compile(post.content, mdsvexOptions);
-			post.content = code;
+			const { code } = await compile(post!.content, mdsvexOptions);
+			post!.content = code;
 		})();
 		return post;
 	}
