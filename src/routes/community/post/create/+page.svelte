@@ -1,5 +1,5 @@
 <script lang="ts">
-	import BackTo from '../../../../lib/components/ui/BackTo.svelte';
+	import BackTo from '$lib/components/ui/BackTo.svelte';
 	import { page } from '$app/stores';
 	import { supabase } from '$lib/supabaseClient';
 

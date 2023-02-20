@@ -4,8 +4,8 @@
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import PageBlock from '../lib/components/ui/PageBlock.svelte';
-	import InView from '../lib/components/ui/InView.svelte';
+	import PageBlock from '$lib/components/ui/PageBlock.svelte';
+	import InView from '$lib/components/ui/InView.svelte';
 
 	if (browser && $page.data.session) {
 		goto('/home');
