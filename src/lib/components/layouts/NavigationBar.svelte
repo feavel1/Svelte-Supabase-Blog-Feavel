@@ -1,7 +1,10 @@
 <script>
+	import { page } from '$app/stores';
 	import ThemeChanger from '$lib/components/ui/navBar/ThemeChanger.svelte';
 	import New from '../ui/badges/New.svelte';
 	import Wip from '../ui/badges/Wip.svelte';
+
+	let user = $page.data.session && $page.data.session.user;
 </script>
 
 <!-- svelte-ignore a11y-missing-attribute -->
@@ -165,7 +168,9 @@
 			</div>
 
 			<a href="/my-account">
-				<div class="btn-ghost btn flex gap-2 px-4">我的账号</div>
+				<div class="btn-ghost btn flex gap-2 px-4">
+					{#if user}我的账户{:else}登录{/if}
+				</div>
 			</a>
 			<div class="flex-2">
 				<ThemeChanger />

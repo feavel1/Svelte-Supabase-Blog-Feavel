@@ -6,7 +6,8 @@
 
 	export let id: number, email: string, title: string, content: string, likes, created_at: string;
 
-	let likeButtonDisabled: boolean, postLike: number;
+	let postLike: number,
+		user = $page.data.session && $page.data.session.user;
 
 	if (likes === null) {
 		postLike = 0;
@@ -19,13 +20,11 @@
 		postLike = likes.likes;
 	}
 
-	if (!$page.data?.session?.user.email) {
-		likeButtonDisabled = true;
-	} else {
-		likeButtonDisabled = false;
-	}
-
 	function addLike() {
+		if (!user) {
+			alert('登录才能点赞哦😯');
+			return;
+		}
 		async function addLike() {
 			const { error } = await supabase.from('likes').update({ likes: postLike }).eq('id', id);
 			if (error) throw new Error(error.message);
@@ -36,12 +35,12 @@
 </script>
 
 <div
-	in:fly={{ y: -50, duration: 1000 }}
+	in:fly={{ y: -50, duration: 500 }}
 	class="mb-5 flex rounded-sm bg-secondary text-secondary-content shadow-xl transition-all duration-300 hover:rounded-3xl hover:bg-secondary-focus hover:text-secondary-content"
 >
 	<div class="card-body">
 		<div class="flex flex-col gap-1">
-			<h1 class="w-44 truncate text-2xl font-semibold">{title}</h1>
+			<div class="text-2xl font-bold">{title}</div>
 			<!-- <p class="text-clip">{content}</p> -->
 			<div class="badge">作者: {email}</div>
 			<div class="badge-primary badge">
@@ -49,7 +48,7 @@
 			</div>
 		</div>
 		<div class="card-actions mt-10 justify-between">
-			<button disabled={likeButtonDisabled} class="btn-primary btn" on:click={addLike}>
+			<button class="btn-primary btn" on:click={addLike}>
 				{postLike}赞❤️
 			</button>
 			<a class="btn-primary btn" href="community/post/{id}">
