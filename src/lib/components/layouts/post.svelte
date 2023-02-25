@@ -14,15 +14,7 @@
 		title: title + ' - Feavel的部落',
 		description: '点击Feavel的部落中查看关于此内容的帖子',
 		url: 'https://feavel-musci-camp.vercel.com',
-		type: 'website',
-		images: [
-			{
-				url: 'img-link.png',
-				width: 128,
-				height: 128,
-				alt: 'Icon Image'
-			}
-		]
+		type: 'website'
 	}}
 	jsonLd={{
 		'@type': 'Article',
