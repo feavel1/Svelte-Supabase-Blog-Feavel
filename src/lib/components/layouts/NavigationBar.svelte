@@ -1,17 +1,29 @@
-<script>
+<script lang="ts">
+	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
+	import New from '$lib/components/ui/badges/New.svelte';
+	import Wip from '$lib/components/ui/badges/Wip.svelte';
 	import ThemeChanger from '$lib/components/ui/navBar/ThemeChanger.svelte';
-	import New from '../ui/badges/New.svelte';
-	import Wip from '../ui/badges/Wip.svelte';
+	import PageTransition from '$lib/components/ui/PageTransition.svelte';
+	import Footer from '$lib/components/ui/Footer.svelte';
+
+	export let key: string;
 
 	let user = $page.data.session && $page.data.session.user;
+	let drawercontent: HTMLDivElement;
+	let checked: boolean;
+
+	afterNavigate(() => {
+		drawercontent.scrollTop = 0;
+		checked = false;
+	});
 </script>
 
 <!-- svelte-ignore a11y-missing-attribute -->
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-<div class="drawer-new">
-	<input type="checkbox" id="my-drawer-3" class="drawer-toggle" />
-	<div class="drawer-content flex flex-col">
+<div class="drawer">
+	<input type="checkbox" id="my-drawer-3" class="drawer-toggle" bind:checked />
+	<div bind:this={drawercontent} class="drawer-content flex flex-col">
 		<!-- Navbar -->
 		<div class="navbar fixed w-full border-b border-base-100 backdrop-blur-md">
 			<div class="flex-1 lg:hidden">
@@ -177,8 +189,16 @@
 			</div>
 		</div>
 		<!-- Page content here -->
-		<slot />
+		<PageTransition {key}>
+			<div class="mt-28 min-h-screen px-6 pb-16 xl:px-2">
+				<div class="flex justify-center">
+					<slot />
+				</div>
+			</div>
+			<Footer />
+		</PageTransition>
 	</div>
+
 	<!-- Drawer -->
 	<div class="drawer-side">
 		<label for="my-drawer-3" class="drawer-overlay" />

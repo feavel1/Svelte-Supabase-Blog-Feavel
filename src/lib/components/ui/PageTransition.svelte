@@ -12,9 +12,3 @@
 		<slot />
 	</div>
 {/key}
-
-<!-- {#key key}
-	<div in:slide={{ duration, delay: duration }} out:slide={{ duration }}>
-		<slot />
-	</div>
-{/key} -->
