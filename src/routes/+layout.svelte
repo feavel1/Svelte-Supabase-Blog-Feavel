@@ -1,13 +1,14 @@
 <script lang="ts">
 	import '../app.css';
-	import type { PageData } from './$types';
+	import type { LayoutData } from './$types';
 	import { onMount } from 'svelte';
 	import { themeChange } from 'theme-change';
 	import { invalidate } from '$app/navigation';
-	import { supabase } from '$lib/supabaseClient';
 	import NavigationBar from '$lib/components/layouts/NavigationBar.svelte';
 
-	export let data: PageData;
+	export let data: LayoutData;
+
+	$: ({ supabase } = data);
 
 	onMount(() => {
 		themeChange(false);
@@ -17,12 +18,11 @@
 		} = supabase.auth.onAuthStateChange(() => {
 			invalidate('supabase:auth');
 		});
-		return () => {
-			subscription.unsubscribe();
-		};
+
+		return () => subscription.unsubscribe();
 	});
 </script>
 
-<NavigationBar key={data.url}>
+<NavigationBar key={data.url.pathname}>
 	<slot />
 </NavigationBar>

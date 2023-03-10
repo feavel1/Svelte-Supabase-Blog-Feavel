@@ -1,18 +1,18 @@
 /// <reference types="@sveltejs/kit" />
 
-// See https://kit.svelte.dev/docs/types#app
-// for information about these interfaces
-// and what to do when importing types
-declare namespace App {
-	interface Supabase {
-		Database: import('./lib/supabase').Database;
-		SchemaName: 'public';
-	}
+import { SupabaseClient, Session } from '@supabase/supabase-js';
+import { Database } from './lib/supabase';
 
-	// interface Locals {}
-	interface PageData {
-		session: import('@supabase/supabase-js').Session | null;
+declare global {
+	namespace App {
+		interface Locals {
+			supabase: SupabaseClient<Database>;
+			getSession(): Promise<Session | null>;
+		}
+		interface PageData {
+			session: Session | null;
+		}
+		// interface Error {}
+		// interface Platform {}
 	}
-	// interface Error {}
-	// interface Platform {}
 }
