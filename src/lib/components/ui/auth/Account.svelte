@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import type { AuthSession } from '@supabase/supabase-js';
+	import type { Session } from '@supabase/supabase-js';
 	import { supabase } from '$lib/supabaseClient';
 	import BackTo from '../BackTo.svelte';
 	import UserPosts from './UserPosts.svelte';
 
-	export let session: AuthSession;
+	export let session: Session;
 
 	let loading = false;
 	let username: string | null = null;

@@ -1,8 +1,7 @@
 <script lang="ts">
 	import Account from '$lib/components/ui/auth/Account.svelte';
 	import Auth from '$lib/components/ui/auth/Auth.svelte';
-	import type { Session } from '@supabase/supabase-js';
-	export let session: Session | null;
+	import { page } from '$app/stores';
 </script>
 
 <svelte:head>
@@ -10,8 +9,8 @@
 	<meta name="description" content="我的账号" />
 </svelte:head>
 
-{#if !session}
+{#if !$page.data.session}
 	<Auth />
 {:else}
-	<Account {session} />
+	<Account session={$page.data.session} />
 {/if}
