@@ -12,14 +12,14 @@ export const load = (async ({ params }) => {
 		return data;
 	}
 
-	async function fetchComments(postId: String) {
-		let { data, error } = await supabase.from('comments').select('*').eq('post_id', postId);
-		if (error) throw new Error(error.message);
-		return data;
-	}
+	// async function fetchComments(postId: String) {
+	// 	let { data, error } = await supabase.from('comments').select('*').eq('post_id', postId);
+	// 	if (error) throw new Error(error.message);
+	// 	return data;
+	// }
 
 	return {
-		post: fetchPost(params.editPostId),
-		comments: fetchComments(params.editPostId)
+		post: fetchPost(params.editPostId)
+		// comments: fetchComments(params.editPostId)
 	};
 }) satisfies PageServerLoad;
