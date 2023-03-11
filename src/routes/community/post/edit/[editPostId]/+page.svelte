@@ -3,7 +3,6 @@
 	import { supabase } from '$lib/supabaseClient';
 	import type { PageData } from './$types';
 	export let data: PageData;
-	import { page } from '$app/stores';
 
 	let title: string,
 		content: string = data.post!.content,
@@ -18,7 +17,9 @@
 
 <div class="w-full max-w-3xl">
 	<BackTo />
-	{#if !$page.data.session?.user.id == data.post.userId}
+	{#if data.session?.user.id !== data.post.post_creator_id}
+		<h1>哎呀...小黑客...干嘛呢</h1>
+	{:else}
 		<h1 class="mb-4 text-6xl">编辑帖子</h1>
 
 		<form on:submit|preventDefault={() => (submit = true)}>
@@ -57,7 +58,5 @@
 				<pre>{error}</pre>
 			{/await}
 		{/if}
-	{:else}
-		<h1>哎呀...小黑客...干嘛呢</h1>
 	{/if}
 </div>
