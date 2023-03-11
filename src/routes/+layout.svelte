@@ -1,5 +1,7 @@
 <script lang="ts">
 	import '../app.css';
+	import { supabase } from '$lib/supabaseClient';
+
 	import type { LayoutData } from './$types';
 	import { onMount } from 'svelte';
 	import { themeChange } from 'theme-change';
@@ -8,7 +10,7 @@
 
 	export let data: LayoutData;
 
-	$: ({ supabase } = data);
+	// $: ({ supabase } = data);
 
 	onMount(() => {
 		themeChange(false);
