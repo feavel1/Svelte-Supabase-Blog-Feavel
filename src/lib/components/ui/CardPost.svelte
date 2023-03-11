@@ -4,7 +4,7 @@
 	import Time from 'svelte-time/src/Time.svelte';
 	import { fly } from 'svelte/transition';
 
-	export let id: number, email: string, title: string, content: string, likes, created_at: string;
+	export let id: number, email: string, title: string, likes, created_at: string;
 
 	let postLike: number,
 		user = $page.data.session && $page.data.session.user;
@@ -41,7 +41,6 @@
 	<div class="card-body">
 		<div class="flex flex-col gap-1">
 			<div class="text-2xl font-bold">{title}</div>
-			<!-- <p class="text-clip">{content}</p> -->
 			<div class="badge">作者: {email}</div>
 			<div class="badge-primary badge">
 				创建： <Time relative class="text-xs " timestamp={created_at} />

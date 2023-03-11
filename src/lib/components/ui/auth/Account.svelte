@@ -85,7 +85,7 @@
 	async function fetchPosts() {
 		const { data, error } = await supabase
 			.from('posts')
-			.select(`id, title, content, likes (likes)`)
+			.select(`id, title, likes (likes)`)
 			.eq('post_creator_id', session.user.id)
 			.order('created_at', { ascending: false });
 		if (error) throw new Error(error.message);

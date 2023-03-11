@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { supabase } from '$lib/supabaseClient';
 	import CardPostUser from '../CardPostUser.svelte';
-	export let id: number, title: string, content: string, likes;
+	export let id: number, title: string, likes;
 
 	let postLike: number;
 
