@@ -16,11 +16,11 @@ export const load = (async ({ params }) => {
 		}
 		const mdsvexOptions = {
 			highlight: {
-				highlighter
+				highlighter: String
 			}
 		};
 		(async () => {
-			const { code } = await compile(post!.content, mdsvexOptions);
+			const { code }: any = await compile(post!.content, mdsvexOptions);
 			post!.content = code;
 		})();
 		return post;

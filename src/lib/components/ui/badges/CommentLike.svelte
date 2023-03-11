@@ -48,11 +48,11 @@
 			likedByUser = false;
 		} else {
 			// Like the comment
+			count.update((n) => n + 1);
 			const { error } = await supabase
 				.from('comment_likes')
 				.insert({ comment_id: comment.id, user_id: user.id })
 				.single();
-			count.update((n) => n + 1);
 			if (error) {
 				console.error(error);
 				return;
