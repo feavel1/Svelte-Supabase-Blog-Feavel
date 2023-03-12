@@ -1,18 +1,21 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
 	import PageBlock from '$lib/components/ui/PageBlock.svelte';
 	import InView from '$lib/components/ui/InView.svelte';
 
-	if (browser && $page.data.session) {
+	export let session;
+
+	if (browser && session) {
 		goto('/home');
 	}
 
 	let ready = false;
-	onMount(() => (ready = true));
+	onMount(() => {
+		ready = true;
+	});
 </script>
 
 <svelte:head>

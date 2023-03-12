@@ -5,10 +5,12 @@
 
 {#key key}
 	<div
-		in:fly={{ y: -50, duration: 500, delay: 600 }}
-		out:fly={{ y: -50, duration: 350 }}
+		in:fly={{ y: -100, duration: 600, delay: 250 }}
+		out:fly={{ y: -50, duration: 300 }}
 		class="-z-50"
 	>
 		<slot />
 	</div>
 {/key}
+
+<!-- out:fly={{ y: -50, duration: 350 }} -->

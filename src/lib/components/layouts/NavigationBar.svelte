@@ -1,11 +1,13 @@
 <script lang="ts">
-	import { afterNavigate } from '$app/navigation';
+	import { beforeNavigate, afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import New from '$lib/components/ui/badges/New.svelte';
 	import Wip from '$lib/components/ui/badges/Wip.svelte';
 	import ThemeChanger from '$lib/components/ui/navBar/ThemeChanger.svelte';
 	import PageTransition from '$lib/components/ui/PageTransition.svelte';
 	import Footer from '$lib/components/ui/Footer.svelte';
+	import Jellyfish from '$lib/components/ui/spinner/Jellyfish.svelte';
+	import { fade } from 'svelte/transition';
 
 	export let key: string;
 
@@ -13,11 +15,32 @@
 	let drawercontent: HTMLDivElement;
 	let checked: boolean;
 
-	afterNavigate(() => {
-		drawercontent.scrollTop = 0;
+	let isLoading = false;
+
+	beforeNavigate(({ to }) => {
+		isLoading = !!to?.route.id;
 		checked = false;
 	});
+
+	afterNavigate(() => {
+		drawercontent.scrollTop = 0;
+		isLoading = false;
+	});
 </script>
+
+<!-- svelte-ignore a11y-missing-attribute -->
+<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+
+{#if isLoading}
+	<!-- ⬇️ fade in delay used so that you don't see the translation when cashed -->
+	<div
+		in:fade={{ delay: 250 }}
+		out:fade={{}}
+		class="fixed z-50 flex h-screen w-screen flex-col items-center justify-center bg-base-100 opacity-90"
+	>
+		<Jellyfish />
+	</div>
+{/if}
 
 <!-- svelte-ignore a11y-missing-attribute -->
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
