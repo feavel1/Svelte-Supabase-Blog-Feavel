@@ -31,3 +31,5 @@ export const handle: Handle = async ({ event, resolve }) => {
 		}
 	});
 };
+
+// import '$lib/supabaseClient';

@@ -13,14 +13,14 @@
 	openGraph={{
 		title: title + ' - Feavel的部落',
 		description: '点击Feavel的部落中查看关于此内容的帖子',
-		url: 'https://feavel-musci-camp.vercel.com',
+		url: 'https://feavel.com',
 		type: 'website'
 	}}
 	jsonLd={{
 		'@type': 'Article',
 		mainEntityOfPage: {
 			'@type': 'WebPage',
-			'@id': 'https://feavel-musci-camp.vercel.com'
+			'@id': 'https://feavel.com'
 		},
 		headline: title,
 		image: ['img-link.png', 'img-link.png', 'img-link.png'],

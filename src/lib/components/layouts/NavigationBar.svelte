@@ -205,7 +205,7 @@
 		</div>
 		<PageTransition {key}>
 			<div class="mt-28 min-h-screen px-6 pb-16 xl:px-2">
-				<div class="flex justify-center overflow-x-hidden overscroll-x-none">
+				<div class="flex justify-center overflow-x-hidden">
 					<!-- Page content here -->
 					<slot />
 				</div>

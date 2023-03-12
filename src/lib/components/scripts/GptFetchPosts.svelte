@@ -16,7 +16,7 @@
 		try {
 			const { data } = await supabase
 				.from('posts')
-				.select(`created_at,email, id, title, likes (likes)`)
+				.select(`created_at, email, id, title, likes (likes)`)
 				.order('created_at', { ascending: false })
 				.range(offset, offset + limit);
 			posts = data;

@@ -13,13 +13,12 @@
 	onMount(() => {
 		themeChange(false);
 		// 👆 false parameter is required for svelte
-		const {
-			data: { subscription }
-		} = supabase.auth.onAuthStateChange(() => {
+
+		const { data } = supabase.auth.onAuthStateChange(() => {
 			invalidate('supabase:auth');
 		});
 
-		return () => subscription.unsubscribe();
+		return () => data.subscription.unsubscribe();
 	});
 </script>
 

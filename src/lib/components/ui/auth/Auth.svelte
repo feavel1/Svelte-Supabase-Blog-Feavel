@@ -8,7 +8,9 @@
 	const handleLogin = async () => {
 		try {
 			loading = true;
-			const { error } = await supabase.auth.signInWithOtp({ email: emailToVerify });
+			const { error } = await supabase.auth.signInWithOtp({
+				email: emailToVerify
+			});
 			if (error) throw error;
 			alert('快去邮箱📮查看你的魔术🪄链接🔗吧❤️!');
 		} catch (error) {

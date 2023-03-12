@@ -49,14 +49,14 @@
 			const { user } = session;
 
 			const updates = {
-				id: user.id,
+				// id: user.id,
 				username,
 				website,
 				avatar_url: avatarUrl,
-				updated_at: new Date().toString()
+				updated_at: new Date()
 			};
 
-			let { error } = await supabase.from('profiles').upsert(updates);
+			let { error } = await supabase.from('profiles').update(updates).eq('id', user.id);
 
 			if (error) throw error;
 		} catch (error) {
