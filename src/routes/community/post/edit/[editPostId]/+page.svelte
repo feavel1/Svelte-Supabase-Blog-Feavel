@@ -2,7 +2,6 @@
 	import BackTo from '$lib/components/ui/BackTo.svelte';
 	import { supabase } from '$lib/supabaseClient';
 	import type { PageData } from './$types';
-	import { page } from '$app/stores';
 	export let data: PageData;
 
 	let title: string,
@@ -18,7 +17,7 @@
 
 <div class="w-full max-w-3xl">
 	<BackTo />
-	{#if data.session?.user.id !== data.post.post_creator_id}
+	{#if data.session?.user.id !== data.post?.post_creator_id}
 		<h1>哎呀...小黑客...干嘛呢</h1>
 	{:else}
 		<h1 class="mb-4 text-6xl">编辑帖子</h1>

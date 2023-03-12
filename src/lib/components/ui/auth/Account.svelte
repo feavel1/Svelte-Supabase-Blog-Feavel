@@ -53,7 +53,7 @@
 				username,
 				website,
 				avatar_url: avatarUrl,
-				updated_at: new Date()
+				updated_at: new Date().toDateString()
 			};
 
 			let { error } = await supabase.from('profiles').upsert(updates);

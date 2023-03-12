@@ -35,7 +35,6 @@ export interface Database {
           created_at: string
           email: string
           id: number
-          likes: number
           post_id: number
           user_id: string
         }
@@ -44,7 +43,6 @@ export interface Database {
           created_at?: string
           email: string
           id?: number
-          likes?: number
           post_id: number
           user_id: string
         }
@@ -53,7 +51,6 @@ export interface Database {
           created_at?: string
           email?: string
           id?: number
-          likes?: number
           post_id?: number
           user_id?: string
         }
