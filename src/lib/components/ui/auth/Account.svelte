@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import type { Session } from '@supabase/supabase-js';
-	import { supabase } from '$lib/supabaseClient';
+	import type { Session, SupabaseClient } from '@supabase/supabase-js';
+	// import { supabase } from '$lib/supabaseClient';
 	import BackTo from '../BackTo.svelte';
 	import UserPosts from './UserPosts.svelte';
 
+	export let supabase: SupabaseClient;
 	export let session: Session;
 
 	let loading = false;
@@ -13,7 +14,7 @@
 	let avatarUrl: string | null = null;
 
 	onMount(() => {
-		getProfile();
+		// getProfile();
 	});
 
 	const getProfile = async () => {
@@ -49,14 +50,14 @@
 			const { user } = session;
 
 			const updates = {
-				// id: user.id,
+				id: user.id,
 				username,
 				website,
 				avatar_url: avatarUrl,
 				updated_at: new Date()
 			};
 
-			let { error } = await supabase.from('profiles').update(updates).eq('id', user.id);
+			let { error } = await supabase.from('profiles').upsert(updates);
 
 			if (error) throw error;
 		} catch (error) {
@@ -97,7 +98,7 @@
 	<form class="form-control mx-auto w-full max-w-sm" on:submit|preventDefault={updateProfile}>
 		<BackTo />
 		<h1 class="mb-4 text-5xl">我的账号</h1>
-		<div>
+		<!-- <div>
 			<label class="label" for="email">Email</label>
 			<input
 				class="input-bordered input w-full "
@@ -119,9 +120,9 @@
 				type="website"
 				bind:value={website}
 			/>
-		</div>
+		</div> -->
 
-		<div class="mt-4 flex flex-col gap-3">
+		<!-- <div class="mt-4 flex flex-col gap-3">
 			<div class="flex justify-between">
 				<input
 					type="submit"
@@ -149,5 +150,6 @@
 			<p>Something went wrong while fetching the data:</p>
 			<pre>{error}</pre>
 		{/await}
-	</div>
+	</div> -->
+	</form>
 </div>
