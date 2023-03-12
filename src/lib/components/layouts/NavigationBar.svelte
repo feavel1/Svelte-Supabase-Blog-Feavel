@@ -63,7 +63,7 @@
 				<a href="/home"><div class="btn-ghost btn mx-2 px-2">feavel的部落</div></a>
 				<div class="menu menu-horizontal">
 					<!-- Navbar menu content here -->
-					<div class="dropdown-hover dropdown-end dropdown">
+					<div class="dropdown-end dropdown dropdown-hover">
 						<a tabindex="0" class="btn-ghost btn m-1" href="/learn">学习</a>
 
 						<div
@@ -142,7 +142,7 @@
 						</div>
 					</div>
 
-					<div class="dropdown-end dropdown-hover dropdown">
+					<div class="dropdown-end dropdown dropdown-hover">
 						<div tabindex="0" class="btn-ghost btn m-1">社区</div>
 
 						<div

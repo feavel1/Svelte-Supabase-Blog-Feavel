@@ -2,6 +2,7 @@
 	import BackTo from '$lib/components/ui/BackTo.svelte';
 	import { supabase } from '$lib/supabaseClient';
 	import type { PageData } from './$types';
+	import { page } from '$app/stores';
 	export let data: PageData;
 
 	let title: string,
