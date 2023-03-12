@@ -3,13 +3,12 @@
 	import { fly } from 'svelte/transition';
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import PageBlock from '$lib/components/ui/PageBlock.svelte';
 	import InView from '$lib/components/ui/InView.svelte';
 	import Jellyfish from '$lib/components/ui/spinner/Jellyfish.svelte';
 
-	export let session;
-
-	if (browser && session) {
+	if (browser && $page.data.session) {
 		goto('/home');
 	}
 

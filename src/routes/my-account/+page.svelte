@@ -1,7 +1,7 @@
-<script lang="ts">
+<script>
+	import { page } from '$app/stores';
 	import Account from '$lib/components/ui/auth/Account.svelte';
 	import Auth from '$lib/components/ui/auth/Auth.svelte';
-	import { page } from '$app/stores';
 </script>
 
 <svelte:head>

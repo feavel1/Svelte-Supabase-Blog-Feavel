@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { parse } from 'node-html-parser';
 import { getHighlighter } from 'shiki';
 

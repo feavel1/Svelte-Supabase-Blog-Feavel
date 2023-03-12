@@ -12,5 +12,3 @@
 		<slot />
 	</div>
 {/key}
-
-<!-- out:fly={{ y: -50, duration: 350 }} -->

@@ -41,6 +41,7 @@
 	<div class="card-body">
 		<div class="flex flex-col gap-1">
 			<div class="text-2xl font-bold">{title}</div>
+			<!-- <p class="text-clip">{content}</p> -->
 			<div class="badge">作者: {email}</div>
 			<div class="badge-primary badge">
 				创建： <Time relative class="text-xs " timestamp={created_at} />

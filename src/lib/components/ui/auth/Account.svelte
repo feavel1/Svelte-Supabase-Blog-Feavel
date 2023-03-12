@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import type { AuthSession } from '@supabase/supabase-js';
 	import { supabase } from '$lib/supabaseClient';
 	import BackTo from '../BackTo.svelte';
 	import UserPosts from './UserPosts.svelte';
 
-	export let session;
+	export let session: AuthSession;
 
 	let loading = false;
 	let username: string | null = null;
@@ -84,7 +85,7 @@
 	async function fetchPosts() {
 		const { data, error } = await supabase
 			.from('posts')
-			.select(`id, title, likes (likes)`)
+			.select(`id, title, content, likes (likes)`)
 			.eq('post_creator_id', session.user.id)
 			.order('created_at', { ascending: false });
 		if (error) throw new Error(error.message);
