@@ -5,6 +5,7 @@
 	import { goto } from '$app/navigation';
 	import PageBlock from '$lib/components/ui/PageBlock.svelte';
 	import InView from '$lib/components/ui/InView.svelte';
+	import Jellyfish from '$lib/components/ui/spinner/Jellyfish.svelte';
 
 	export let session;
 
@@ -13,6 +14,7 @@
 	}
 
 	let ready = false;
+
 	onMount(() => {
 		ready = true;
 	});
@@ -23,7 +25,9 @@
 	<meta name="description" content="Feavel's Camp Home Page" />
 </svelte:head>
 
-{#if ready}
+{#if !ready}
+	<Jellyfish />
+{:else}
 	<div class="flex w-full max-w-5xl flex-col content-center">
 		<PageBlock>
 			<InView let:isVisible>
