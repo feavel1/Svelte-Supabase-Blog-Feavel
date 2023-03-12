@@ -13,8 +13,8 @@
 
 <!-- ⬇️ fade in delay used so that you don't see the translation when cashed -->
 <div
-	in:fade={{ delay: 450 }}
-	out:fade={{}}
+	in:fade={{ delay: 300 }}
+	out:fade={{ duration: 300 }}
 	class="fixed z-50 flex h-screen w-screen flex-col items-center justify-center bg-base-100 opacity-90"
 >
 	<div

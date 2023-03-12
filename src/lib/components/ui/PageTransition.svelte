@@ -5,7 +5,7 @@
 
 {#key key}
 	<div
-		in:fly={{ y: -100, duration: 600, delay: 250 }}
+		in:fly={{ y: -100, duration: 600, delay: 300 }}
 		out:fly={{ y: -50, duration: 300 }}
 		class="-z-50"
 	>
