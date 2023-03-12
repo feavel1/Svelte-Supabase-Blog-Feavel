@@ -4,7 +4,7 @@
 	import Time from 'svelte-time/src/Time.svelte';
 	import { fly } from 'svelte/transition';
 
-	export let id: number, email: string, title: string, content: string, likes, created_at: string;
+	export let id: number, email: string, title: string, likes, created_at: string;
 
 	let postLike: number,
 		user = $page.data.session && $page.data.session.user;

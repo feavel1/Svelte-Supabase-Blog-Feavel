@@ -27,7 +27,5 @@
 
 	<h2 class="mt-10 text-3xl">用户创建的帖子：</h2>
 
-	<!-- <List {...$data} on:loadMore={data.fetchMore} /> -->
-
 	<GptFetchPosts />
 </div>

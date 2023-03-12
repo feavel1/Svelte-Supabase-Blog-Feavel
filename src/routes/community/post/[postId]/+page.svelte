@@ -7,7 +7,7 @@
 	export let data;
 
 	let post = data.post,
-		comments = data.comments,
+		comments: any = data.comments,
 		content = '',
 		user = $page.data.session && $page.data.session.user;
 
@@ -70,7 +70,7 @@
 			</div>
 		{/if}
 
-		{#if comments.length === 0}
+		{#if comments?.length === 0}
 			<p>暂时没有评论，快添加一个吧.</p>
 		{:else}
 			{#each comments as comment}

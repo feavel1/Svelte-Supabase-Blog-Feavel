@@ -1,11 +1,12 @@
 <script lang="ts">
-	import { afterNavigate } from '$app/navigation';
+	import { beforeNavigate, afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import New from '$lib/components/ui/badges/New.svelte';
 	import Wip from '$lib/components/ui/badges/Wip.svelte';
 	import ThemeChanger from '$lib/components/ui/navBar/ThemeChanger.svelte';
 	import PageTransition from '$lib/components/ui/PageTransition.svelte';
 	import Footer from '$lib/components/ui/Footer.svelte';
+	import Jellyfish from '$lib/components/ui/spinner/Jellyfish.svelte';
 
 	export let key: string;
 
@@ -13,11 +14,25 @@
 	let drawercontent: HTMLDivElement;
 	let checked: boolean;
 
-	afterNavigate(() => {
-		drawercontent.scrollTop = 0;
+	let isLoading = false;
+
+	beforeNavigate(({ to }) => {
+		isLoading = !!to?.route.id;
 		checked = false;
 	});
+
+	afterNavigate(() => {
+		drawercontent.scrollTop = 0;
+		isLoading = false;
+	});
 </script>
+
+<!-- svelte-ignore a11y-missing-attribute -->
+<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+
+{#if isLoading}
+	<Jellyfish />
+{/if}
 
 <!-- svelte-ignore a11y-missing-attribute -->
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
@@ -48,7 +63,7 @@
 				<a href="/home"><div class="btn-ghost btn mx-2 px-2">feavel的部落</div></a>
 				<div class="menu menu-horizontal">
 					<!-- Navbar menu content here -->
-					<div class="dropdown-hover dropdown-end dropdown">
+					<div class="dropdown-end dropdown dropdown-hover">
 						<a tabindex="0" class="btn-ghost btn m-1" href="/learn">学习</a>
 
 						<div
@@ -127,7 +142,7 @@
 						</div>
 					</div>
 
-					<div class="dropdown-end dropdown-hover dropdown">
+					<div class="dropdown-end dropdown dropdown-hover">
 						<div tabindex="0" class="btn-ghost btn m-1">社区</div>
 
 						<div
@@ -188,10 +203,10 @@
 				<ThemeChanger />
 			</div>
 		</div>
-		<!-- Page content here -->
 		<PageTransition {key}>
 			<div class="mt-28 min-h-screen px-6 pb-16 xl:px-2">
-				<div class="flex justify-center">
+				<div class="flex justify-center overflow-x-hidden overscroll-x-none">
+					<!-- Page content here -->
 					<slot />
 				</div>
 			</div>

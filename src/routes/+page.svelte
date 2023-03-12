@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { browser } from '$app/environment';
@@ -6,13 +6,17 @@
 	import { page } from '$app/stores';
 	import PageBlock from '$lib/components/ui/PageBlock.svelte';
 	import InView from '$lib/components/ui/InView.svelte';
+	import Jellyfish from '$lib/components/ui/spinner/Jellyfish.svelte';
 
 	if (browser && $page.data.session) {
 		goto('/home');
 	}
 
 	let ready = false;
-	onMount(() => (ready = true));
+
+	onMount(() => {
+		ready = true;
+	});
 </script>
 
 <svelte:head>
@@ -20,14 +24,16 @@
 	<meta name="description" content="Feavel's Camp Home Page" />
 </svelte:head>
 
-{#if ready}
-	<div class="flex w-full max-w-5xl flex-col content-center ">
+{#if !ready}
+	<Jellyfish />
+{:else}
+	<div class="flex w-full max-w-5xl flex-col content-center">
 		<PageBlock>
 			<InView let:isVisible>
 				{#if isVisible}
 					<h1 in:fly={{ x: -400, duration: 900 }} class="em text-6xl font-bold">欢迎来到</h1>
-					<p in:fly={{ x: -800, duration: 1200 }} class="text-3xl font-black">Feavel 的部落</p>
-					<p in:fly={{ x: 800, duration: 1500 }} class="">一个学习&交流的网站</p>
+					<p in:fly={{ x: -400, duration: 1200 }} class="text-3xl font-black">Feavel 的部落</p>
+					<p in:fly={{ x: 400, duration: 1500 }} class="">一个学习&交流的网站</p>
 					<div in:fly={{ y: 800, duration: 2000 }} class="mt-64">⬇️ 下滑</div>
 				{/if}
 			</InView>
@@ -70,7 +76,9 @@
 						那我们应该怎么办呢？
 					</h1>
 					<p in:fly={{ x: -800, duration: 1200 }} class="text-3xl font-black">
-						首先... <br />我们必须必须必须，得让无聊的东西变的有趣❤️
+						首先... <br />我们必须必须必须让无聊的东西
+						<br />
+						变的有趣❤️
 					</p>
 					<p in:fly={{ x: 800, duration: 1500 }} class="text-secondary">
 						只有通过不断质疑和突破思想的桎梏，我们才能真正学到东西。
