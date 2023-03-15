@@ -23,7 +23,7 @@ title: 基础知识👶🏻
 | ------------------------------------------ | ----------------------------------------------------------------------- |
 | [新手学习道路](/learn/programming/roadmap) | [我应该选哪个框架?](/learn/programming/what-framework) <New />          |
 | [编程语言冰川](/learn/programming/iceberg) | [快速搭建 Svelte 工程](/learn/programming/svelte/setup-project) <New /> |
-| [推荐资源](/learn/programming/resources)   | 用 Vercel 发布网站                                                      |
+| [推荐资源](/learn/programming/resources)   | [进段知识，下一篇](/learn/intermidiate)                                 |
 
 <!-- ## 前端开发
 

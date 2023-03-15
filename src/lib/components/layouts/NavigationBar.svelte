@@ -63,7 +63,7 @@
 				<a href="/home"><div class="btn-ghost btn mx-2 px-2">feavel的部落</div></a>
 				<div class="menu menu-horizontal">
 					<!-- Navbar menu content here -->
-					<div class="dropdown-end dropdown dropdown-hover">
+					<div class="dropdown-hover dropdown-end dropdown">
 						<a tabindex="0" class="btn-ghost btn m-1" href="/learn">学习</a>
 
 						<div
@@ -76,13 +76,11 @@
 									<span>网络工程</span>
 								</li>
 								<li>
-									<a href="/learn/programming">
-										👶🏻 基础知识 <New />
-									</a>
+									<a href="/learn/programming"> 👶🏻 基础知识 </a>
 								</li>
 								<li>
-									<a>
-										🎨 前端工程 <Wip />
+									<a href="/learn/intermidiate">
+										🎨 进段工程 <Wip />
 									</a>
 								</li>
 								<li>
@@ -97,8 +95,8 @@
 									<span>哲学</span>
 								</li>
 								<li>
-									<a>
-										哲学史 <Wip />
+									<a href="/chat">
+										🦉哲学助理 <New />
 									</a>
 								</li>
 								<li>
@@ -142,7 +140,7 @@
 						</div>
 					</div>
 
-					<div class="dropdown-end dropdown dropdown-hover">
+					<div class="dropdown-end dropdown-hover dropdown">
 						<div tabindex="0" class="btn-ghost btn m-1">社区</div>
 
 						<div
@@ -154,19 +152,13 @@
 									<span>BLOG</span>
 								</li>
 								<li>
-									<a href="/community">
-										博客主页 <New />
-									</a>
+									<a href="/community"> 博客主页 </a>
 								</li>
 								<li>
-									<a href="/community/guide">
-										社区指南🧭 <New />
-									</a>
+									<a href="/community/guide"> 社区指南🧭 </a>
 								</li>
 								<li>
-									<a href="/my-account">
-										我的博客 <New />
-									</a>
+									<a href="/my-account"> 我的博客 </a>
 								</li>
 							</ul>
 							<ul class="menu">
@@ -174,9 +166,7 @@
 									<span>特殊服务</span>
 								</li>
 								<li>
-									<a href="/community/guide/contribute">
-										贡献 <New />
-									</a>
+									<a href="/community/guide/contribute"> 贡献 </a>
 								</li>
 								<li>
 									<a>
@@ -192,6 +182,7 @@
 						</div>
 					</div>
 				</div>
+				<a href="/chat" class="btn-ghost btn mx-2 gap-3 border-pink-300 px-2">OWL <New /></a>
 			</div>
 
 			<a href="/my-account">
@@ -204,7 +195,7 @@
 			</div>
 		</div>
 		<PageTransition {key}>
-			<div class="mt-28 min-h-screen px-6 pb-16 xl:px-2">
+			<div class="mt-24 min-h-screen px-6 pb-16 xl:px-2">
 				<div class="flex justify-center overflow-x-hidden overscroll-x-none">
 					<!-- Page content here -->
 					<slot />
@@ -227,21 +218,14 @@
 					<span>社区</span>
 				</li>
 				<li>
-					<a href="/community">
-						📨 博客主页 <New />
-					</a>
+					<a href="/community"> 📨 博客主页 </a>
 				</li>
 				<li>
-					<a href="/my-account">
-						📫 我发的帖子
-						<New />
-					</a>
+					<a href="/my-account"> 📫 我发的帖子 </a>
 				</li>
 
 				<li>
-					<a href="/community/guide/contribute">
-						💕 贡献 <New />
-					</a>
+					<a href="/community/guide/contribute"> 💕 贡献 </a>
 				</li>
 			</ul>
 			<div class="divider" />
@@ -251,13 +235,11 @@
 					<span>网络工程</span>
 				</li>
 				<li>
-					<a href="/learn/programming">
-						👶🏻 基础知识 <New />
-					</a>
+					<a href="/learn/programming"> 👶🏻 基础知识 </a>
 				</li>
 				<li>
-					<a>
-						🎨 前端工程 <Wip />
+					<a href="/learn/intermidiate">
+						🎨 进段工程 <Wip />
 					</a>
 				</li>
 				<li>
@@ -273,14 +255,13 @@
 					<span>哲学</span>
 				</li>
 				<li>
-					<a>
-						哲学史
-						<Wip />
+					<a href="/chat">
+						🦉哲学助理 <New />
 					</a>
 				</li>
 				<li>
 					<a>
-						神分析
+						精神分析
 						<Wip />
 					</a>
 				</li>

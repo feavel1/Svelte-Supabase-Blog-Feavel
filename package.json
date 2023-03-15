@@ -36,8 +36,11 @@
 		"@supabase/auth-helpers-sveltekit": "^0.8.7",
 		"@supabase/supabase-js": "^2.10.0",
 		"daisyui": "^2.51.3",
+		"gpt3-tokenizer": "^1.1.5",
 		"node-html-parser": "^6.1.5",
+		"openai": "^3.2.1",
 		"shiki": "^0.14.1",
+		"sse.js": "^0.6.1",
 		"svelte-seo": "^1.5.3",
 		"theme-change": "^2.5.0"
 	}
