@@ -13,7 +13,7 @@
 			/>
 		</div>
 	</div>
-	<div class="chat-header">
+	<div class="chat-header text-white">
 		{type === 'user' ? 'Me' : 'Owl'}
 	</div>
 	<div

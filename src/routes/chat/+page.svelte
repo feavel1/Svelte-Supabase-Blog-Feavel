@@ -71,13 +71,13 @@
 	<div class="flex w-full flex-col gap-2">
 		<div>
 			<h1 class="my-0 text-2xl font-extrabold md:text-3xl">Feavel 的精神分析助理:</h1>
-			<h1 class="my-0 mb-5 text-5xl font-extrabold md:text-6xl">OWL🦉</h1>
-			<p class="my-0 text-sm">由 GPT-3.5-turbo 提供</p>
+			<h1 class="text-5xl font-extrabold md:text-6xl">OWL🦉</h1>
+			<p class=" text-sm">由 GPT-3.5-turbo 提供</p>
 		</div>
 
 		<div class="divider" />
 
-		<div class="flex h-[500px] w-full flex-col gap-4 overflow-y-auto rounded-md bg-gray-900 p-4">
+		<div class="flex h-[45vh] w-full flex-col gap-4 overflow-y-auto rounded-md bg-gray-900 p-4">
 			<div class="flex flex-col gap-2">
 				<ChatMessage
 					type="assistant"
