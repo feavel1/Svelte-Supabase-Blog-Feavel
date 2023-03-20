@@ -7,6 +7,7 @@
 	import PageTransition from '$lib/components/ui/PageTransition.svelte';
 	import Footer from '$lib/components/ui/Footer.svelte';
 	import Jellyfish from '$lib/components/ui/spinner/Jellyfish.svelte';
+	import Logo from '../ui/Logo.svelte';
 
 	export let key: string;
 
@@ -59,14 +60,14 @@
 				</label>
 			</div>
 
-			<div class="hidden flex-1 lg:block">
-				<a href="/home"><div class="btn-ghost btn mx-2 px-2">feavel的部落</div></a>
-				<div class="menu menu-horizontal">
+			<div class="hidden flex-1 lg:block lg:align-middle ">
+				<ul class="menu menu-horizontal">
+					<li><a href="/home" class="btn-ghost btn m-1 rounded-md">Feavel's Camp</a></li>
 					<!-- Navbar menu content here -->
-					<div class="dropdown-hover dropdown-end dropdown">
+					<li class="dropdown-hover dropdown-end dropdown">
 						<a tabindex="0" class="btn-ghost btn m-1" href="/learn">学习</a>
 
-						<div
+						<ul
 							tabindex="0"
 							class="dropdown-content grid w-max grid-cols-3 rounded-sm bg-base-200 p-4 shadow"
 						>
@@ -137,10 +138,10 @@
 									</a>
 								</li>
 							</ul>
-						</div>
-					</div>
+						</ul>
+					</li>
 
-					<div class="dropdown-end dropdown-hover dropdown">
+					<li class="dropdown-end dropdown-hover dropdown">
 						<div tabindex="0" class="btn-ghost btn m-1">社区</div>
 
 						<div
@@ -180,9 +181,11 @@
 								</li>
 							</ul>
 						</div>
-					</div>
-				</div>
-				<a href="/chat" class="btn-ghost btn mx-2 gap-3 border-pink-300 px-2">OWL <New /></a>
+					</li>
+					<li>
+						<a href="/chat" class="btn-ghost btn m-1">OWL </a>
+					</li>
+				</ul>
 			</div>
 
 			<a href="/my-account">
@@ -210,7 +213,7 @@
 		<label for="my-drawer-3" class="drawer-overlay" />
 		<div class="menu w-80 bg-base-100 p-4">
 			<!-- Sidebar content here -->
-			<a href="/home"><div class="btn-primary  btn mx-2 px-2">feavel的部落 - 主页</div></a>
+			<a href="/home"><div class="btn-primary btn mx-2 px-2">feavel的部落 - 主页</div></a>
 			<div class="divider" />
 			<!-- Blog -->
 			<ul class="menu">

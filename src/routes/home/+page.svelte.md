@@ -2,7 +2,10 @@
 layout: Home
 ---
 
-<script>import Card from '$lib/components/ui/Card.svelte';</script>
+<script>
+import Card from '$lib/components/ui/Card.svelte';
+import Logo from '$lib/components/ui/Logo.svelte';
+</script>
 
 <svelte:head>
 
@@ -81,3 +84,7 @@ layout: Home
 </div>
 
 </div>
+
+<div class="divider" />
+
+<Logo />
