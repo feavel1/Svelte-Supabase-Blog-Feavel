@@ -97,7 +97,7 @@
 			<div class="" bind:this={scrollToDiv} />
 		</div>
 		{#if !$page.data.session}
-			<a href="/my-account" class="btn">请先登录</a>
+			<a href="/my-account" class="btn">抱歉，我最近的开放使用到期了。等我有时间续费会通知您。</a>
 		{:else}
 			<form
 				class="flex w-full gap-4 rounded-md bg-gray-900 p-4"
