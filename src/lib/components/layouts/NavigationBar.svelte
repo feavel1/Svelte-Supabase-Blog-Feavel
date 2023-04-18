@@ -7,7 +7,6 @@
 	import PageTransition from '$lib/components/ui/PageTransition.svelte';
 	import Footer from '$lib/components/ui/Footer.svelte';
 	import Jellyfish from '$lib/components/ui/spinner/Jellyfish.svelte';
-	import Logo from '../ui/Logo.svelte';
 
 	export let key: string;
 
@@ -64,7 +63,7 @@
 				<ul class="menu menu-horizontal">
 					<li><a href="/home" class="btn-ghost btn m-1 rounded-md">Feavel's Camp</a></li>
 					<!-- Navbar menu content here -->
-					<li class="dropdown-hover dropdown-end dropdown">
+					<li class="dropdown dropdown-end dropdown-hover">
 						<a tabindex="0" class="btn-ghost btn m-1" href="/learn">学习</a>
 
 						<ul
