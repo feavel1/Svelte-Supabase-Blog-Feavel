@@ -69,3 +69,77 @@ src
   hooks.client.ts
   hooks.server.ts
     
+
+
+```
+src
+├── lib //组件文件夹
+│   ├── components
+│   │   ├── ui
+│   │   │   ├── Cards
+│   │   │   │   ├── PostCard.svelte
+│   │   │   │   ├── ChatCard.svelte
+│   │   │   │   ├── PageBlock.svelte
+│   │   │   │   ├── PageTransition.svelte
+│   │   │   │   ├── ChatMessage.svelte
+│   │   │   │   └── InView.svelte
+│   │   │   ├── Auth
+│   │   │   │   ├── Account.svelte
+│   │   │   │   ├── Login.svelte
+│   │   │   │   └── UserPosts.svlete
+│   │   │   ├── Badges
+│   │   │   │   ├── CommentLikes.svelte
+│   │   │   │   ├── PostLikes.svelte
+│   │   │   │   ├── New.svelte
+│   │   │   │   ├── Wip.svelte
+│   │   │   │   ├── HamburgerIcon.svelte
+│   │   │   │   ├── ThemeChanger.svelte
+│   │   │   │   └── Spinner
+│   │   │   │       └── Jellyfish.svelte
+│   │   │   └── Footer
+│   │   │       ├── Logo.svelte
+│   │   │       └── Footer.svelte
+│   │   ├── layouts
+│   │   │   ├── NavBar.svelte
+│   │   │   ├── PostLayout.svelte
+│   │   │   └── LearnLayout.svelte
+│   │   └── scripts
+│   │       ├── codeHighlighter.js
+│   │       └── FetchPosts.svelte
+│   └── supabaseLib
+│       ├── supabaseTypes.ts
+│       └── supabaseClient.ts
+├── routes //页面链接🔗
+│   ├── +page.svelte //主页文件
+│   │   ├── home
+│   │   │   └── +page.md
+│   │   ├── my-account
+│   │   │   └── +page.md
+│   │   ├── community
+│   │   │   ├── +page.md
+│   │   │   ├── [postId]
+│   │   │   │   └── +page.svelte
+│   │   │   ├── createPost
+│   │   │   │   └── +page.svelte
+│   │   │   ├── editPost
+│   │   │   │   └── [editPostId]
+│   │   │   │       └── +page.svelte
+│   │   │   └── guide
+│   │   │       ├── contribute
+│   │   │       │   └── +page.md
+│   │   │       ├── markDownDemo
+│   │   │       │   └── +page.md
+│   │   │       └── +page.md
+│   │   ├── learn
+│   │   │   └── +page.md
+│   │   └── chat
+│   │       └── +page.md
+│   ├── +layout.ts
+│   ├── +layout.svelte
+│   ├── +layout.server.ts
+│   └── +error.svelte
+├── app.css
+├── app.html
+├── hooks.client.ts
+└── hooks.server.ts
+```
