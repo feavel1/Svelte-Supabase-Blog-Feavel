@@ -59,7 +59,7 @@
 				</label>
 			</div>
 
-			<div class="hidden flex-1 lg:block lg:align-middle ">
+			<div class="hidden flex-1 lg:block lg:align-middle">
 				<ul class="menu menu-horizontal">
 					<li><a href="/home" class="btn-ghost btn m-1 rounded-md">Feavel's Camp</a></li>
 					<!-- Navbar menu content here -->
