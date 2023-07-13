@@ -97,7 +97,7 @@
 						启发、鼓励、帮助你的内容
 					</p>
 					<p in:fly={{ x: 800, duration: 1500 }} class="text-secondary">开始学习吧</p>
-					<div in:fly={{ x: -400, duration: 900 }} class="felx-col mt-5 flex gap-3 ">
+					<div in:fly={{ x: -400, duration: 900 }} class="felx-col mt-5 flex gap-3">
 						<a href="/home"><button class="btn-accent btn text-accent-content">进入主页</button></a>
 						<a href="/my-account">
 							<button class="btn-info btn text-info-content"> 登录账号 </button>
