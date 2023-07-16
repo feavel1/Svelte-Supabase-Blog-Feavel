@@ -40,7 +40,7 @@
 	<input type="checkbox" id="my-drawer-3" class="drawer-toggle" bind:checked />
 	<div bind:this={drawercontent} class="drawer-content flex flex-col">
 		<!-- Navbar -->
-		<div class="navbar fixed h-[4rem] w-full border-b border-gray-600 backdrop-blur-md">
+		<div class="navbar fixed h-[4rem] w-full border-b border-base-300 backdrop-blur-md">
 			<div class="flex-1 lg:hidden">
 				<label for="my-drawer-3" class="btn-ghost btn-square btn">
 					<svg
@@ -63,7 +63,7 @@
 				<ul class="menu menu-horizontal">
 					<li><a href="/home" class="btn-ghost btn m-1 rounded-md">Feavel's Camp</a></li>
 					<!-- Navbar menu content here -->
-					<li class="dropdown dropdown-end dropdown-hover">
+					<li class="dropdown-end dropdown-hover dropdown">
 						<a tabindex="0" class="btn-ghost btn m-1" href="/learn">学习</a>
 
 						<ul

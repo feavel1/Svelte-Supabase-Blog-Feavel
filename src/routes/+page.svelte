@@ -48,9 +48,9 @@
 							<button class="btn-primary btn text-primary-content"> 登录账号 </button>
 						</a>
 						<div class="mt-4 font-mono tracking-widest text-opacity-10">
-							<p>Made Possible With ❤️</p>
+							<p>❤️ Made Possible With ❤️</p>
 							<p>
-								<a href="https://kit.svelte.dev" class="text-orange-400">Svelte</a> and
+								<a href="https://kit.svelte.dev" class="text-orange-400">SvelteKit</a> and
 								<a href="https://supabase.com" class="text-green-400">Supabase</a>
 							</p>
 						</div>
@@ -63,7 +63,7 @@
 		<PageBlock>
 			<InView let:isVisible>
 				{#if isVisible}
-					<div class="pb-[20vh] pt-[20vh]">
+					<div class=" pt-[10vh]">
 						<div class="">
 							<h1 in:fly={{ x: -400, duration: 900 }} class="font-bold tracking-widest">
 								💡可能你想学💡
@@ -79,23 +79,22 @@
 							</p>
 						</div>
 
-						<div class="mt-[15vh]">
-							<h1
-								in:fly={{ x: -400, duration: 900 }}
-								class="cgr mb-1 text-4xl font-bold tracking-tighter md:text-6xl"
-							>
-								Sorry, Bad News
-							</h1>
-							<p
-								in:fly={{ x: -800, duration: 1200 }}
-								class="font-extralight leading-5 tracking-widest"
-							>
-								音乐语言太复杂<br />
-								哲学会失去自己的分析性<br />
-								电影越拍越多看不完<br />
-								我只知道我啥都不知道🤷
-							</p>
+						<div
+							in:fly={{ x: -400, duration: 900 }}
+							class="mt-[15vh] text-4xl tracking-tighter md:text-6xl"
+						>
+							<h1 class="font-extralight">Sorry, Bad News</h1>
+							<p class="cgr font-black">不是所有东西那么好学</p>
 						</div>
+						<p
+							in:fly={{ x: -800, duration: 1200 }}
+							class="font-extralight leading-5 tracking-widest"
+						>
+							音乐语言太复杂<br />
+							哲学会失去自己的分析性<br />
+							电影越拍越多看不完<br />
+							我只知道我啥都不知道🤷
+						</p>
 					</div>
 				{/if}
 			</InView>
@@ -104,7 +103,7 @@
 		<PageBlock>
 			<InView let:isVisible>
 				{#if isVisible}
-					<div class="pb-[20vh] pt-[20vh]">
+					<div class="pb-[20vh] pt-[10vh]">
 						<div>
 							<h1 in:fly={{ x: -400, duration: 900 }} class="text-xl font-bold tracking-widest">
 								那我们应该怎么办呢?
