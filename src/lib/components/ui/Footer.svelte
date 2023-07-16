@@ -1,6 +1,6 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 
-<footer class="footer footer-center rounded bg-base-200 p-10">
+<footer class="footer footer-center rounded bg-base-200 p-10 text-base-content">
 	<div class="grid grid-flow-col gap-4">
 		<a class="link-hover link" href="/community/guide/contribute">贡献指南❤️</a>
 		<a class="link-hover link" href="/community/about">关于本站💬</a>

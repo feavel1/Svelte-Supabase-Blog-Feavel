@@ -2,4 +2,4 @@
 	// @ts-nocheck
 </script>
 
-<div class="w-full max-w-3xl"><slot /></div>
+<div class="w-full max-w-3xl leading-4"><slot /></div>

@@ -2,7 +2,7 @@
 layout: post
 author: Feavel
 date: 2022年2月6日
-title: 学习主页📚
+title: 🏭 学习主页
 ---
 
 <script>
@@ -17,8 +17,7 @@ title: 学习主页📚
 
 <Card>
   <div class="card-body">
-    <div class="card-title">👶🏻 基础编程知识</div>
-    <div class="badge-info badge">New!</div>
+    <div class="card-title">🛜 网络工程 / 网站搭建</div>
     <div>新手、前端、Svelte Kit、Astro</div>
     <div class="card-actions justify-end">
       <a href="/learn/programming"> <button class="btn-accent btn">学习基础</button></a>
@@ -26,7 +25,21 @@ title: 学习主页📚
   </div>
 </Card>
 
-<!-- <div class="divider" />
+<div class="divider" />
+
+<Card>
+  <div class="card-body">
+    <div class="card-title">Complete(sh) Rust Cheat Sheet 🦀️</div>
+    <div class="badge-info badge">New!</div>
+    <div>For those with some coding skill</div>
+    <div class="card-actions justify-end">
+      <a href="/learn/programming/rust"> <button class="btn-accent btn">学一些有的没的</button></a>
+    </div>
+  </div>
+</Card>
+
+<div class="divider" />
+
 
 <Card>
   <div class="card-body">
@@ -50,6 +63,6 @@ title: 学习主页📚
       <a href="/learn/phylosophy"> <button class="btn-accent btn">学习哲学</button></a>
     </div>
   </div>
-</Card> -->
+</Card>
 
 <div class="divider" />

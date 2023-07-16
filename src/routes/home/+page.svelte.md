@@ -39,7 +39,7 @@ import Logo from '$lib/components/ui/Logo.svelte';
 <Card>
 	<div class="card-body">
 		<h3 class="card-title">学习🧑🏼‍💻</h3>
-		<p>是否想学混音、编程、哲学？</p>
+		<p>编程、音乐、哲学？</p>
 		<div class="card-actions justify-end">
 			<a href="/learn"><button class="btn-primary btn">阅读</button></a>
 		</div>

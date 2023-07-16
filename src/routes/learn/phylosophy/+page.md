@@ -5,7 +5,9 @@ date: 2022年2月6日
 title: 欢迎来到哲学主页
 ---
 
-Introvert vs extrovert
+Work in progress
+
+<!-- Introvert vs extrovert
 
 Surebal vs Emotional
 
@@ -25,4 +27,4 @@ Three things that effect life:
 
 1. self bias
 2. perent influence
-3. Acnoledege that you have blind spots
+3. Acnoledege that you have blind spots -->

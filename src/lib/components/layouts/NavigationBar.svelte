@@ -40,7 +40,7 @@
 	<input type="checkbox" id="my-drawer-3" class="drawer-toggle" bind:checked />
 	<div bind:this={drawercontent} class="drawer-content flex flex-col">
 		<!-- Navbar -->
-		<div class="navbar fixed w-full border-b border-base-100 backdrop-blur-md">
+		<div class="navbar fixed h-[4rem] w-full border-b border-gray-600 backdrop-blur-md">
 			<div class="flex-1 lg:hidden">
 				<label for="my-drawer-3" class="btn-ghost btn-square btn">
 					<svg
@@ -197,7 +197,7 @@
 			</div>
 		</div>
 		<PageTransition {key}>
-			<div class="mt-24 min-h-screen px-6 pb-16 xl:px-2">
+			<div class="mt-20 min-h-screen px-6 pb-16 xl:px-2">
 				<div class="flex justify-center overflow-x-hidden overscroll-x-none">
 					<!-- Page content here -->
 					<slot />

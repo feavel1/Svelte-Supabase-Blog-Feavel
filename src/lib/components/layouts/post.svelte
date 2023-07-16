@@ -46,8 +46,8 @@
 	<h1 class="my-0 text-5xl font-extrabold md:text-6xl">{title}</h1>
 	<p class="my-0">by {author}, {date}</p>
 
-	<div class="divider " />
-	<div class="prose-lg prose md:prose-xl first-letter:text-cyan-300">
+	<div class="divider" />
+	<div class="prose-lg prose w-full max-w-3xl first-letter:text-cyan-300">
 		<slot />
 	</div>
 </div>
